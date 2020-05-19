@@ -9,6 +9,12 @@ export const Body = styled.div`
         background:#FFFFFF;
         height:60px;
         width:100%;
+        display:flex;
+        justify-content: space-evenly;
+        align-content:center;
+        div{
+            width: 50%;
+        }
     }
 `
 

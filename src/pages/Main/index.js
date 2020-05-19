@@ -11,6 +11,10 @@ import Apartament from '../../Assets/apartment.svg'
 import Radar from '../../Assets/radar.svg'
 import Arrows from '../../Assets/arrows.svg'
 import Pc from '../../Assets/Pc.png'
+import footer1 from '../../Assets/footer1.png'
+import footer2 from '../../Assets/footer2.png'
+import footer3 from '../../Assets/footer3.png'
+import footer4 from '../../Assets/footer4.png'
 
 export default function Main(){
 
@@ -40,7 +44,13 @@ export default function Main(){
                     <img src={Pc} alt="pc"/>
                 </div>
             </Container>
-            <div className="branco"></div>
+            <div className="branco">
+                <img src={footer1} alt=" "/>
+                <img src={footer2} alt=" "/>
+                <img src={footer3} alt=" "/>
+                <img src={footer4} alt=" "/>
+                <div></div>
+            </div>
                 <br></br>
                 <br></br>
                 <br></br>

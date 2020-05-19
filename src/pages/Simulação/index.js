@@ -7,6 +7,7 @@ import SimulatorVerde from './SimulatorVerde.js';
 import SimulatorAzul from './SimulatorAzul.js';
 import SimulatorVerdeAPE from './SimulatorVerdeAPE.js'
 import SimulatorVerdeAPE2 from './SimulatorVerdeAPE2'
+import photo from '../../Assets/simulator.png'
 
 export default function Simulacao() {
   const [cliente, setCliente] = useState('');
@@ -109,7 +110,7 @@ export default function Simulacao() {
             <p>Preencha o formulário abaixo e tenha em mãos um detalhado estudo comparativo entre Mercado Livre de Energia e Mercado Cativo, comprovando possibilidades de redução de custos adequadas para a sua empresa.</p>
           </div>
           <div>
-            a
+            <img src={photo} alt="simulação"/>
           </div>
         </div>
         <br></br>

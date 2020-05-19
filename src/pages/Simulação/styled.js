@@ -95,7 +95,6 @@ export const Body = styled.div`
         }
         div:last-child{
             width:50%;
-            background:black;
             width:465px;
             height:449px;
         }
