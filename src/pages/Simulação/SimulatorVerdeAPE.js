@@ -6,9 +6,8 @@ export default function SimulatorVerde(props){
     const inputs = props.inputs
     const ResultCativo = props.resultCat
     const ResultLivre = props.resultLiv
-    const ape = props.ape
-    console.log('teste')
-    console.log(ape)
+    const ape = props.apeResult
+
     const {cativoDemandaUnica,cativoDemandaUltrapassagem,cativoConsumoPonta,cativoConsumoPontaFora,qtdGerador,
         totalDemandaUnica,totalDemandaUltrapassagem,totalConsumoPonta,totalcativoConsumoPontaFora,totalGerador
         } = ResultCativo
@@ -68,7 +67,7 @@ export default function SimulatorVerde(props){
                     <th>Total:</th>
                     <td></td>
                     <td></td>
-                    <tr>{totalCativo}</tr>
+                    <td>{totalCativo}</td>
                 </tr>
             </table>
             <table>

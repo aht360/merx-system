@@ -26,8 +26,8 @@ export default function NavBar(props){
                     <button>Pesquisa Mercado Livre</button>
                     <button>Negocie sua Energia</button>
                     <Link to="/simulacao"><button>Simulação</button></Link>
-                    <Link to="/mercado_livre"><button>Mercado Livre de Energia</button></Link>
-                    <Link to="/autoproducao"><button>Autoprodução de Energia</button></Link>
+                    <Link to="/"><button>Mercado Livre de Energia</button></Link>
+                    <Link to="/"><button>Autoprodução de Energia</button></Link>
                     <Link to="/"><button>Contato</button></Link>
                     <Link to="/"><button>Login</button></Link>
                 </nav>

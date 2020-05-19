@@ -14,7 +14,7 @@ import Pc from '../../Assets/Pc.png'
 
 export default function Main(){
 
-    var phrases = ["Escolha seu fornecedor","Negocie sua energia","Realize suas cotações",
+    var phrases = ["Escolha seu fornecedor","Negocie sua energia excedente ou gerada","Realize suas cotações",
                   "Analise seus dados","Simule sua economia","Conheça mais sobre,"]
 
 

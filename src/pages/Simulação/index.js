@@ -45,7 +45,7 @@ export default function Simulacao() {
   const [inputs, setInputs] = useState({});
   const [resultCativo, setResultCativo] = useState({});
   const [resultLivre, setResultLivre] = useState({});
-  const [ape,setApe] = useState()
+  const [ape,setApe] = useState({})
 
   async function handleSimulation(e) { 
     setShow(true)
@@ -86,9 +86,9 @@ export default function Simulacao() {
         setInputs(input);
         setResultCativo(ResultCativo);
         setResultLivre(ResultLivre)
-        if(ape){
-          setApe(ape)
-        }
+          if(calc==="APE"){
+            setApe(ape)
+          }
         
       
     } catch (err) {
@@ -302,12 +302,12 @@ export default function Simulacao() {
             <br></br>
             <br></br>
           </form>
-          
          
-        {(show ===true && (ths==="VERDE") && (calc==="ML")) && <SimulatorVerde inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre}/>}
-        {(show ===true && (ths==="AZUL" ) && (calc==="ML")) && <SimulatorAzul inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre}/>}
-        {(show ===true && (ths==="VERDE") && (calc==="APE") && (tipoInstal==="LOCAL")) && <SimulatorVerdeAPE inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre} ape={ape}/>}
-        {(show ===true && (ths==="VERDE") && (calc==="APE") && (tipoInstal==="REMOTA")) && <SimulatorVerdeAPE2 inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre} ape={ape}/>}
+          {(show ===true && (ths==="VERDE") && (calc==="ML")) && <SimulatorVerde inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre}/>}
+          {(show ===true && (ths==="AZUL" ) && (calc==="ML")) && <SimulatorAzul inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre}/>}
+          {(show ===true && (ths==="VERDE") && (calc==="APE") && (tipoInstal==="LOCAL")) && <SimulatorVerdeAPE inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre} apeResult={ape}/>}
+          {(show ===true && (ths==="VERDE") && (calc==="APE") && (tipoInstal==="REMOTA")) && <SimulatorVerdeAPE2 inputs={inputs} resultCat={resultCativo}  resultLiv={resultLivre} apeResult={ape}/>}
+
       </Body>
       <Footer/>
     </div>
