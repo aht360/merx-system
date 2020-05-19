@@ -90,7 +90,7 @@ export default function Simulacao() {
             setApe(ape)
           }
         
-      
+      alert('Será enviado para você, um Email com os detalhes da sua simulação.');
     } catch (err) {
       alert('Erro, tente novamente.');
     }
