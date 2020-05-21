@@ -1,0 +1,65 @@
+.container-vantagens{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.title-box-vantagens{
+    width: 15%;
+    margin-left: 10%;
+}
+
+.title-vantagens{
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 68px;
+    
+}
+
+.subtitle-vantagens{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.container-table{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.table-title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.table-item{
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.linha{
+    display: inline;
+}
+
+.centerCol{
+    display: inline-block;
+}
+
+.line-vant{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col-vant{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.textbox-vant{
+    padding: 100px 200px 0 200px;
+    text-align: justify;
+    font-size: 21px;
+}

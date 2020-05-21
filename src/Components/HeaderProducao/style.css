@@ -1,0 +1,25 @@
+.textBox-autoproducao{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50%;
+}
+
+.title-autoproducao{
+    color: #0067CC;
+    font-weight: bold;
+}
+
+.subtitle-autoproducao{
+    margin-top: 20px;
+}
+
+.imgSize-autoproducao{
+    width: 50%;
+}
+
+.header-producao-row{
+    margin-top: 0px;
+    max-height: fit-content;
+}
