@@ -1,15 +1,18 @@
-.container{
+.container-header{
     background:#0067CC;
     color: #FFFFFF;
-    height:450px;
     font-size:18px;
     display:flex;
 }
 
 .container-text{
-    margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+    /*
+    padding: 70px;
     margin-left: 80px;
-    width: 50%;
+    */
 }
 
 .container-text-typedEffect{
@@ -21,26 +24,27 @@
     margin-bottom: 30px;
 }
 
-.btn{
+.btn-h{
     color: white;
     border-radius: 30px;
     padding: 10px;
     text-decoration: none;
 }
 
-.btn-header{
+.btn-header-h{
     font-size: 16px;
     transition: all .9s;
     display: inline-block;
 }
 
-.btn-header:hover{
+.btn-header-h:hover{
     border-style: solid;
     background-color: white;
     color: black;
     border: white;
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .btn--animated {
@@ -60,11 +64,18 @@
     } 
 }
 
+.displayText{
+    
+}
+
 
 
 .container-img{
-    margin-top: 200px;
-    margin-left: 50px;
+    position: absolute;
+    left: 50%;
+    top: 37%;
+    transform: translateX(-50%);
+    transform: translateY((-50%))
 }
 .imgSize{
     height: 350px;

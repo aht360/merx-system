@@ -10,18 +10,20 @@ import Fade from 'react-reveal/Fade';
 export default function Revolution(){
 
     return(
-        <Container className="container-revolution">
-            <Row>
-                <Col className="col1">
-                    <h1 className="title-revolution">
-                        A revolução já aconteceu
-                    </h1>
-                    <p className="subtitle-revolution">
-                        A energia muda a forma como você vive.
-                    </p>
+        <Container fluid className="container-revolution">
+            <Row className="marginRow">
+                <Col className="col1" sm={4}>
+                    <div className="textBoxLeft">
+                        <h1 className="title-revolution">
+                            A revolução já aconteceu
+                        </h1>
+                        <p className="subtitle-revolution">
+                            A energia muda a forma como você vive.
+                        </p>
+                    </div>
                 </Col>
 
-                <Col>
+                <Col sm={8}>
                     <div className="container-icons">
                         <Fade top>
                             <div className="icon-text">

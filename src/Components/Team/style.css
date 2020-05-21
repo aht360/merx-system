@@ -1,22 +1,15 @@
 .container-team{
-    margin-top: 160px;
     background-color: #F5F5F5;
     color: black;
-}
-
-.col-team{
-    width: 40%;
-}
-
-.col-team2{
+    font-size: 16px;
 }
 
 .linhaTeam{
-    margin-bottom: 160px;
+    padding: 120px;
 }
 
-.teamCard{
-    margin-top: 80px;
+.title-revolution{
+    font-weight: bold;
 }
 
 .button-team{
@@ -34,7 +27,9 @@
 }
 
 .spanClass{
-    width: 32%;
+    /*
+    */
+    width: 50%;
     text-align: center;
 }
 
@@ -47,4 +42,11 @@
     border: none;
     cursor:pointer;
     display:flex;
+}
+
+.buttons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }

@@ -12,6 +12,8 @@
     font-size: 56px;
 }
 
+
+
 .imgRevolution{
     margin:20px;
     width:100px;
@@ -37,4 +39,14 @@
     align-items:center;
     width: 50%;
     margin-top: 20px;
+}
+
+.textBoxLeft{
+    padding-left: 120px;
+    text-align: left;
+}
+
+.marginRow{
+    margin: -50px;
+    margin-top: 40px;
 }

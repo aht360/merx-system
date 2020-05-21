@@ -9,10 +9,10 @@ export default function HeaderFooter(){
 
     return(
         <div className="container-HeaderFooter">
-            <img classname="correctHeight" src={footer1} alt="f1"/>
             <img src={footer2} alt="f2"/>
             <img src={footer3} alt="f3"/>
-            <img classname="correctHeight" src={footer4} alt="f4"/>
+            <img src={footer1} alt="f1"/>
+            <img src={footer4} alt="f4"/>
         </div>
     );
 }

@@ -6,18 +6,19 @@ import Fade from 'react-reveal/Fade';
 export default function Team(){
 
     return(
-        <Container className="container-team">
+        <Container fluid className="container-team">
             <Row className="linhaTeam">
-                <Col className="col-team">
+                <Col className="col-team" sm={4}>
                     <h1 className="title-revolution">
                         Faça parte da MERX
                     </h1>
                     <p className="subtitle-team">
                         Com a MERX, você trabalha com uma empresa séria, focada em oferecer excelência na qualidade de seus produtos e serviços
                     </p>
+                        
                 </Col>
 
-                <Col className="col-team2">
+                <Col className="col-team2" sm={8}>
                     <div className="buttons">
                         <div className="beClient">
                             <span className="spanClass">Invista em um dos negócios que mais crescem no Brasil</span>

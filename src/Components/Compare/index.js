@@ -35,5 +35,6 @@ export default function Compare(){
                 </Fade>
             </div>
         </div>
+        
     );
 }
