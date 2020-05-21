@@ -23,7 +23,7 @@ export default function Team(){
                         <div className="beClient">
                             <span className="spanClass">Invista em um dos negócios que mais crescem no Brasil</span>
                             <Fade right>
-                                <a href="https://google.com" className="btn-compare btn-team">
+                                <a href="https://google.com" className="btn-tem btn-team">
                                     Quero ser um investidor
                                 </a>
                             </Fade>
@@ -31,7 +31,7 @@ export default function Team(){
                         <div className="beClient">
                             <span className="spanClass">Suas necessidades de forma personalizada e objetiva</span>
                             <Fade right>
-                                <a href="https://google.com" className="btn-compare btn-team">
+                                <a href="https://google.com" className="btn-tem btn-team">
                                     Quero ser um cliente
                                 </a>
                             </Fade>
@@ -39,7 +39,7 @@ export default function Team(){
                         <div className="beClient">
                             <span className="spanClass">Leve nossas soluções para seus clientes</span>
                             <Fade right>
-                                <a href="https://google.com" className="btn-compare btn-team">
+                                <a href="https://google.com" className="btn-tem btn-team">
                                     Quero ser parceiro
                                 </a>
                             </Fade>

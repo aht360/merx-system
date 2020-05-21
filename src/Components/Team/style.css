@@ -21,7 +21,7 @@
 }
 
 .beClient{
-    width:100%;
+    width:600px;
     height:100%;
     display:flex;
     justify-content:flex-start;
@@ -30,21 +30,22 @@
 }
 
 .spanClass{
-    /*
-    */
     width: 50%;
-    text-align: center;
+    text-align: left;
 }
 
 .btn-team{
     text-align: center;
-    width:220px;
+    width:360px;
     margin: 0px 20px;
     background:#0067CC;
     color:#FFFFFF;
     border: none;
     cursor:pointer;
     display:flex;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .buttons{
@@ -52,4 +53,41 @@
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+}
+
+.btn-tem:link,
+.btn-tem:visited{
+    padding: 15px 70px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+    position: relative;
+}
+
+.btn-tem:hover {
+    background-color: #0067CC;
+    border: white;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+}
+
+.btn-tem::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #0067CC;
+    transition: all .4s;
+}
+
+.btn-tem:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }

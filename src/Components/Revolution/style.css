@@ -43,10 +43,14 @@
 
 .textBoxLeft{
     padding-left: 120px;
+    margin-top: -170px;
     text-align: left;
+    position: absolute;
+    top: 50%;
 }
 
 .marginRow{
     margin: -50px;
     margin-top: 40px;
+    display: relative;
 }

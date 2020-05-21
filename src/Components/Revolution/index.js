@@ -12,7 +12,7 @@ export default function Revolution(){
     return(
         <Container fluid className="container-revolution">
             <Row className="marginRow">
-                <Col className="col1" sm={4}>
+                <Col className="col1" sm={5}>
                     <div className="textBoxLeft">
                         <h1 className="title-revolution">
                             A revolução já aconteceu
@@ -23,7 +23,7 @@ export default function Revolution(){
                     </div>
                 </Col>
 
-                <Col sm={8}>
+                <Col sm={7}>
                     <div className="container-icons">
                         <Fade top>
                             <div className="icon-text">
