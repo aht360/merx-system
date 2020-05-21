@@ -23,6 +23,7 @@ export const Containers = styled.div`
         background-color:${props=>props.BgColor};
         font-size:15px;
         cursor:pointer;
+        transition: all .7s;
 
         :hover{
             border-color:${props=>props.color};

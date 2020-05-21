@@ -1,5 +1,5 @@
 import React from 'react'
-import {Containers} from './styles.js'
+import {Containers} from './style.js'
 import {Link} from "react-router-dom";
 import Logo from "../../Assets/logo.png"
 import BlackLogo from "../../Assets/blackLogo.png"

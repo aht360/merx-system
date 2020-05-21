@@ -1,0 +1,40 @@
+.container-revolution{
+    background-color: white;
+    color: black;
+}
+
+.col1{
+    width: 50%;
+    text-align: center;
+}
+
+.title-revolution{
+    font-size: 56px;
+}
+
+.imgRevolution{
+    margin:20px;
+    width:100px;
+    transition: all .2s;
+}
+
+.imgRevolution:hover{
+    transform: scale(1.2);
+}
+
+.container-icons{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;       
+    text-align: justify;
+}
+
+.icon-text{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    width: 50%;
+    margin-top: 20px;
+}
