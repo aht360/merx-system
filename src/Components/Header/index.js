@@ -7,7 +7,7 @@ import './style.css';
 
 export default function Header(){
 
-    var phrases = ["Escolha seu fornecedor","Negocie sua energia excedente ou gerada","Realize suas cotações",
+    var phrases = ["Escolha seu fornecedor","Realize suas cotações",
                   "Analise seus dados","Simule sua economia","Conheça mais sobre,"];
 
     return(

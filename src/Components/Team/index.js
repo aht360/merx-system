@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import {Container, Row, Col } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 
 export default function Team(){
 
@@ -20,21 +21,27 @@ export default function Team(){
                     <div className="buttons">
                         <div className="beClient">
                             <span className="spanClass">Invista em um dos negócios que mais crescem no Brasil</span>
-                            <a href="https://google.com" className="btn-compare btn-team">
-                                Quero ser um investidor
-                            </a>
+                            <Fade right>
+                                <a href="https://google.com" className="btn-compare btn-team">
+                                    Quero ser um investidor
+                                </a>
+                            </Fade>
                         </div>
                         <div className="beClient">
                             <span className="spanClass">Suas necessidades de forma personalizada e objetiva</span>
-                            <a href="https://google.com" className="btn-compare btn-team">
-                                Quero ser um cliente
-                            </a>
+                            <Fade right>
+                                <a href="https://google.com" className="btn-compare btn-team">
+                                    Quero ser um cliente
+                                </a>
+                            </Fade>
                         </div>
                         <div className="beClient">
                             <span className="spanClass">Leve nossas soluções para seus clientes</span>
-                            <a href="https://google.com" className="btn-compare btn-team">
-                                Quero ser parceiro
-                            </a>
+                            <Fade right>
+                                <a href="https://google.com" className="btn-compare btn-team">
+                                    Quero ser parceiro
+                                </a>
+                            </Fade>
                         </div>
                     </div>
                 </Col>
