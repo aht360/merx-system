@@ -7,6 +7,27 @@
     align-content:center;
 }
 
-.correctHeight{
-    
+.row-partner{
+    display: flex;
+}
+
+
+@media only screen and (max-width: 600px){
+    .container-HeaderFooter{
+        display: inline-block;
+        position: relative;
+    }
+    .partner-size{
+        
+    }
+
+    .row-partner{
+        display: flex;
+    }
+
+    .column-partner{
+        padding: 5px;
+    }
+
+
 }

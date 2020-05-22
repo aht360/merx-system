@@ -1,5 +1,5 @@
 import React from 'react';
-import {Body} from './styles.js';
+import './styles.css';
 import NavBar from '../../Components/Navbar/index';
 import Header from '../../Components/Header/index';
 import HeaderFooter from '../../Components/HeaderFooter/index';
@@ -12,7 +12,7 @@ import Footer from '../../Components/Footer/index';
 export default function Main(){
 
     return(
-        <Body>
+        <div className="master-container">
             <NavBar />
             <Header />
             <HeaderFooter />
@@ -20,8 +20,8 @@ export default function Main(){
             <About />
             <Revolution />
             <Team />
-            <Footer/>
-        </Body>
+            <Footer />
+        </div>
     )
 }
 

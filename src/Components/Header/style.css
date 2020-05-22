@@ -64,12 +64,6 @@
     } 
 }
 
-.displayText{
-    
-}
-
-
-
 .container-img{
     position: absolute;
     left: 50%;
@@ -84,4 +78,28 @@
 .verticalIcon{
     margin-left: 5px;
     vertical-align: -3px;
+}
+
+@media only screen and (max-width: 1100px){
+
+    .container-header{
+        font-size: 13px;
+    }
+
+    .container-img{
+        display: none;
+    }
+
+    .container-text-typedEffect{
+        font-size: 24px;
+        width: 300px;
+    }
+
+    .container-text{
+        padding: 10px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+
 }

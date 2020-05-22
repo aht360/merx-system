@@ -10,14 +10,17 @@
     margin-top: -10px;
 }
 
-.justify-navItems{
-    position: absolute;
-    left: 55%;
-    transform: translateX(-55%);
-    width:80%;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
+
+@media only screen and (min-width: 1200px) {
+    .justify-navItems{
+        position: absolute;
+        left: 55%;
+        transform: translateX(-55%);
+        width:80%;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+    }
 }
 
 #navItem-color{

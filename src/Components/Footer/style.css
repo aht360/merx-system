@@ -1,0 +1,81 @@
+.footer-container{
+    padding: 100px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.row-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+  
+.column-footer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+}
+
+.under-footer{
+    padding-top: 50px;
+}
+
+.logo-footer{
+    width: 30%;
+}
+
+
+.footer-text{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.align-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 900px){
+    .logo-footer{
+        margin-bottom: 20px;
+    }
+    .footer-container{
+        margin-top: -50px;
+    }
+    .logo-footer{
+        width: 120px;
+    }
+
+    .align-text{
+        font-size: 12px;
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+        width: 100%;
+    }
+
+    .row-footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    .under-footer{
+        width: 300px;
+        font-size: 14px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .column-footer{
+        text-align: center;
+    }
+}

@@ -25,7 +25,7 @@ export default function NavBar(props){
     };
     
     return(
-        <Navbar expand="lg" className="bg-blue" style={divStyle} variant="dark">
+        <Navbar collapseOnSelect expand="lg" className="bg-blue" style={divStyle} variant="dark">
             <Navbar.Brand href="#home">
                 {!changeColor && <img className="logoBrand" src={Logo} alt="Logo"/>}
                 {changeColor && <img className="logoBrand" src={BlackLogo} alt="Logo"/>}
