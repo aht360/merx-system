@@ -36,7 +36,7 @@ export default function NavBar(props){
                         <Nav.Link id="navItem-color" style={divStyle} href="/">Início</Nav.Link>
                         <Nav.Link id="navItem-color" style={divStyle} href="#pesquisa">Pesquisa Mercado Livre</Nav.Link>
                         <Nav.Link id="navItem-color" style={divStyle} href="#negocie">Negocie sua Energia</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="simulacao">Simulação</Nav.Link>
+                        <Nav.Link id="navItem-color" style={divStyle} href="#simulacao">Simulação</Nav.Link>
                         <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Mercado Livre de Energia</Nav.Link>
                         <Nav.Link id="navItem-color" style={divStyle} href="autoproducao">Autoprodução de Energia</Nav.Link>
                         <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Contato</Nav.Link>
