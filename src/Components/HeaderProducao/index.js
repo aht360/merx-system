@@ -17,7 +17,7 @@ export default function HeaderProducao(){
                     </Fade>
                     <Fade bottom delay={500}>
                         <p className="subtitle-autoproducao">
-                            O Autoprodutor de Energia Elétrica ou APE, é a pessoa física ou jurídica ou empresas reunidas em consórcio que recebem concessão ou autorização para produzir energia elétrica destinada ao seu uso exclusivo. Decreto n. 2.003, de 10 setembro de 1996.
+                            O Autoprodutor de Energia Elétrica ou APE, é a pessoa ou empresas reunidas em consórcio que recebem concessão ou autorização para produzir energia elétrica destinada ao seu uso exclusivo. Decreto n. 2.003, de 10 setembro de 1996.
                         </p>
                     </Fade>
                 </div>

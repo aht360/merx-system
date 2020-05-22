@@ -173,6 +173,9 @@ export default function Vantagens(){
             </div>
 
             <div className="textbox-vant">
+                <div className="title3">
+                    <b className="title32">Realize sua migração com segurança e tranquilidade!</b>
+                </div>
                 <p>
                 Ressalvamos que a autoprodução é uma atuação que exige diversos conhecimentos específicos com relação às normas técnicas e regulatórias, além de profissionais qualificados para analisar cada caso, identificar e sugerir a melhor estratégia para alcançar os benefícios apresentados. A MERX ENERGIA possui uma área dedicada à Gestão de Energia (Geração e Consumidores) e conta com profissionais que conhecem, com profundidade, as legislações, os benefícios e os riscos da autoprodução.  Além de possuir clientes Autoprodutores em sua carteira de clientes, gerando assim uma expertise única para lhe atender.
                 </p>
