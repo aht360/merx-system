@@ -20,12 +20,12 @@ export default function Vantagens(){
                 <div className="line-vant">
                     <div className="col-vant">
                         <Fade left>
-                            <b className="table-title">ACR – AMBIENTE DE CONTRATAÇÃO REGULADA</b>
+                            <b className="table-title border-left">ACR – AMBIENTE DE CONTRATAÇÃO REGULADA</b>
                         </Fade>
                     </div>
                     <div className="col-vant">
                         <Fade right>
-                            <b className="table-title">ACL – AMBIENTE DE CONTRATAÇÃO LIVRE</b>
+                            <b className="table-title border-right">ACL – AMBIENTE DE CONTRATAÇÃO LIVRE</b>
                         </Fade>
                     </div>
                 </div>

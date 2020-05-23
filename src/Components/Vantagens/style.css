@@ -28,12 +28,13 @@
 
 .table-title{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 36px;
+    padding: 5px;
 }
 
 .table-item{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 36px;
 }
 
@@ -50,6 +51,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+
 }
 
 .col-vant{
@@ -80,6 +82,23 @@
         margin-left: 0px;
         padding: 30px;
     }
+    .table-title{
+        border-bottom-style: solid;
+    }
+    .line-vant{
+        align-items: center;
+    }
+    .table-item{
+        padding: 5px;
+    }
+
+    .border-left{
+        border-left-style: solid;
+    }
+
+    .border-right{
+        border-left-style: solid;
+    }
 
     .title-vantagens{
         font-weight: bold;
@@ -95,7 +114,11 @@
     .textbox-vant{
         padding: 23px;
         text-align: justify;
-        font-size: 21px;
+        font-size: 16px;
+    }
+    .title32{
+        font-size: 22px;
+        
     }
 
 }
