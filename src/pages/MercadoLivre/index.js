@@ -3,7 +3,7 @@ import './style.css';
 import NavBar from '../../Components/Navbar/index';
 import HeaderMercadoLivre from '../../Components/HeaderMercadoLivre/index';
 import Modernizacao from '../../Components/Modernizacao/index';
-import Schema from '../../Components/Schema/index';
+import Video from '../../Components/Video/index';
 import Team from '../../Components/Team/index';
 import Footer from '../../Components/Footer/index';
 
@@ -13,7 +13,7 @@ export default function Main(){
         <div className="container-mercadoLivre">
             <NavBar changeColor="false"/>
             <HeaderMercadoLivre />
-            <Schema />
+            <Video />
             <Modernizacao />
             <Team />
             <Footer />
