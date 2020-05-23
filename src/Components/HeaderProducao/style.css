@@ -4,6 +4,7 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 50%;
+    
 }
 
 .title-autoproducao{
@@ -22,4 +23,40 @@
 .header-producao-row{
     margin-top: 0px;
     max-height: fit-content;
+}
+
+@media only screen and (max-width: 1100px){
+    .header-producao-row{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        
+    }
+
+    .textBox-autoproducao{
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 20px;
+    }
+
+    .imgBox-autoproducao{
+        text-align: center;
+    }
+
+    .imgSize-autoproducao{
+        width: 60%;
+    }
+
+    .title-autoproducao{
+        font-size: 26px;
+    }
+
+    .subtitle-autoproducao{
+        font-size: 14px;
+    }
+
 }

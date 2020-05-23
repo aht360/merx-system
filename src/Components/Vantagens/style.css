@@ -73,3 +73,29 @@
     font-size: 26px;
     
 }
+
+@media only screen and (max-width: 1100px){
+    .title-box-vantagens{
+        width: 100%;
+        margin-left: 0px;
+        padding: 30px;
+    }
+
+    .title-vantagens{
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 68px;
+    }
+
+    .subtitle-vantagens{
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .textbox-vant{
+        padding: 23px;
+        text-align: justify;
+        font-size: 21px;
+    }
+
+}

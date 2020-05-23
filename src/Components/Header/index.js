@@ -3,7 +3,7 @@ import Pc from '../../Assets/Pc.png';
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { Row, Column, Col, Container } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import './style.css';
 
 export default function Header(){

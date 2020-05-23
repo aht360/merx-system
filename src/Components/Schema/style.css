@@ -81,3 +81,13 @@
 .imgSchema{
     width: 50%;
 }
+
+@media only screen and (max-width: 1100px){
+    .textbox-schema{
+        padding: 30px;
+        text-align: justify;
+    }
+    .imgSchema{
+        width: 100%;
+    }
+}   

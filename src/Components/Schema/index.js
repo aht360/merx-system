@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import Schema from '../../Assets/schema.png';
-import Fade from 'react-reveal/Fade';
 
 export default function Main(){
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
 import './style.css';
 import Fade from 'react-reveal/Fade';
 
