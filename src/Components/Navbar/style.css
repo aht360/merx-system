@@ -14,6 +14,11 @@
     transition: all .7s;
 }
 
+.notBold{
+    font-weight: normal;
+    cursor: pointer;
+}
+
 #navItem-color:hover{
     border-bottom:1px solid white;
 }

@@ -95,7 +95,7 @@ export default function Modernizacao (){
                         <div className="col-vant">
                             <Fade right>
                                 
-                            <p className="table-item destak">Residencial em 1º.01.2024</p>
+                            <p className="table-item destak">Residencial após 2024</p>
                             </Fade>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ export default function Modernizacao (){
                 </div>
 
                 <p className="text-modernizacao">
-                    Buscando proporcionar um crescimento equilibrado do mercado, foi proposta essa abertura parcialmente fracionada. A Consulta Pública 33 ainda prevê que o Poder Executivo apresente um plano para acesso ao ambiente livre também para os consumidores conectados na baixa tensão (Residencial).
+                    Para proporcionar um crescimento equilibrado do mercado, foi proposta essa abertura parcialmente fracionada. A Consulta Pública 33 ainda prevê que o Poder Executivo apresente um plano para acesso ao ambiente livre também para os consumidores conectados na baixa tensão (Residencial).
                 </p>
             </div>
 

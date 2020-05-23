@@ -3,6 +3,7 @@ import './style.css';
 import footer1 from '../../Assets/footer1.png'
 import footer2 from '../../Assets/footer2.png'
 import footer3 from '../../Assets/footer3.png'
+import footer4 from '../../Assets/footer4.png'
 
 export default function HeaderFooter(){
 
@@ -18,10 +19,10 @@ export default function HeaderFooter(){
                 <div className="column-partner">
                     <img className="partner-size" src={footer1} alt="f1"/>
                 </div>
+                <div className="column-partner">
+                    <img className="partner-size" src={footer4} alt="f1"/>
+                </div>
             </div>
-            
-            
-            
             
         </div>
     );
