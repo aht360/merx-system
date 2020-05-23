@@ -27,7 +27,9 @@ export default function Main(){
     return(
         <div className="container-video">
             <div className="video-box">
+                
                 <h1 className="video-button" onClick={showModal} onEntered={modalLoaded}><FontAwesomeIcon icon={faPlayCircle} /></h1>
+
                 
                 <Modal 
                     show={isOpen} 

@@ -1,0 +1,32 @@
+.table-container{
+    background-color: #E5E5E5;
+}
+
+.textBox-table{
+    padding: 50px 150px 50px 150px;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.text-table{
+    padding: 0px 50px 0px 50px;
+    text-align: justify;
+}
+
+.table-box{
+    padding: 0px 400px 0px 400px;
+}
+
+@media only screen and (max-width: 1100px){
+    .textBox-table{
+        padding: 0px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .table-container{
+        padding: 30px 0 30px 0;
+    }
+    .table-box{
+        padding: 30px;
+    }
+}
