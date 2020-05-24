@@ -5,6 +5,7 @@ import { Form } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEnvelope, faPhoneAlt, faIdCard, faIdCardAlt, faLock } from '@fortawesome/free-solid-svg-icons'
 import LoginModal from '../../Components/LoginModal/index';
+import TermsModal from '../../Components/TermsModal/index';
 
 
 class App extends Component{
@@ -17,10 +18,19 @@ class App extends Component{
         this.showModal();
     }
 
+    termsModalRef = (obj) => { 
+        this.showTermsModal = obj && obj.handleShow 
+    }
+
+    onTermsClick = () => {
+        this.showTermsModal();
+    }
+
     render(){
         return(
             <div className="container-register42">
                 <LoginModal ref={this.loginModalRef} ></LoginModal>
+                <TermsModal ref={this.termsModalRef} ></TermsModal>
                 <div className="register-box42">
                     <Form>
     
@@ -31,9 +41,9 @@ class App extends Component{
                 
                         </Form.Group>
                         
-                        <Form.Group controlId="registerGroupName" className="register-cell">
+                        <Form.Group controlId="registerGroupName text-center" className="register-cell" style={{width: "100%"}}>
                             <Form.Label className=""><FontAwesomeIcon icon={faUser} className="registerIcon"/></Form.Label>
-                            <Form.Control className="text-center " type="text" placeholder="Nome completo*" style={{width: "268px"}}/>
+                            <Form.Control className="text-center" type="text" placeholder="Nome completo*" style={{width: "268px"}}/>
                         </Form.Group>
     
                         <Form.Group controlId="registerGroupEmail" className="register-cell">
@@ -88,6 +98,12 @@ class App extends Component{
                             <Form.Label className="text-center" style={{width: "100%"}}>
                                 <a href="/" style={{marginTop: "20px", color: "rgba(64, 64, 64, 0.8)", fontSize: "12px", textDecorationLine: "underline"}}>
                                     Ir para home
+                                </a>
+                            </Form.Label>
+
+                            <Form.Label className="text-center" style={{width: "100%"}}>
+                                <a href="#?" onClick={this.onTermsClick} style={{marginTop: "20px", color: "rgba(64, 64, 64, 0.8)", fontSize: "12px", textDecorationLine: "underline"}}>
+                                    Termos e condições
                                 </a>
                             </Form.Label>
     
