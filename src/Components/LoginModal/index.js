@@ -24,6 +24,8 @@ handleShow() {
 handleClose(){
     this.setState({ show: false })
 }
+
+
 render() {
     return (
        <div>
@@ -42,11 +44,13 @@ render() {
                             <Form.Group controlId="formGroupHeader">
 
                                 <Form.Label className="text-center loginTitle" style={{width: "100%"}}><img alt="logo" src={BlackLogo} className="logo-login"></img></Form.Label>
-                                <Form.Label className="text-center loginTitle" style={{width: "100%"}}>Entrar</Form.Label>
-                                <Form.Label className="text-center loginText" style={{width: "100%"}}>Vincule o login com o seu Facebook e facilite o seu acesso a MERX. Não postaremos nada em sua página.</Form.Label>
+                                <Form.Label className="text-center loginTitle" style={{width: "100%", fontWeight: "bold"}}>Entrar</Form.Label>
+                                {/* 
+                                <Form.Label className="text-center loginText" style={{width: "100%"}}>Vincule o login com o seu Facebook e facilite o seu acesso a MERX. Não postaremos nada em sua página.</Form.Label>                              
+                                */}
                             
                             </Form.Group>
-
+                            {/* 
                             <Form.Group controlId="formGroupSocialLogin">
                                 <Form.Label className="text-center" style={{width: "100%"}}><button className="fb-button">Entrar com Facebook</button></Form.Label>
                             </Form.Group>
@@ -54,6 +58,7 @@ render() {
                             <Form.Group controlId="formGroupMiddle">
                                 <Form.Label className="text-center" style={{width: "100%"}}>ou</Form.Label>
                             </Form.Group>
+                            */}
                             
                             <Form.Group controlId="formGroupEmail">
                                 <Form.Control className="text-center center-input" size="lg" type="email" placeholder="Email" style={{width: "268px"}}/>
@@ -70,9 +75,26 @@ render() {
 
                             <Form.Group controlId="formGroupFooter">
 
-                                <Form.Label className="text-center" style={{width: "100%"}}><p className="loginText" style={{marginTop: "40px"}}>Não tem conta? <a href="https://google.com" style={{display: "inline", color: "#0067CC"}}>Crie sua conta</a></p></Form.Label>
-                                <Form.Label className="text-center" style={{width: "100%"}}><a href="https://google.com" style={{marginTop: "20px", color: "rgba(64, 64, 64, 0.8)", fontSize: "12px", textDecorationLine: "underline"}}>Esqueceu sua senha?</a></Form.Label>
-                                <Form.Label className="text-center" style={{width: "100%"}}><p style={{marginTop: "20px", fontSize: "12px", color: "rgba(151, 151, 151, 0.8)"}}>MERX's Termos de serviço & Políticas de privacidade</p></Form.Label>
+                                <Form.Label className="text-center" style={{width: "100%"}}>
+                                    <p className="loginText" style={{marginTop: "40px"}}>
+                                        Não tem conta?  
+                                        <a href="https://google.com" style={{display: "inline", color: "#0067CC"}}>
+                                            Crie sua conta
+                                        </a>
+                                    </p>
+                                </Form.Label>
+
+                                <Form.Label className="text-center" style={{width: "100%"}}>
+                                    <a href="https://google.com" style={{marginTop: "20px", color: "rgba(64, 64, 64, 0.8)", fontSize: "12px", textDecorationLine: "underline"}}>
+                                        Esqueceu sua senha?
+                                    </a>
+                                </Form.Label>
+
+                                <Form.Label className="text-center" style={{width: "100%"}}>
+                                    <p style={{marginTop: "20px", fontSize: "12px", color: "rgba(151, 151, 151, 0.8)"}}>
+                                        MERX's Termos de serviço & Políticas de privacidade
+                                    </p>
+                                </Form.Label>
                                 
                             </Form.Group>
 
