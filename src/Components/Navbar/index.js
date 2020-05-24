@@ -66,7 +66,7 @@ class App extends Component{
             <div>
 
                 <LoginModal ref={this.loginModalRef} ></LoginModal>
-                
+
                 <Navbar collapseOnSelect expand="lg" className="bg-blue" style={divStyle} variant="light">
 
                     <Navbar.Brand href="#home">
@@ -83,15 +83,13 @@ class App extends Component{
 
                         <Nav className="justify-navItems">
                             <Nav.Link id="navItem-color" style={divStyle} href="/">Início</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} href="#pesquisa">Pesquisa Mercado Livre</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} href="#negocie">Negocie sua Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick} href="#pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick} href="#negocie">Negocie sua Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} href="#simulacao">Simulação</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} href="mercado-livre">Mercado Livre de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} href="autoproducao">Autoprodução de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Contato</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick}>
-                                Login
-                            </Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick}>Login</Nav.Link>
                         </Nav>
 
                     </Navbar.Collapse>
