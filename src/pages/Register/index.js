@@ -48,22 +48,22 @@ class App extends Component{
     
                         <Form.Group controlId="registerGroupEmail" className="register-cell">
                             <Form.Label className=""><FontAwesomeIcon icon={faEnvelope} className="registerIcon"/></Form.Label>
-                            <Form.Control className="text-center " type="email" placeholder="Email*" style={{width: "268px"}}/>
+                            <Form.Control className="text-center " type="email" placeholder="Email*" style={{width: "268px", marginRight: "4px"}}/>
                         </Form.Group>
     
                         <Form.Group controlId="registerGroupTel" className="register-cell">
                             <Form.Label className=""><FontAwesomeIcon icon={faPhoneAlt} className="registerIcon"/></Form.Label>
-                            <Form.Control className="text-center " type="tel" placeholder="Telefone*" style={{width: "268px"}}/>
+                            <Form.Control className="text-center " type="tel" placeholder="Telefone*" style={{width: "268px", marginRight: "3px"}}/>
                         </Form.Group>
     
                         <Form.Group controlId="registerGroupCpf" className="register-cell">
                             <Form.Label className=""><FontAwesomeIcon icon={faIdCard} className="registerIcon"/></Form.Label>
-                            <Form.Control className="text-center " type="text" placeholder="CPF (somente números)*" maxlength="11" style={{width: "268px"}}/>
+                            <Form.Control className="text-center " type="text" placeholder="CPF (somente números)*" maxlength="11" style={{width: "268px", marginRight: "7px"}}/>
                         </Form.Group>
     
                         <Form.Group controlId="registerGroupCnpj" className="register-cell">
                             <Form.Label className=""><FontAwesomeIcon icon={faIdCardAlt} className="registerIcon"/></Form.Label>
-                            <Form.Control className="text-center " type="text" placeholder="CNPJ (somente números)" maxlength="14" style={{width: "268px"}}/>
+                            <Form.Control className="text-center " type="text" placeholder="CNPJ (somente números)" maxlength="14" style={{width: "268px", marginRight: "7px"}}/>
                         </Form.Group>
     
                         <Form.Group controlId="registerGroupPass" className="register-cell">
