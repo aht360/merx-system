@@ -1,46 +1,109 @@
-import React from 'react'
-import Logo from "../../Assets/logo.png"
-import BlackLogo from "../../Assets/blackLogo.png"
-import { Navbar, Nav } from 'react-bootstrap'
+import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
+import LoginModal from '../../Components/LoginModal/index'
+import { Navbar, Nav } from 'react-bootstrap';
 import './style.css';
 
-export default function NavBar(props){
-    var changeColor = props.changeColor || false
-    var colorBack
-    var fontColor
-    if(changeColor ===false){
-        colorBack = "#0067CC"
-        fontColor = "#FFFFFF"
-    }else{
-        colorBack = "#FFFFFF;"
-        fontColor = "#000"
+import BlackLogo from "../../Assets/blackLogo.png";
+
+import Logo from "../../Assets/logo.png";
+
+
+class App extends Component{
+    
+    constructor(props){
+        super();
+        var changeColor = props.changeColor;
+        var colorBack = '';
+        var fontColor = '';
+        var setColor;
+
+        
+        switch(changeColor){
+            case 'true':
+                colorBack = "#0067CC" // Blue
+                fontColor = "#FFFFFF" // White
+                setColor = true;
+                break;
+            case 'false':
+                colorBack = "#FFFFFF;" // White
+                fontColor = "#000" // Black
+                setColor = false;
+                break;
+            default:
+                console.log('lixo');
+        }
+
+        this.state = {
+            colorBack,
+            fontColor,
+            changeColor: setColor
+        }
+
+
+    }
+    
+   
+    loginModalRef = (obj) => { 
+        this.showModal = obj && obj.handleShow 
     }
 
-    const divStyle = {
-        backgroundColor: colorBack,
-        color: fontColor,
-        borderColor: fontColor
-    };
-    
-    return(
-        <Navbar collapseOnSelect expand="lg" className="bg-blue" style={divStyle} variant="light">
-            <Navbar.Brand href="#home">
-                {!changeColor && <img className="logoBrand" src={Logo} alt="Logo"/>}
-                {changeColor && <img className="logoBrand" src={BlackLogo} alt="Logo"/>}
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="justify-navItems">
-                        <Nav.Link id="navItem-color" style={divStyle} href="/">Início</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="#pesquisa">Pesquisa Mercado Livre</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="#negocie">Negocie sua Energia</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="#simulacao">Simulação</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="mercado-livre">Mercado Livre de Energia</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="autoproducao">Autoprodução de Energia</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Contato</Nav.Link>
-                        <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Login</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    )
+    onLoginClick = () => {
+    this.showModal();
+    }
+
+
+    render(){
+
+        
+        const divStyle = {
+            backgroundColor: this.state.colorBack,
+            color: this.state.fontColor,
+            borderColor: this.state.fontColor
+        };
+
+        return (
+            <div>
+
+                <LoginModal ref={this.loginModalRef} ></LoginModal>
+                
+                <Navbar collapseOnSelect expand="lg" className="bg-blue" style={divStyle} variant="light">
+
+                    <Navbar.Brand href="#home">
+
+                        { this.state.changeColor && <img className="logoBrand white" src={Logo} alt="Logo"/> }
+
+                        { !this.state.changeColor && <img className="logoBrand black" src={BlackLogo} alt="Logo"/>}
+
+                    </Navbar.Brand>
+                    
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+                    <Navbar.Collapse id="responsive-navbar-nav">
+
+                        <Nav className="justify-navItems">
+                            <Nav.Link id="navItem-color" style={divStyle} href="/">Início</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} href="#pesquisa">Pesquisa Mercado Livre</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} href="#negocie">Negocie sua Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} href="#simulacao">Simulação</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} href="mercado-livre">Mercado Livre de Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} href="autoproducao">Autoprodução de Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Contato</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick}>
+                                Login
+                            </Nav.Link>
+                        </Nav>
+
+                    </Navbar.Collapse>
+                    
+                </Navbar>
+
+            </div>  
+        )
+    }
 }
+export default App;
+
+/*
+ReactDOM.render(<App/>, document.getElementById('root'))
+*/

@@ -10,10 +10,9 @@ import Team from '../../Components/Team/index';
 import Footer from '../../Components/Footer/index';
 
 export default function Main(){
-
     return(
         <div className="master-container">
-            <NavBar />
+            <NavBar changeColor="true"/>
             <Header />
             <HeaderFooter />
             <Compare />
