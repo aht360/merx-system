@@ -70,7 +70,7 @@ render() {
 
 
                             <Form.Group controlId="formGroupContinueButton">
-                                <Form.Label className="text-center" style={{width: "100%"}}><button className="fb-button color-change buffer-space-login-2">Continuar</button></Form.Label>
+                                <Form.Label className="text-center" style={{width: "100%"}}><button href="/" className="fb-button color-change buffer-space-login-2">Continuar</button></Form.Label>
                             </Form.Group>
 
                             <Form.Group controlId="formGroupFooter">
@@ -78,7 +78,7 @@ render() {
                                 <Form.Label className="text-center" style={{width: "100%"}}>
                                     <p className="loginText" style={{marginTop: "40px"}}>
                                         Não tem conta?  
-                                        <a href="https://google.com" style={{display: "inline", color: "#0067CC"}}>
+                                        <a href="register" style={{display: "inline", color: "#0067CC", marginLeft: "5px"}}>
                                             Crie sua conta
                                         </a>
                                     </p>

@@ -1,0 +1,97 @@
+.container-register42{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+        
+}
+
+.register-box42{
+    background-color: #E5E5E5;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.register-cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.registerIcon{
+    font-size: 60px;
+    padding: 17px 10px 10px 10px;
+    margin-top: 2px;
+}
+
+.check-box-cont{
+    text-align: center;
+    padding: 40px;
+}
+
+.register-button{
+    margin: 0px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: normal;
+    text-align: center;
+    width:360px;
+    background:#0067CC;
+    color:#FFFFFF;
+    border: none;
+    cursor:pointer;
+    display:flex;
+    font-size: 16px;
+}
+
+.register-button:link,
+.register-button:visited{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+    position: relative;
+}
+
+.register-button:hover {
+    background-color: #0067CC;
+    border: white;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+}
+
+
+.register-button::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #0067CC;
+    transition: all .4s;
+}
+
+.register-button:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .container-register42{
+        padding: 0px;
+    }
+}
