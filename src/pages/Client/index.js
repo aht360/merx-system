@@ -6,6 +6,7 @@ import CheckCard from '../../Components/CheckCard/index';
 import CoustCardRow from '../../Components/CoustCardRow/index';
 import ProgressBar from '../../Components/ProgressBar/index';
 import EconomyGraph from '../../Components/EconomyGraph/index';
+import ConsumeLine from '../../Components/ConsumeLine/index';
 import Footer from '../../Components/Footer/index';
 
 import './style.css';
@@ -19,6 +20,8 @@ export default function Main(){
             <ProgressBar value="50"/>
             <CoustCardRow />
             <EconomyGraph />
+            <ConsumeLine />
+
 
             <Footer />
         </div>

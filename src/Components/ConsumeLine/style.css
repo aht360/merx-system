@@ -1,0 +1,17 @@
+.consumeLine-container-master{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    
+}
+.consumeLine-container{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*
+    margin-left: 50%;
+    transform: translateX(-50%);
+    */
+    flex-wrap: wrap;
+}

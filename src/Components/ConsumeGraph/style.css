@@ -1,0 +1,39 @@
+.consumeGraph-container{
+    width: 445px;
+    height: 356px;
+    background-color: white;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.consume-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 0px 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #EBEFF2;;
+}
+
+.consume-title{
+    font-weight: bold;
+    font-size: 24px;
+    color: #192A3E;
+}
+
+.consume-subtitle{
+    font-weight: normal;
+    font-size: 18px;
+    color: #192A3E;
+}
+
+@media only screen and (max-width: 1200px){
+    .consumeGraph-container{
+        width: 100%;
+    }
+
+}

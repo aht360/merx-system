@@ -32,7 +32,7 @@ class SimpleLineChart extends Component {
         return (
             <div className="container-econimyGraph">
                 <b className="title-graphic">Economia Acumulada</b>
-                <div style={{ width: '100%', height: 300 }}>
+                <div style={{ width: '100%', height: 250 }}>
                     <ResponsiveContainer>
                         <AreaChart 
                             data={data}
