@@ -5,7 +5,7 @@ import ClientInfo from '../../Components/ClientInfo/index';
 import CheckCard from '../../Components/CheckCard/index';
 import CoustCardRow from '../../Components/CoustCardRow/index';
 import ProgressBar from '../../Components/ProgressBar/index';
-
+import EconomyGraph from '../../Components/EconomyGraph/index';
 import Footer from '../../Components/Footer/index';
 
 import './style.css';
@@ -18,6 +18,8 @@ export default function Main(){
             <CheckCard />
             <ProgressBar value="50"/>
             <CoustCardRow />
+            <EconomyGraph />
+
             <Footer />
         </div>
     )

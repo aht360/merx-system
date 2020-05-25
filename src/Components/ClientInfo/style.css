@@ -1,7 +1,6 @@
 .clientInfo-container{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     padding: 93px 0px 50px 130px;
     background-color: #E5E5E5;
 
@@ -10,7 +9,6 @@
 .clientInfo-display-row{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .clientInfo-display-column{
@@ -57,11 +55,16 @@
 
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 600px){
+
+    .clientInfo-display-row{
+        flex-wrap: wrap;
+    }
     .clientInfo-container{
         padding: 0px;
         margin-top: 30px;
         text-align: center;
+        flex-wrap: wrap;
 
     }
 
