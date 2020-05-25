@@ -1,0 +1,51 @@
+.container-CoustCardItem{
+    width: 380px;
+    background: #FFFFFF;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    border-left-style: solid;
+    border-left-color: #0067CC;
+    border-left-width: 3px;
+    padding: 15px;
+    transition: all .3s linear;
+    color: rgb(53, 53, 53);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.container-CoustCardItem:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    color: black;
+
+
+
+}
+
+
+.coustCardItem-title{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.coustCardItem-content{
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.coutCardItem-value{
+    margin-left: 10px;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .container-CoustCardItem{
+        width: 100%;
+        margin: 15px;
+    }
+}

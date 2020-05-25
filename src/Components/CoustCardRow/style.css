@@ -1,0 +1,15 @@
+.container-CoustCard{
+    display: flex;
+    justify-content: center;
+}
+
+.container-CoustCardRow{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 0px;
+    cursor: default;
+    width: 1200px;
+    flex-wrap: wrap;
+}

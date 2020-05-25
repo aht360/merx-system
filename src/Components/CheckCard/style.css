@@ -17,18 +17,21 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    transition: all .3s linear;
 }
 
-.card-checkbox:hover{
-    transform: scale(1.01);
-}
 
 .card-checkbox-item{
     width: 200px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: all .3s linear;
+    color: rgb(53, 53, 53);
+}
+
+.card-checkbox-item:hover{
+    transform: translateY(-3px);
+    color: black;
 }
 
 .card-checkbox-item-title{
@@ -56,6 +59,8 @@
         width: fit-content;
         height: fit-content;
         padding-top: 10px;
+
+        margin: 15px;
     }
 
     .card-checkbox-item{

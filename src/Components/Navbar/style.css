@@ -47,7 +47,7 @@
     left: 0;
     right: 100%;
     bottom: 0;
-    background: black;
+    background: rgb(212, 212, 212);
     height: 2px;
     -webkit-transition-property: right;
     transition-property: right;
