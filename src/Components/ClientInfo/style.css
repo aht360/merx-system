@@ -1,8 +1,9 @@
 .clientInfo-container{
     display: flex;
     flex-direction: column;
-    padding: 93px 0px 50px 130px;
+    padding: 10px 0px 50px 130px;
     background-color: #E5E5E5;
+    transform: scale(0.8);
 
 }
 
@@ -65,7 +66,7 @@
         margin-top: 30px;
         text-align: center;
         flex-wrap: wrap;
-
+        transform: scale(1);
     }
 
     .clientInfo-box-content{
