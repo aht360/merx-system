@@ -1,0 +1,65 @@
+.container-checkCard{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    cursor: default;
+}
+
+.card-checkbox{
+    width: 1200px;
+    height: 136px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all .3s linear;
+}
+
+.card-checkbox:hover{
+    transform: scale(1.01);
+}
+
+.card-checkbox-item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-checkbox-item-title{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-checkbox-item-content{
+    font-size: 12px;
+}
+
+.iconCardCheck{
+    color: green;
+    transition: all .5s linear;
+
+}
+
+.iconCardCheck:hover{
+    color: rgb(47, 255, 47);
+}
+
+@media only screen and (max-width: 1200px){
+
+    .card-checkbox{
+        width: fit-content;
+        height: fit-content;
+        padding-top: 10px;
+    }
+
+    .card-checkbox-item{
+        width: 100%;
+        padding: 5px;
+    }
+}

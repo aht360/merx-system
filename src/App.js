@@ -4,6 +4,7 @@ import Main from './pages/Home/index.js';
 import Autoproducao from './pages/Autoproducao/index';
 import MercadoLivre from './pages/MercadoLivre/index';
 import Register from './pages/Register/index';
+import Client from './pages/Client/index';
 
 import './App.css';
 
@@ -11,10 +12,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Main}/>
-        <Autoproducao path="/autoproducao" component={Autoproducao}/>
-        <MercadoLivre path="/mercado-livre" component={MercadoLivre}/>
-        <Register path="/register" component={Register}/>
+        <Route path="/" exact component={Main} />
+        <Autoproducao path="/autoproducao" component={Autoproducao} />
+        <MercadoLivre path="/mercado-livre" component={MercadoLivre} />
+        <Register path="/register" component={Register} />
+        <Client path="/client" component={Client} />
       </Switch>
     </BrowserRouter>
   );

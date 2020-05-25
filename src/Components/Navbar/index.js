@@ -82,14 +82,14 @@ class App extends Component{
                     <Navbar.Collapse id="responsive-navbar-nav">
 
                         <Nav className="justify-navItems">
-                            <Nav.Link id="navItem-color" style={divStyle} href="/">Início</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick} href="#pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick} href="#negocie">Negocie sua Energia</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} href="#simulacao">Simulação</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} href="mercado-livre">Mercado Livre de Energia</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} href="autoproducao">Autoprodução de Energia</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} href="#pricing">Contato</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} onClick={this.onLoginClick}>Login</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/">Início</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#negocie">Negocie sua Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#simulacao">Simulação</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="mercado-livre">Mercado Livre de Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="autoproducao">Autoprodução de Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#pricing">Contato</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Login</Nav.Link>
                         </Nav>
 
                     </Navbar.Collapse>
