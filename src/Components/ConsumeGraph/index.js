@@ -1,4 +1,5 @@
 import React from 'react';
+import ConsumeGraphContent from '../ConsumeGraphContent/index';
 import './style.css';
 
 
@@ -10,7 +11,9 @@ export default function ConsumeGraph(){
                 <p className="consume-subtitle">Anual MWh</p>
             </div>
             <div className="consume-content">
-                
+                <div>
+                    <ConsumeGraphContent />
+                </div>
             </div>
         </div>
     );

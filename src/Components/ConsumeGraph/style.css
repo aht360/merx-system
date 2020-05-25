@@ -31,9 +31,14 @@
     color: #192A3E;
 }
 
+.consume-content{
+    position: relative;
+}
+
 @media only screen and (max-width: 1200px){
     .consumeGraph-container{
         width: 100%;
+        margin-top: 30px;
     }
 
 }

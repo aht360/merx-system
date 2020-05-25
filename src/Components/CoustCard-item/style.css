@@ -1,5 +1,5 @@
 .container-CoustCardItem{
-    width: 380px;
+    width: 300px;
     background: #FFFFFF;
     border-radius: 4px;
 
@@ -19,18 +19,16 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
     color: black;
 
-
-
 }
 
 
 .coustCardItem-title{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .coustCardItem-content{
-    font-size: 18px;
+    font-size: 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,7 +36,7 @@
 
 .coutCardItem-value{
     margin-left: 10px;
-    font-size: 36px;
+    font-size: 24px;
     letter-spacing: 1px;
 }
 
