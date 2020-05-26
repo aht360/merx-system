@@ -5,6 +5,7 @@ import Autoproducao from './pages/Autoproducao/index';
 import MercadoLivre from './pages/MercadoLivre/index';
 import Register from './pages/Register/index';
 import Client from './pages/Client/index';
+import Simulacao from './pages/Simulacao/index';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
         <MercadoLivre path="/mercado-livre" component={MercadoLivre} />
         <Register path="/register" component={Register} />
         <Client path="/client" component={Client} />
+        <Simulacao path="/Simulacao" component={Simulacao} />
       </Switch>
     </BrowserRouter>
   );
