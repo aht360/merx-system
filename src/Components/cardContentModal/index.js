@@ -6,19 +6,35 @@ import CoustCardRow from '../CoustCardRow/index';
 import AnaliseLine from '../AnaliseLine/index';
 import DownFiles from '../DownFiles/index';
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
 import './style.css';
 
 
 class cardContentModal extends React.Component {
 
   constructor(props, context){
-      
     super(props, context);
+
+    var myDate = props.date;
+    var myContent = props.content;
+    var myStatus = props.status;
+
+
+    
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
+
     this.state = {
-        show: false
+        show: false,
+        myDate,
+        myContent,
+        myStatus
     }
+
+
     
 }
 
@@ -44,7 +60,8 @@ render() {
             >
                 <Modal.Body>
                     <div className="container-modal-Info">
-                        <CardContent date="Abril/2020" content="Certidão Negativa de Falências, Concordância, Recuperação Judicial ou Extrajudicial" status="2" fullWidth="true"/>
+                        <FontAwesomeIcon icon={faTimes} className="close-icon-card" onClick={this.handleClose}/>
+                        <CardContent date={this.state.myDate} content={this.state.myContent} status={this.state.myStatus} fullWidth="true"/>
                         <CoustCardRow />
                         <AnaliseLine />
                         <DownFiles />

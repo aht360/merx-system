@@ -11,6 +11,7 @@ class CardContent extends Component {
         var date = props.date;
         var text = props.content;
         var fullWidth = props.fullWidth;
+        var status = props.status;
         var widthContent;
         var borderColor;
 
@@ -42,7 +43,8 @@ class CardContent extends Component {
             date,
             text,
             borderColor,
-            widthContent
+            widthContent,
+            status
         }
 
     }
@@ -93,24 +95,32 @@ class CardContent extends Component {
         }
 
         return (
-            <div className="cardContent-container" style={divStyle} onClick={this.onLoginClick}>
-                <CardContentModal ref={this.loginModalRef} ></CardContentModal>
-                <div className="cardContent-header">
-                    <p className="cardContent-title">
-                        {this.state.date}
-                    </p>
-                    <div className="icon-box-card">
-                        {chooseRender()}
+            <div>
+                <CardContentModal date={this.state.date} content={this.state.text} status={this.state.status} fullWidth="true" ref={this.loginModalRef} ></CardContentModal>
+
+                <div className="cardContent-container" style={divStyle} onClick={this.onLoginClick}>
+
+                
+                    <div className="cardContent-header">
+                        <p className="cardContent-title">
+                            {this.state.date}
+                        </p>
+
+                        <div className="icon-box-card">
+                            {chooseRender()}
+                        </div>
+                        
                     </div>
-                    
+        
+                    <div className="cardContent-textBox">
+
+                        <p className="cardContent-text">
+                            {this.state.text}
+                        </p>
+
+                    </div>
+        
                 </div>
-    
-                <div className="cardContent-textBox">
-                    <p className="cardContent-text">
-                        {this.state.text}
-                    </p>
-                </div>
-    
             </div>
         );
 

@@ -10,7 +10,7 @@ export default function ConsumeGraph(){
                 <p className="consume-title-analise">Análise de contratação</p>
             </div>
 
-            <div style={{display: "flex", flexDirection: "column"}}>
+            <div style={{display: "flex", flexDirection: "column", fontSize: "14px"}}>
 
                 <div style={{display: "flex", justifyContent: "space-around", width: "100%"}}>
                     <p style={{textAlign: "left"}}>Energia contratada</p>

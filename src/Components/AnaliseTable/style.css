@@ -10,6 +10,12 @@
 
 .consume-title-analise{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     color: #192A3E;
+}
+
+@media only screen and (max-width: 749px){
+    .AnaliseTable-container{
+        width: 100%;
+    }
 }
