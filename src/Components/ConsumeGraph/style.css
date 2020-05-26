@@ -32,7 +32,24 @@
 }
 
 .consume-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
+}
+
+.pieChart-img{
+    width: 200px;
+    margin-top: 30px;
+}
+
+.inside-chart{
+    position: absolute;
+    left: 22%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 1200px){
