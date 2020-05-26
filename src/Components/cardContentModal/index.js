@@ -62,7 +62,7 @@ render() {
                     <div className="container-modal-Info">
                         <FontAwesomeIcon icon={faTimes} className="close-icon-card" onClick={this.handleClose}/>
                         <CardContent date={this.state.myDate} content={this.state.myContent} status={this.state.myStatus} fullWidth="true"/>
-                        <CoustCardRow />
+                        <CoustCardRow bigger="false"/>
                         <AnaliseLine />
                         <DownFiles />
                     </div>

@@ -19,7 +19,7 @@ export default function Main(){
             <ClientInfo />
             <CheckCard />
             <ProgressBar value="50"/>
-            <CoustCardRow />
+            <CoustCardRow bigger = "true"/>
             <EconomyGraph />
             <ConsumeLine />
             <CardsGrid />
