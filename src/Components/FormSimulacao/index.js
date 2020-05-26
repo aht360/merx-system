@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Form, Row, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import './style.css';
 
 export default function FormSimulacao(){
