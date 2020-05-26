@@ -9,7 +9,8 @@ class CoustCardItem extends Component{
         var borderColor;
 
         if(props.bigger === "true"){ // Client Section
-            widthDimension = "32.5%";
+            
+            widthDimension = "393px";
         }
         else{ // Modal Card
             widthDimension = "235px"; 
