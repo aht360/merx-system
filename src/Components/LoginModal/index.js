@@ -50,6 +50,7 @@ render() {
                                 */}
                             
                             </Form.Group>
+
                             {/* 
                             <Form.Group controlId="formGroupSocialLogin">
                                 <Form.Label className="text-center" style={{width: "100%"}}><button className="fb-button">Entrar com Facebook</button></Form.Label>
@@ -70,7 +71,10 @@ render() {
 
 
                             <Form.Group controlId="formGroupContinueButton">
-                                <Form.Label className="text-center" style={{width: "100%"}}><Link to="/client"><button className="fb-button color-change buffer-space-login-2">Continuar</button></Link></Form.Label>
+                                <Form.Label className="text-center" style={{width: "100%"}}>
+                                    <Link to="/">
+                                        <button className="fb-button color-change buffer-space-login-2">Continuar</button>
+                                    </Link></Form.Label>
                             </Form.Group>
 
                             <Form.Group controlId="formGroupFooter">
