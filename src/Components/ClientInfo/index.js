@@ -10,7 +10,7 @@ export default function ClientInfo(){
 
             <h1 className="clientInfo-title">Área do cliente</h1>
 
-            <div className="clientInfo-display-row" style={{alignItems: "center", justifyContent: "space-between", paddingTop: "45px"}}>
+            <div className="clientInfo-display-row" style={{alignItems: "center", justifyContent: "space-around", paddingTop: "45px"}}>
 
                 <div className="clientInfo-avatar-container">
                     <img className="imgSizeAvatar" src={Avatar} alt="pc"/>

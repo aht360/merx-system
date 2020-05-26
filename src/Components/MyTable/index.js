@@ -24,9 +24,9 @@ function createData(mes, consumo, contrato, lastro, status, percent) {
 const rows = [
   createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
   createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faTimes} className="verticalIcon" style={{color: "red"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "yellow"}}/>, '0%'),
+  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>, '0%'),
   createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "yellow"}}/>, '0%'),
+  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>, '0%'),
   createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
   createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faTimes} className="verticalIcon" style={{color: "red"}}/>, '0%')
   
