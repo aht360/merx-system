@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './style.css';
-import { render } from '@testing-library/react';
 
 
 class CoustCardItem extends Component{

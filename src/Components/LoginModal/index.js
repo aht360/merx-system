@@ -3,7 +3,7 @@ import { Modal, Form } from 'react-bootstrap';
 import BlackLogo from "../../Assets/blackLogo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-
+import { Link } from 'react-router-dom'
 import './style.css';
 
 
@@ -70,7 +70,7 @@ render() {
 
 
                             <Form.Group controlId="formGroupContinueButton">
-                                <Form.Label className="text-center" style={{width: "100%"}}><button href="https://google.com" className="fb-button color-change buffer-space-login-2">Continuar</button></Form.Label>
+                                <Form.Label className="text-center" style={{width: "100%"}}><Link to="/client"><button className="fb-button color-change buffer-space-login-2">Continuar</button></Link></Form.Label>
                             </Form.Group>
 
                             <Form.Group controlId="formGroupFooter">
