@@ -1,5 +1,7 @@
 # Merx Energia Website
 
+You can see a preview in thi url: [https://merxenergia.herokuapp.com/]
+
 This website was built using React.
 
 In the project directory, you can run:
