@@ -1,10 +1,16 @@
 # Merx Energia Website
 
-You can see a preview in thi url: [https://merxenergia.herokuapp.com/]
+You can see a preview in this url: [https://merxenergia.herokuapp.com/]
 
 This website was built using React.
 
 In the project directory, you can run:
+
+### `npm install`
+
+To install all dependencies
+
+After that, you can run:
 
 ### `npm start`
 
