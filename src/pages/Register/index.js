@@ -29,7 +29,7 @@ class App extends Component{
     }
 
     state = {
-        name: "",
+        username: "",
         email: "",
         tel: "",
         cpf: "",
@@ -40,17 +40,19 @@ class App extends Component{
 
     handleSignUp = async e => {
         e.preventDefault();
-        const { name, email, tel, cpf, cnpj, password } = this.state;
-        
+        const { username, email, tel, cpf, cnpj, password } = this.state;
 
-        if (!name || !email || !password) {
+        if (!username || !email || !password) {
             alert("Preencha todos os dados para se cadastrar");
           } 
         else {
             try {
-                await api.post("/signUp", { name, email, tel, cpf, cnpj, password });
-                this.props.history.push("/client");
+
+                await api.post("/users", { username, email, tel, cpf, cnpj, password })
+
                 alert('cadastro realizado!');
+                this.props.history.push("/");
+
             } catch (err) {
                 console.log(err);
                 alert("Ocorreu um erro ao registrar sua conta.");
@@ -83,7 +85,7 @@ class App extends Component{
                                 type="text"
                                 placeholder="Nome completo*" 
                                 style={{width: "268px"}}
-                                onChange={e => this.setState({ name: e.target.value })}
+                                onChange={e => this.setState({ username: e.target.value })}
                             />
                         </Form.Group>
 
