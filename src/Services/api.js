@@ -4,7 +4,7 @@ import { getToken } from "./auth";
 
 
 const api = axios.create({
-    baseURL:'https://merxbackend.herokuapp.com',
+    baseURL:'https://merx-server.herokuapp.com/',
     //baseURL: "http://127.0.0.1:3333"
 });
 
