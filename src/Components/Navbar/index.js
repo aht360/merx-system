@@ -4,6 +4,8 @@ import LoginModal from '../../Components/LoginModal/index'
 import { Navbar, Nav } from 'react-bootstrap';
 import './style.css';
 
+import { isAuthenticated, logout, getToken } from '../../Services/auth';
+
 import BlackLogo from "../../Assets/blackLogo.png";
 
 import Logo from "../../Assets/logo.png";
@@ -42,6 +44,7 @@ class App extends Component{
 
 
     }
+
     
    
     loginModalRef = (obj) => { 
@@ -49,9 +52,15 @@ class App extends Component{
     }
 
     onLoginClick = () => {
-    this.showModal();
+        this.showModal();
     }
 
+    onLogoutClick = () => {
+        console.log(getToken());
+        alert('Deslogado!')
+        logout();
+        window.location.reload();
+    }
 
     render(){
 
@@ -89,7 +98,9 @@ class App extends Component{
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="mercado-livre">Mercado Livre de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="autoproducao">Autoprodução de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#pricing">Contato</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Login</Nav.Link>
+                            {!isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Login</Nav.Link>}
+                            {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLogoutClick}>Sair</Nav.Link>}
+                            {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/client">Área do Cliente</Nav.Link>}
                         </Nav>
 
                     </Navbar.Collapse>

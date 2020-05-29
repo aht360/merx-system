@@ -14,14 +14,16 @@ export default function SimulatorVerde(props){
      } = ResultCativo
 
     const {livreDemanda,livreDemandaForaPonta,livreConsumoPonta,livreGerador,livreConsumoForaPonta,
-        livreTarifaDemanda,livreTarifaDemandaForaPonta,livreTarifaConsumoPonta,livreTarifaConsumoForaPonta,
+        livreTarifaDemanda,livreTarifaConsumoPonta,livreTarifaConsumoForaPonta,
         livreTarifaGerador,totalLivreDemanda,totalLivreDemandaForaPonta,totalLivreConsumoPonta,totalLivreConsumoForaPonta,
         totalLivreGerador,energiaACL,energiaACLTarifa,totalEnergiaACL,totalICMS,totalLivre,economia,economiaPorcentagem,livreIcms
         }= ResultLivre 
 
-
+    var livreTarifaDemandaForaPonta = (ResultLivre.livreTarifaDemandaForaPonta)
+    
 
     const{ demanda, demandaFpu, consumoP, consumoPf, demandaP, demandaPu } = inputs
+
     return(
         <Table>
             <table>
@@ -96,7 +98,7 @@ export default function SimulatorVerde(props){
                 <tr>
                     <th>Demanda Fora Ponta:</th>
                     <td>{livreDemandaForaPonta}</td>
-                    <td>{livreTarifaDemandaForaPonta}</td>
+                    <td>->{livreTarifaDemandaForaPonta}</td>
                     <td>{totalLivreDemandaForaPonta}</td>
                 </tr>
                 <tr>
