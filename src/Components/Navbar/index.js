@@ -85,7 +85,7 @@ class App extends Component{
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/">Início</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#negocie">Negocie sua Energia</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Simulação</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="simulacao">Simulação</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="mercado-livre">Mercado Livre de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="autoproducao">Autoprodução de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#pricing">Contato</Nav.Link>

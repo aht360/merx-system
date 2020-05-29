@@ -22,7 +22,7 @@ function App() {
          
         <Client path="/client" component={Client} />
         
-        <Simulacao path="/Simulacao" component={Simulacao} />
+        <Simulacao path="/simulacao" component={Simulacao} />
       </Switch>
     </BrowserRouter>
   );

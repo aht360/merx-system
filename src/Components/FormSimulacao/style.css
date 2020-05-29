@@ -22,6 +22,12 @@
     font-weight: bold;
 }
 
+.table-tarifa-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 1100px){
     .container-formSimulacao-master{
         padding-bottom: 50px;
