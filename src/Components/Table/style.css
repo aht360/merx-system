@@ -17,6 +17,34 @@
     padding: 0px 400px 0px 400px;
 }
 
+.table-column-ml{
+    display: flex;
+    flex-direction: column;
+}
+
+.table-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #CFE7FF;
+    margin: 10px 0px;
+    width: fit-content;
+    align-items: center;
+    line-height: 4px;
+    padding: 0px 15px;
+}
+
+.table-item{
+    text-align: center;
+    font-weight: bold;
+    width: 100px;
+    margin: 0px;
+}
+.table-item-title{
+    width: 300px;
+    margin: 0px
+}
+
 @media only screen and (max-width: 1100px){
     .textBox-table{
         padding: 0px;

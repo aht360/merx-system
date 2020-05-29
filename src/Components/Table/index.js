@@ -1,50 +1,6 @@
 import React from 'react';
 import './style.css';
-import { withStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 
-const StyledTableCell = withStyles((theme) => ({
-    head: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
-    },
-    body: {
-        backgroundColor: '#CFE7FF',
-        /*
-        borderStyle: 'solid',
-        border: '#E5E5E5',
-        borderWidth: '10px',
-        */
-        fontFamily: `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-            sans-serif`,
-        fontSize: 14,
-    },
-}))(TableCell);
-
-const StyledTableRow = withStyles((theme) => ({
-    root: {
-        '&:nth-of-type(odd)': {
-        backgroundColor: '#CFE7FF',
-        },
-    },
-}))(TableRow);
-
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Demanda mínima', '10 MW', '3 MW', '3 MW', '500KW*'),
-    createData('Tensão mínima de fornecimento', '69 Kv', ' ', '69Kv', ' '),
-    createData('Exercício da Opção (consumidor livre)', '1998', '1998', '2000', '1998'),
-    createData('Data ligação do consumidor', ' ', 'Após 08/07/95', ' ', 'Após 08/07/95'),
-];
 
 
 export default function Main(){
@@ -57,33 +13,42 @@ export default function Main(){
                 </p>
             </div>
 
-            <div className="table-box">
-                <TableContainer component={Paper}>
+        <div style={{display: "flex", justifyContent: "center"}}>
 
-                    <Table  aria-label="customized table">
-                        <TableBody>
+            <div className="table-column">
 
-                            {rows.map((row) => (
-                                <StyledTableRow key={row.name}>
-
-                                    <StyledTableCell component="th" scope="row">
-                                        {row.name}
-                                    </StyledTableCell>
-
-                                    <StyledTableCell align="center">{row.calories}</StyledTableCell>
-                                    <StyledTableCell align="center">{row.fat}</StyledTableCell>
-                                    <StyledTableCell align="center">{row.carbs}</StyledTableCell>
-                                    <StyledTableCell align="center">{row.protein}</StyledTableCell>
-
-                                </StyledTableRow>
-                            ))}
-
-                        </TableBody>
-                    </Table>
-
-                </TableContainer>
+                <div className="table-row">
+                    <p className="table-item-title">Demanda mínima</p>
+                    <p className="table-item">10 MW</p>
+                    <p className="table-item">3 MW</p>
+                    <p className="table-item">3 MW</p>
+                    <p className="table-item">500 KW*</p>
+                </div>
+                <div className="table-row">
+                    <p className="table-item-title">Tensão mínima de fornecimento</p>
+                    <p className="table-item">69 Kv </p>
+                    <p className="table-item"></p>
+                    <p className="table-item">69 Kv </p>
+                    <p className="table-item"> </p>
+                </div>
+                <div className="table-row">
+                    <p className="table-item-title">Exercício da opção (consumidor livre)</p>
+                    <p className="table-item">1998</p>
+                    <p className="table-item">1998</p>
+                    <p className="table-item">2000</p>
+                    <p className="table-item">1998 </p>
+                </div>
+                <div className="table-row">
+                    <p className="table-item-title">Data ligação do consumidor</p>
+                    <p className="table-item"></p>
+                    <p className="table-item">Após 08.07.95</p>
+                    <p className="table-item"></p>
+                    <p className="table-item">Após 08.07.95</p>
+                </div>
             </div>
 
+        </div>
+           
 
             <div className="textBox-table">
                 <p className="text-table">

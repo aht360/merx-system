@@ -33,12 +33,12 @@ export default function Modernizacao (){
                     <div className="line-vant">
                         <div className="col-vant">
                             <Fade left>
-                            <p className="table-item">Abertura do mercado livre de energia elétrica</p>
+                            <p className="o-table-item">Abertura do mercado livre de energia elétrica</p>
                             </Fade>
                         </div>
                         <div className="col-vant">
                             <Fade right>
-                            <p className="table-item">2000 kW em 1º.01.2020</p>
+                            <p className="o-table-item">2000 kW em 1º.01.2020</p>
                                 
                             </Fade>
                         </div>
@@ -47,13 +47,13 @@ export default function Modernizacao (){
                     <div className="line-vant">
                         <div className="col-vant">
                             <Fade left>
-                            <p className="table-item">Consumidor residencial escolher seu próprio fornecedor de energia</p>
+                            <p className="o-table-item">Consumidor residencial escolher seu próprio fornecedor de energia</p>
                             </Fade>
                         </div>
                         <div className="col-vant">
                             <Fade right>
                                 
-                            <p className="table-item">1500 kW em 1º.01.2021</p>
+                            <p className="o-table-item">1500 kW em 1º.01.2021</p>
                             </Fade>
                         </div>
                     </div>
@@ -61,13 +61,13 @@ export default function Modernizacao (){
                     <div className="line-vant">
                         <div className="col-vant">
                             <Fade left>
-                            <p className="table-item">Otimização do mercado de curto prazo (MCP)</p>
+                            <p className="o-table-item">Otimização do mercado de curto prazo (MCP)</p>
                             </Fade>
                         </div>
                         <div className="col-vant">
                             <Fade right>
                                 
-                            <p className="table-item">1000 kW em 1º.01.2022</p>
+                            <p className="o-table-item">1000 kW em 1º.01.2022</p>
                             </Fade>
                         </div>
                     </div>
@@ -75,13 +75,13 @@ export default function Modernizacao (){
                     <div className="line-vant">
                         <div className="col-vant">
                             <Fade left>
-                            <p className="table-item">Separação de atacado e varejo</p>
+                            <p className="o-table-item">Separação de atacado e varejo</p>
                             </Fade>
                         </div>
                         <div className="col-vant">
                             <Fade right>
                                 
-                            <p className="table-item">500 kW em 1º.01.2023</p>
+                            <p className="o-table-item">500 kW em 1º.01.2023</p>
                             </Fade>
                         </div>
                     </div>
@@ -89,13 +89,13 @@ export default function Modernizacao (){
                     <div className="line-vant">
                         <div className="col-vant">
                             <Fade left>
-                            <p className="table-item">Criação de uma bolsa organizada para negociação de energia</p>
+                            <p className="o-table-item">Criação de uma bolsa organizada para negociação de energia</p>
                             </Fade>
                         </div>
                         <div className="col-vant">
                             <Fade right>
                                 
-                            <p className="table-item destak">Residencial após 2024</p>
+                            <p className="o-table-item destak">Residencial após 2024</p>
                             </Fade>
                         </div>
                     </div>
