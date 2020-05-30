@@ -105,7 +105,7 @@ class LoginModal extends React.Component {
                                     <Form.Label>Assunto</Form.Label>
 
                                     <Form.Control as="select" custom onChange={e => this.setState({ toSubject: e.target.value })}>
-
+                                        <option>Selecione um assunto</option>
                                         <option>Quero ser um investidor!</option>
                                         <option>Quero ser um cliente!</option>
                                         <option>Quero ser parceiro!</option>
