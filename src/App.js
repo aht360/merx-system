@@ -7,6 +7,7 @@ import Register from './pages/Register/index';
 import Simulacao from './pages/Simulacao/index';
 
 import Client from './pages/Client/index';
+import Perfil from './pages/Perfil/index';
 
 import { isAuthenticated } from './Services/auth';
 
@@ -36,6 +37,7 @@ const Routes = () => (
       <Route path="/register" component={Register} />
       <PrivateRoute path="/client" component={Client} />
       <PrivateRoute path="/simulacao" component={Simulacao} />
+      <PrivateRoute path="/perfil" component={Perfil} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
   </BrowserRouter>

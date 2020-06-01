@@ -11,6 +11,7 @@ import BlackLogo from "../../Assets/blackLogo.png";
 import Logo from "../../Assets/logo.png";
 
 
+
 class App extends Component{
     
     constructor(props){
@@ -39,13 +40,12 @@ class App extends Component{
         this.state = {
             colorBack,
             fontColor,
-            changeColor: setColor
+            changeColor: setColor,
+            name: ''
         }
 
 
     }
-
-    
    
     loginModalRef = (obj) => { 
         this.showModal = obj && obj.handleShow 
@@ -61,6 +61,7 @@ class App extends Component{
         logout();
         window.location.reload();
     }
+
 
     render(){
 
@@ -100,10 +101,9 @@ class App extends Component{
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="autoproducao">Autoprodução de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#pricing">Contato</Nav.Link>
                             {!isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Login</Nav.Link>}
+                            {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="perfil">Perfil</Nav.Link>}
                             {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLogoutClick}>Sair</Nav.Link>}
-                            {/*
-                            {{isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/client">Área do Cliente</Nav.Link>}
-                            */}
+                            
                         </Nav>
 
                     </Navbar.Collapse>
