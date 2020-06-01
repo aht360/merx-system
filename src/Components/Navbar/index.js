@@ -93,7 +93,7 @@ class App extends Component{
 
                         <Nav className="justify-navItems">
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/">Início</Nav.Link>
-                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#negocie">Negocie sua Energia</Nav.Link>
                             {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="simulacao">Simulação</Nav.Link>}
                             {!isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Simulação</Nav.Link>}

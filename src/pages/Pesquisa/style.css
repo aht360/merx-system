@@ -1,0 +1,42 @@
+.btn-pesquisaml{
+    padding: 15px, 30px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #0067CC;
+    border-style: solid;
+    border: transparent;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.data-ml{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.data-ml-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 900px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: solid 1px black;
+}
+
+.data-ml-row-title{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.data-ml-row-content{
+    font-size: 18px;
+    margin-left: 15px;
+}

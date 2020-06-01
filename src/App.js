@@ -5,6 +5,7 @@ import Autoproducao from './pages/Autoproducao/index';
 import MercadoLivre from './pages/MercadoLivre/index';
 import Register from './pages/Register/index';
 import Simulacao from './pages/Simulacao/index';
+import Pesquisa from './pages/Pesquisa/index';
 
 import Client from './pages/Client/index';
 import Perfil from './pages/Perfil/index';
@@ -35,6 +36,7 @@ const Routes = () => (
       <Route path="/autoproducao" component={Autoproducao} />
       <Route path="/mercado-livre" component={MercadoLivre} />
       <Route path="/register" component={Register} />
+      <Route path="/pesquisa-mercado-livre" component={Pesquisa} />
       <PrivateRoute path="/client" component={Client} />
       <PrivateRoute path="/simulacao" component={Simulacao} />
       <PrivateRoute path="/perfil" component={Perfil} />
