@@ -8,7 +8,8 @@ import LoginModal from '../../Components/LoginModal/index';
 import TermsModal from '../../Components/TermsModal/index';
 
 import { withRouter } from "react-router-dom";
-import api from '../../Services/api';
+
+import api from '../../Services/apiSimulation';
 
 class App extends Component{
 
@@ -29,7 +30,7 @@ class App extends Component{
     }
 
     state = {
-        username: "",
+        nome: "",
         email: "",
         tel: "",
         cpf: "",
@@ -40,15 +41,15 @@ class App extends Component{
 
     handleSignUp = async e => {
         e.preventDefault();
-        const { username, email, tel, cpf, cnpj, password } = this.state;
+        const { nome, email, tel, cpf, cnpj, password } = this.state;
 
-        if (!username || !email || !password) {
+        if (!nome || !email || !password) {
             alert("Preencha todos os dados para se cadastrar");
-          } 
+        } 
         else {
             try {
 
-                await api.post("/users", { username, email, tel, cpf, cnpj, password })
+                await api.post("/sessions", { nome, email, tel, cpf, cnpj, password })
 
                 alert('cadastro realizado!');
                 this.props.history.push("/");
@@ -85,7 +86,7 @@ class App extends Component{
                                 type="text"
                                 placeholder="Nome completo*" 
                                 style={{width: "268px"}}
-                                onChange={e => this.setState({ username: e.target.value })}
+                                onChange={e => this.setState({ nome: e.target.value })}
                             />
                         </Form.Group>
 

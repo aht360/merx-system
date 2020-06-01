@@ -6,7 +6,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import './style.css';
 
-import api from '../../Services/api';
+import api from '../../Services/apiSimulation';
+
 import { login } from '../../Services/auth';
 
 class LoginModal extends React.Component {
@@ -39,10 +40,14 @@ class LoginModal extends React.Component {
           this.setState({ error: "Preencha e-mail e senha para continuar!" });
         } else {
             try {
-                const response = await api.post("/sessions", { email, password });
+                const response = await api.post("/authenticate", { email, password });
+
                 login(response.data.token);
-                alert('Logado!')
+
+                alert(`Bem vindo ${response.data.user.nome}`)
+
                 window.location.reload();
+
             } catch (err) {
                 this.setState({
                     error:
