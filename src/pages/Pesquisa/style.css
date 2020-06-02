@@ -4,6 +4,7 @@
     sans-serif;
     background-color: #E5E5E5;
     padding: 30px;
+    min-height: 50vh;
 }
 
 .btn-pesquisaml{
@@ -47,4 +48,16 @@
 .data-ml-row-content{
     font-size: 18px;
     margin-left: 15px;
+}
+
+.search-item{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0px;
+    transition: all .3s linear;
+}
+
+.search-item:hover{
+    background-color: rgb(204, 204, 204);
 }

@@ -1,0 +1,36 @@
+.group{
+    position:relative;
+    margin-top: 5%;
+}
+
+.styledInput{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    width:500px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+
+.styledInput:focus {
+    outline: none;
+}
+
+label{
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:50%;
+    transform: translateX(-50%);
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+.styledInput:focus ~ label, .styledInput:valid ~ label 		{
+    top:-30px;
+    font-size:22px;
+    color:#5264AE;
+}
