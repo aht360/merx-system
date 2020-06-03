@@ -1,77 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
 import Avatar from '../../Assets/avatar-empty.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
-import api from '../../Services/apiSimulation'
+export default function ClientInfo(props){
 
-import { getToken } from '../../Services/auth';
-
-
-export default function ClientInfo(){
-
-    const [ companyCNPJ, setCompCNPJ ] = useState('');
-    const [ Nome, setNome ] = useState('');
-    const [ Sigla, setSigla ] = useState('');
-    const [ InicioACL, setInicioACL ] = useState('');
-    const [ Submercado, setSubmercado ] = useState('');
-    const [ Classe, setClasse ] = useState('');
-    const [ Categoria, setCategoria ] = useState('');
-    const [ AgCC, setAgCC ] = useState('');
-    const [ ContEnerg, setContEnerg ] = useState('');
-    const [ GarantCont, setGarantCont ] = useState('');
-
-    async function getData(){
-
-        const my_token = getToken();
-        
-        try {
-
-            var response = await api.get('/user', {
-                headers: { authorization: 'Bearer ' + my_token }
-            })
-            
-
-        } catch (err) {
-            console.log(err);
-            alert("Erro ao pegar o id do usuario");
-        }
-        
-        const _id = response.data.user_id;
-        
-        
-        try {
-            
-            response = await api.post('/user', {_id},{
-                headers: { authorization: 'Bearer ' + my_token }
-            })
-
-            setCompCNPJ(response.data.user.companyCNPJ);
-
-        } catch (err) {
-            console.log(err);
-            alert("Erro ao pegar os dados do usuario");
-        }
-            
-        response = await api.post('/getCompany', { companyCNPJ });
-
-        console.log(response.data.company)
-        setNome(response.data.company.Nome);
-        setSigla(response.data.company.Sigla);
-        setInicioACL(response.data.company.InicioACL);
-        setSubmercado(response.data.company.Submercado);
-        setClasse(response.data.company.Classe);
-        setCategoria(response.data.company.Categoria);
-        setAgCC(response.data.company.AgCC);
-        setContEnerg(response.data.company.ContEnerg);
-        setGarantCont(response.data.company.GarantCont);
-        
-    }
-
-    getData();
+    const Nome = props.Nome;
+    const companyCNPJ = props.companyCNPJ;
+    const Sigla = props.Sigla;
+    const InicioACL = props.InicioACL;
+    const Submercado = props.Submercado;
+    const Classe = props.Classe;
+    const Categoria = props.Categoria;
+    const AgCC = props.AgCC;
+    const ContEnerg = props.ContEnerg;
+    const GarantCont = props.GarantCont;
 
     return(
+
         <div className="clientInfo-container">
 
             <h1 className="clientInfo-title">Área do cliente</h1>
