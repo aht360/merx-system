@@ -13,7 +13,7 @@ const SearchBox = ({ searchfield, searchChange, submitThis }) => {
                 />
                 <span className="highlight"></span>
                 <span className="bar"></span>
-                <label>Buscar empresa por Nome</label>
+                <label className="label-search">Buscar empresa por Nome</label>
             </div>
         </div>
     );

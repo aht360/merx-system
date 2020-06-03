@@ -78,7 +78,6 @@ class LoginModal extends React.Component {
                                     <Form.Label className="text-center loginTitle" style={{width: "100%"}}><img alt="logo" src={BlackLogo} className="logo-login"></img></Form.Label>
                                     <Form.Label className="text-center loginTitle" style={{width: "100%", fontWeight: "bold"}}>Entrar</Form.Label>
                                     
-                                
                                 </Form.Group>
                                 
                                 <Form.Group controlId="formGroupEmail">
