@@ -10,6 +10,7 @@ import Scroll from '../../Components/Scroll';
 
 import DadosCCEE from '../../Components/DadosCCEE/index';
 import GraficoConsumo from '../../Components/GraficoConsumo/index';
+import GraficoTotal from '../../Components/GraficoTotal/index';
 
 import './style.css';
 
@@ -113,6 +114,7 @@ class App extends Component {
                                 <h1 style={{color: 'black', margin: '20px 0px', fontSize: '26px'}}>{searchfield}</h1>
                                 <DadosCCEE  nome={searchfield}/>
                                 <GraficoConsumo nome={searchfield}/>
+                                <GraficoTotal nome={searchfield} />
                                 <button style={{marginTop: '30px'}} onClick={this.newSearch} className="styled-btn-pesquisa" >Nova pesquisa</button>
                             </div>
 

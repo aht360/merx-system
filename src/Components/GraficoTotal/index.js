@@ -5,7 +5,6 @@ import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
-import './style.css';
 
 class App extends Component{
 
@@ -48,40 +47,40 @@ class App extends Component{
         if(data.length > 2){
             data_graph = [
                 {
-                    name: 'Jan/19', leve: Number(data[0].Jan19) , medio: Number(data[1].Jan19), pesado: Number(data[2].Jan19) , amt: 2400,
+                    name: 'Jan/19', total: Number(data[0].Jan19) + Number(data[1].Jan19) + Number(data[2].Jan19) , amt: 2400,
                 },
                 {
-                    name: 'Fev/19', leve: Number(data[0].Fev19), medio: Number(data[1].Fev19) , pesado: Number(data[2].Fev19) , amt: 2210,
+                    name: 'Fev/19', total: Number(data[0].Fev19) + Number(data[1].Fev19) + Number(data[2].Fev19) , amt: 2210,
                 },
                 {
-                    name: 'Mar/19', leve: Number(data[0].Mar19), medio: Number(data[1].Mar19) , pesado: Number(data[2].Mar19) , amt: 2210,
+                    name: 'Mar/19', total: Number(data[0].Mar19) + Number(data[1].Mar19) + Number(data[2].Mar19) , amt: 2210,
                 },
                 {
-                    name: 'Abr/19', leve: Number(data[0].Abr19), medio: Number(data[1].Abr19) , pesado: Number(data[2].Abr19) , amt: 2210,
+                    name: 'Abr/19', total: Number(data[0].Abr19) + Number(data[1].Abr19) + Number(data[2].Abr19) , amt: 2210,
                 },
                 {
-                    name: 'Mai/19', leve: Number(data[0].Mai19), medio: Number(data[1].Mai19) , pesado: Number(data[2].Mai19) , amt: 2210,
+                    name: 'Mai/19', total: Number(data[0].Mai19) + Number(data[1].Mai19) + Number(data[2].Mai19) , amt: 2210,
                 },
                 {
-                    name: 'Jun/19', leve: Number(data[0].Jun19), medio: Number(data[1].Jun19) , pesado: Number(data[2].Jun19) , amt: 2210,
+                    name: 'Jun/19', total: Number(data[0].Jun19) + Number(data[1].Jun19) + Number(data[2].Jun19) , amt: 2210,
                 },
                 {
-                    name: 'Jul/19', leve: Number(data[0].Jul19), medio: Number(data[1].Jul19) , pesado: Number(data[2].Jul19) , amt: 2210,
+                    name: 'Jul/19', total: Number(data[0].Jul19) + Number(data[1].Jul19) + Number(data[2].Jul19) , amt: 2210,
                 },
                 {
-                    name: 'Ago/19', leve: Number(data[0].Ago19), medio: Number(data[1].Ago19) , pesado: Number(data[2].Ago19) , amt: 2210,
+                    name: 'Ago/19', total: Number(data[0].Ago19) + Number(data[1].Ago19) + Number(data[2].Ago19) , amt: 2210,
                 },
                 {
-                    name: 'Set/19', leve: Number(data[0].Set19), medio: Number(data[1].Set19) , pesado: Number(data[2].Set19) , amt: 2210,
+                    name: 'Set/19', total: Number(data[0].Set19) + Number(data[1].Set19) + Number(data[2].Set19) , amt: 2210,
                 },
                 {
-                    name: 'Out/19', leve: Number(data[0].Out19), medio: Number(data[1].Out19) , pesado: Number(data[2].Out19) , amt: 2210,
+                    name: 'Out/19', total: Number(data[0].Out19) + Number(data[1].Out19) + Number(data[2].Out19) , amt: 2210,
                 },
                 {
-                    name: 'Nov/19', leve: Number(data[0].Nov19), medio: Number(data[1].Nov19) , pesado: Number(data[2].Nov19) , amt: 2210,
+                    name: 'Nov/19', total: Number(data[0].Nov19) + Number(data[1].Nov19) + Number(data[2].Nov19) , amt: 2210,
                 },
                 {
-                    name: 'Dez/19', leve: Number(data[0].Dez19), medio: Number(data[1].Dez19) , pesado: Number(data[2].Dez19) , amt: 2210,
+                    name: 'Dez/19', total: Number(data[0].Dez19) + Number(data[1].Dez19) + Number(data[2].Dez19) , amt: 2210,
                 },
             ];
         }
@@ -90,7 +89,7 @@ class App extends Component{
             <div style={{display: "flex", flexDirection: "row", justifyContent: "center", color: "black"}}>
                 <div style={{display: "flex", flexDirection: "column", marginTop: "50px", backgroundColor: "white", width: "1200px", padding: "30px", borderRadius: "10px", boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.06)"}}>
                     <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                        <p style={{fontSize: "30px", fontWeight: "bold"}}>Gráfico de Consumo por Patamar</p>
+                        <p style={{fontSize: "30px", fontWeight: "bold"}}>Gráfico de Consumo Total</p>
                     </div>
 
                     <BarChart
@@ -106,9 +105,7 @@ class App extends Component{
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="leve" fill="#CFE7FF" />
-                        <Bar dataKey="medio" fill="#69b4ff" />
-                        <Bar dataKey="pesado" fill="#0067CC" />
+                        <Bar dataKey="total" fill="#69b4ff" />
                     </BarChart>
 
                 </div>
