@@ -108,6 +108,9 @@ class App extends Component {
                         }
                         { show === true && 
                             <div>
+                                <img alt="logo" src={BlackLogo} className="logo-login"></img>
+                                <h1 style={{color: 'black', margin: '20px 0px', fontSize: '32px'}}>PESQUISA MERCADO LIVRE</h1>
+                                <h1 style={{color: 'black', margin: '20px 0px', fontSize: '26px'}}>{searchfield}</h1>
                                 <DadosCCEE  nome={searchfield}/>
                                 <GraficoConsumo nome={searchfield}/>
                                 <button style={{marginTop: '30px'}} onClick={this.newSearch} className="styled-btn-pesquisa" >Nova pesquisa</button>
