@@ -12,42 +12,42 @@ export default function CheckCard(){
             <div className="card-checkbox">
 
                 <div className="card-checkbox-item">
-                    <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Empresa</p>
-                    <p className="card-checkbox-item-content">Classe, categoria e informações cadastrais da empresa</p>
+                    <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Energia</p>
+                    <p className="card-checkbox-item-content">Compra de Energia</p>
                 </div>
 
                 <div className="card-checkbox-item">
                     <div className="card-checkbox-item">
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Informações Financeiras</p>
-                        <p className="card-checkbox-item-content">Classe, categoria e informações cadastrais da empresa</p>
+                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Distribuidora</p>
+                        <p className="card-checkbox-item-content">Ajuste e gestão de contratos</p>
                     </div>
                 </div>
 
                 <div className="card-checkbox-item">
                     <div className="card-checkbox-item">
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Contratos e atribuições</p>
-                        <p className="card-checkbox-item-content">Classe, categoria e informações cadastrais da empresa</p>
+                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Informações financeiras</p>
+                        <p className="card-checkbox-item-content">Abertura da Conta Trianon</p>
                     </div>
                 </div>
 
                 <div className="card-checkbox-item">
                     <div className="card-checkbox-item" style={{color: "#C4C4C4"}}>
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck}/> Perfil de agente</p>
-                        <p className="card-checkbox-item-content">Perfis de atuação no mercado</p>
+                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck}/> CCEE</p>
+                        <p className="card-checkbox-item-content">Processo de aprovação na CCEE</p>
                     </div>
                 </div>
 
                 <div className="card-checkbox-item">
                     <div className="card-checkbox-item" style={{color: "#C4C4C4"}}>
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck}/> Documentos</p>
-                        <p className="card-checkbox-item-content">Documentos vinculados ao cadastro da organização</p>
+                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck}/> Adequação da Medição</p>
+                        <p className="card-checkbox-item-content">Ajuste físico da Medição</p>
                     </div>
                 </div>
 
                 <div className="card-checkbox-item">
                     <div className="card-checkbox-item" style={{color: "#C4C4C4"}}>
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck}/> Resumo</p>
-                        <p className="card-checkbox-item-content">Resumo das informações cadastrais da empresa</p>
+                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck}/> Aprovação</p>
+                        <p className="card-checkbox-item-content">Consumidor Livre</p>
                     </div>
                 </div>
                 

@@ -101,7 +101,7 @@ class App extends Component{
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="autoproducao">Autoprodução de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#pricing">Contato</Nav.Link>
                             {!isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Login</Nav.Link>}
-                            {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="perfil">Perfil</Nav.Link>}
+                            {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="client">Perfil</Nav.Link>}
                             {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLogoutClick}>Sair</Nav.Link>}
                             
                         </Nav>
