@@ -61,3 +61,21 @@
 .search-item:hover{
     background-color: rgb(204, 204, 204);
 }
+
+.styled-btn-pesquisa{
+    padding: 5px 50px;
+    font-weight: bold;
+    background-color: #0067CC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.styled-btn-pesquisa:hover{
+    
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    transition: all .3s linear;
+}

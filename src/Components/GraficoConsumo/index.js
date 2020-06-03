@@ -1,6 +1,10 @@
 import React, { Component }  from 'react';
 import api from '../../Services/apiSimulation'
 
+import {
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
+
 import './style.css';
 
 class App extends Component{
@@ -20,7 +24,6 @@ class App extends Component{
         try {
             var response = await api.post("/DadosConsumo", { NomeAgente });
             this.setState({data: response.data});
-            
             if(response.data.length !== 0){
                 this.setState({erro: true});
 
@@ -32,62 +35,87 @@ class App extends Component{
         }
     }
 
+    
 
-    render(){        
 
-        return(
-            <div>
-                { this.state.data[0] !== undefined && 
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center", color: "black"}}>
-                        <div style={{display: "flex", flexDirection: "column", marginTop: "50px", backgroundColor: "white", width: "1400px", padding: "30px", borderRadius: "10px", boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.06)"}}>
-                            <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                                <p style={{fontSize: "30px", fontWeight: "bold"}}>Gráfico Consumo</p>
-                            </div>
-                            
-                            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px', fontSize: "12px"}}>
-                                <p style={{width: "100px"}}>Cód Perfil</p>
-                                <p style={{width: "100px"}}>Patamar</p>
-                                <p style={{width: "100px"}}>Jan19</p>
-                                <p style={{width: "100px"}}>Fev19</p>
-                                <p style={{width: "100px"}}>Mar19</p>
-                                <p style={{width: "100px"}}>Abr19</p>
-                                <p style={{width: "100px"}}>Mai19</p>
-                                <p style={{width: "100px"}}>Jun19</p>
-                                <p style={{width: "100px"}}>Jul19</p>
-                                <p style={{width: "100px"}}>Ago19</p>
-                                <p style={{width: "100px"}}>Set19</p>
-                                <p style={{width: "100px"}}>Out19</p>
-                                <p style={{width: "100px"}}>Nov19</p>
-                                <p style={{width: "100px"}}>Dez19</p>
-                            </div>
-                            {
-                            this.state.data.map(item => (
-                                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px', fontSize: "12px"}}>
-                                    <p style={{width: "100px"}}>{item.CodPerfil}</p>
-                                    <p style={{width: "100px"}}>{item.Patamar}</p>
-                                    <p style={{width: "100px"}}>{item.Jan19}</p>
-                                    <p style={{width: "100px"}}>{item.Fev19}</p>
-                                    <p style={{width: "100px"}}>{item.Mar19}</p>
-                                    <p style={{width: "100px"}}>{item.Abr19}</p>
-                                    <p style={{width: "100px"}}>{item.Mai19}</p>
-                                    <p style={{width: "100px"}}>{item.Jun19}</p>
-                                    <p style={{width: "100px"}}>{item.Jul19}</p>
-                                    <p style={{width: "100px"}}>{item.Ago19}</p>
-                                    <p style={{width: "100px"}}>{item.Set19}</p>
-                                    <p style={{width: "100px"}}>{item.Out19}</p>
-                                    <p style={{width: "100px"}}>{item.Nov19}</p>
-                                    <p style={{width: "100px"}}>{item.Dez19}</p>
-                                </div>
-                            ))
-                                
-                            }
-                            
-                        </div>
+
+    render(){
+
+        const data = this.state.data;
+        console.log(data)
+        
+        var data_graph = []
+        if(data.length > 2){
+            data_graph = [
+                {
+                    name: 'Jan/19', leve: Number(data[0].Jan19) , medio: Number(data[1].Jan19), pesado: Number(data[2].Jan19) , amt: 2400,
+                },
+                {
+                    name: 'Fev/19', leve: Number(data[0].Fev19), medio: Number(data[1].Fev19) , pesado: Number(data[2].Fev19) , amt: 2210,
+                },
+                {
+                    name: 'Mar/19', leve: Number(data[0].Mar19), medio: Number(data[1].Mar19) , pesado: Number(data[2].Mar19) , amt: 2210,
+                },
+                {
+                    name: 'Abr/19', leve: Number(data[0].Abr19), medio: Number(data[1].Abr19) , pesado: Number(data[2].Abr19) , amt: 2210,
+                },
+                {
+                    name: 'Mai/19', leve: Number(data[0].Mai19), medio: Number(data[1].Mai19) , pesado: Number(data[2].Mai19) , amt: 2210,
+                },
+                {
+                    name: 'Jun/19', leve: Number(data[0].Jun19), medio: Number(data[1].Jun19) , pesado: Number(data[2].Jun19) , amt: 2210,
+                },
+                {
+                    name: 'Jul/19', leve: Number(data[0].Jul19), medio: Number(data[1].Jul19) , pesado: Number(data[2].Jul19) , amt: 2210,
+                },
+                {
+                    name: 'Ago/19', leve: Number(data[0].Ago19), medio: Number(data[1].Ago19) , pesado: Number(data[2].Ago19) , amt: 2210,
+                },
+                {
+                    name: 'Set/19', leve: Number(data[0].Set19), medio: Number(data[1].Set19) , pesado: Number(data[2].Set19) , amt: 2210,
+                },
+                {
+                    name: 'Out/19', leve: Number(data[0].Out19), medio: Number(data[1].Out19) , pesado: Number(data[2].Out19) , amt: 2210,
+                },
+                {
+                    name: 'Nov/19', leve: Number(data[0].Nov19), medio: Number(data[1].Nov19) , pesado: Number(data[2].Nov19) , amt: 2210,
+                },
+                {
+                    name: 'Dez/19', leve: Number(data[0].Dez19), medio: Number(data[1].Dez19) , pesado: Number(data[2].Dez19) , amt: 2210,
+                },
+            ];
+        }
+              
+        return (
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "center", color: "black"}}>
+                <div style={{display: "flex", flexDirection: "column", marginTop: "50px", backgroundColor: "white", width: "1200px", padding: "30px", borderRadius: "10px", boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.06)"}}>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                        <p style={{fontSize: "30px", fontWeight: "bold"}}>Gráfico de Consumo</p>
                     </div>
-                }
-            </div>
-        );
 
+                    <BarChart
+                        width={1200}
+                        height={400}
+                        data={data_graph}
+                        margin={{
+                            top: 5, right: 30, left: 0, bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="leve" fill="#CFE7FF" />
+                        <Bar dataKey="medio" fill="#69b4ff" />
+                        <Bar dataKey="pesado" fill="#0067CC" />
+                    </BarChart>
+
+                </div>
+            </div>
+            
+        );
+        
     }
 }
 

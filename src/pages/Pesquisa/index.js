@@ -110,7 +110,7 @@ class App extends Component {
                             <div>
                                 <DadosCCEE  nome={searchfield}/>
                                 <GraficoConsumo nome={searchfield}/>
-                                <button onClick={this.newSearch}>Nova pesquisa</button>
+                                <button style={{marginTop: '30px'}} onClick={this.newSearch} className="styled-btn-pesquisa" >Nova pesquisa</button>
                             </div>
 
                         }
