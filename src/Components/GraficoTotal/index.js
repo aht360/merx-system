@@ -41,7 +41,6 @@ class App extends Component{
     render(){
 
         const data = this.state.data;
-        console.log(data)
         
         var data_graph = []
         if(data.length > 2){

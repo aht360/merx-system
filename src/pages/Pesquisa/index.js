@@ -8,6 +8,8 @@ import Footer from '../../Components/Footer/index';
 import SearchBox from '../../Components/SearchBox';
 import Scroll from '../../Components/Scroll';
 
+import DadosReceita from '../../Components/DadosReceita/index';
+import QuadroSocietario from '../../Components/QuadroSocietario/index';
 import DadosCCEE from '../../Components/DadosCCEE/index';
 import GraficoConsumo from '../../Components/GraficoConsumo/index';
 import GraficoTotal from '../../Components/GraficoTotal/index';
@@ -35,8 +37,18 @@ class App extends Component {
     async componentDidMount() {
         try {
             const response = await api.get('/ShowDadosCadastrais');
-            let dataName = response.data.map( item => item.NomeAgente );
-            let filtData = dataName.filter((este, i) => dataName.indexOf(este) === i);
+            
+
+            var dataName = {
+                NomeAgente: '',
+                CnpjAgente: ''
+            }
+            
+            dataName.NomeAgente = response.data.map( item => item.NomeAgente );
+             
+            let filtData = dataName.NomeAgente.filter((este, i) => dataName.NomeAgente.indexOf(este) === i);
+           
+
             this.setState({ data: filtData })
             
         } catch (err) {
@@ -110,8 +122,9 @@ class App extends Component {
                         { show === true && 
                             <div>
                                 <img alt="logo" src={BlackLogo} className="logo-login"></img>
-                                <h1 style={{color: 'black', margin: '20px 0px', fontSize: '32px'}}>PESQUISA MERCADO LIVRE</h1>
                                 <h1 style={{color: 'black', margin: '20px 0px', fontSize: '26px'}}>{searchfield}</h1>
+                                <DadosReceita nome={searchfield} />
+                                <QuadroSocietario nome={searchfield} />
                                 <DadosCCEE  nome={searchfield}/>
                                 <GraficoConsumo nome={searchfield}/>
                                 <GraficoTotal nome={searchfield} />

@@ -3,11 +3,6 @@ import api from '../../Services/apiSimulation'
 
 import './style.css';
 
-
-
-
-
-
 class App extends Component{
 
     constructor(props){
@@ -24,7 +19,6 @@ class App extends Component{
         const { NomeAgente } = this.state
         try {
             const response = await api.post("/DadosCadastrais", { NomeAgente });
-            console.log(response.data)
             this.setState({data: response.data});
             
             if(response.data.length !== 0){
