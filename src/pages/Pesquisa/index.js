@@ -11,6 +11,7 @@ import Scroll from '../../Components/Scroll';
 import DadosReceita from '../../Components/DadosReceita/index';
 import QuadroSocietario from '../../Components/QuadroSocietario/index';
 import DadosCCEE from '../../Components/DadosCCEE/index';
+import Lastro from '../../Components/Lastro/index';
 import GraficoConsumo from '../../Components/GraficoConsumo/index';
 import GraficoTotal from '../../Components/GraficoTotal/index';
 
@@ -125,7 +126,8 @@ class App extends Component {
                                 <h1 style={{color: 'black', margin: '20px 0px', fontSize: '26px'}}>{searchfield}</h1>
                                 <DadosReceita nome={searchfield} />
                                 <QuadroSocietario nome={searchfield} />
-                                <DadosCCEE  nome={searchfield}/>
+                                <DadosCCEE  nome={searchfield} />
+                                <Lastro nome={searchfield} />
                                 <GraficoConsumo nome={searchfield}/>
                                 <GraficoTotal nome={searchfield} />
                                 <button style={{marginTop: '30px'}} onClick={this.newSearch} className="styled-btn-pesquisa" >Nova pesquisa</button>

@@ -42,7 +42,6 @@ class App extends Component{
 
         const dataReceita = await apiReceita.get(`/${my_cnpj}`);
         this.setState({ data: dataReceita.data.qsa })
-        console.log(this.state.data)
 
     }
 
@@ -62,18 +61,11 @@ class App extends Component{
 
                         {
                             data.map( item => 
-                                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px', fontSize: "12px"}}>
-                                    <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
+                                <div style={{display: "flex", flexDirection: "row", justifyContent: "flex-start", borderBottom: "solid", borderWidth: '1px', fontSize: "12px"}}>
+                                    <div style={{display: "flex", flexDirection: "row", alignItems: "baseline"}}>
                                         <p style={{fontWeight: "bold", fontSize: "16px"}}>Nome: </p>
                                         <p style={{fontSize: "14px", marginLeft: "10px"}}>{item.nome}</p>
-                                    </div>
-                                    <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
-                                        <p style={{fontWeight: "bold", fontSize: "16px"}}>Representante Legal: </p>
                                         <p style={{fontSize: "14px", marginLeft: "10px"}}>{item.nome_rep_legal}</p>
-                                    </div>
-                                    <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
-                                        <p style={{fontWeight: "bold", fontSize: "16px"}}>País Origem: </p>
-                                        <p style={{fontSize: "14px", marginLeft: "10px"}}>{item.pais_origem}</p>
                                     </div>
                                 </div>
                             )

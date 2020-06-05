@@ -43,7 +43,6 @@ class App extends Component{
 
         const dataReceita = await apiReceita.get(`/${my_cnpj}`);
         this.setState({ data: dataReceita.data })
-        console.log(dataReceita.data)
 
     }
 
@@ -60,18 +59,14 @@ class App extends Component{
                         <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
                             <p style={{fontSize: "30px", fontWeight: "bold"}}>Dados da empresa:</p>
                         </div>
-                        <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px'}}>
-                            <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
+                        <div style={{display: "flex", flexDirection: "row", justifyContent: "center", borderBottom: "solid", borderWidth: '1px'}}>
+                            <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '600px', justifyContent: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Nome: </p>
                                 <p style={{fontSize: "18px", marginLeft: "10px"}}>{data.nome}</p>
                             </div>
-                            <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
+                            <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '600px',  justifyContent: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>UF: </p>
                                 <p style={{fontSize: "18px", marginLeft: "10px"}}>{data.uf}</p>
-                            </div>
-                            <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
-                                <p style={{fontWeight: "bold", fontSize: "22px"}}>Municipio: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{data.municipio}</p>
                             </div>
                         </div>
                         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px'}}>
@@ -84,8 +79,8 @@ class App extends Component{
                                 <p style={{fontSize: "18px", marginLeft: "10px"}}>{data.cep}</p>
                             </div>
                             <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", width: '300px'}}>
-                                <p style={{fontWeight: "bold", fontSize: "22px"}}>Complemento: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{data.complemento}</p>
+                                <p style={{fontWeight: "bold", fontSize: "22px"}}>Municipio: </p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{data.municipio}</p>
                             </div>
                         </div>
                         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px'}}>
