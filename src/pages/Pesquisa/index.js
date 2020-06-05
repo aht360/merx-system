@@ -11,6 +11,7 @@ import Scroll from '../../Components/Scroll';
 import DadosReceita from '../../Components/DadosReceita/index';
 import QuadroSocietario from '../../Components/QuadroSocietario/index';
 import DadosCCEE from '../../Components/DadosCCEE/index';
+import Medias from '../../Components/Medias/index';
 import Lastro from '../../Components/Lastro/index';
 import GraficoConsumo from '../../Components/GraficoConsumo/index';
 import GraficoTotal from '../../Components/GraficoTotal/index';
@@ -127,6 +128,7 @@ class App extends Component {
                                 <DadosReceita nome={searchfield} />
                                 <QuadroSocietario nome={searchfield} />
                                 <DadosCCEE  nome={searchfield} />
+                                <Medias nome={searchfield} />
                                 <Lastro nome={searchfield} />
                                 <GraficoConsumo nome={searchfield}/>
                                 <GraficoTotal nome={searchfield} />
