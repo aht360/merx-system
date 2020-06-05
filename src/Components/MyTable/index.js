@@ -22,13 +22,13 @@ function createData(mes, consumo, contrato, lastro, status, percent) {
 }
 
 const rows = [
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faTimes} className="verticalIcon" style={{color: "red"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
-  createData('Mar/19', '159,13', '192,15','0,02', <FontAwesomeIcon icon={faTimes} className="verticalIcon" style={{color: "red"}}/>, '0%')
+  createData('Mai/20', '953,87', '936,13','-17,74', <FontAwesomeIcon icon={faTimes} className="verticalIcon" style={{color: "red"}}/>, '0%'),
+  createData('Abr/20', '925,12', '928,65','3,09', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
+  createData('Mar/20', '898,23', '932,15','0,02', <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>, '0%'),
+  createData('Fev/20', '950,54', '960,54','9,95', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
+  createData('Jan/20', '873,13', '882,15','31,03', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "#green"}}/>, '0%'),
+  createData('Dez/19', '756,11', '759,31','3,67', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%'),
+  createData('Nov/19', '676,13', '695,01','23,27', <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>, '0%')
   
 ];
 

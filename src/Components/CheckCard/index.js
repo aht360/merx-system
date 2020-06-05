@@ -16,7 +16,7 @@ export default function CheckCard(props){
                     props.EnergiaCheck
                     &&  
                     <div className="card-checkbox-item">
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Energia</p>
+                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Energia ACL</p>
                         <p className="card-checkbox-item-content">Compra de Energia</p>
                     </div>
                 }

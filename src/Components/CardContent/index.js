@@ -69,7 +69,7 @@ class CardContent extends Component {
                 return (
                     <div>
                         <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>
-                        <p style={{fontSize: "10px"}}>Aprovado</p>
+                        <p style={{fontSize: "10px"}}>Completo</p>
                     </div>
                 );
             }
@@ -77,7 +77,7 @@ class CardContent extends Component {
                 return(
                     <div>
                         <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>
-                        <p style={{fontSize: "10px"}}>Possui pendência</p>
+                        <p style={{fontSize: "10px"}}>Em operação</p>
                     </div>
                 );
             }
