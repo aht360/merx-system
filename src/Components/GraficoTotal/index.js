@@ -88,7 +88,7 @@ class App extends Component{
             <div style={{display: "flex", flexDirection: "row", justifyContent: "center", color: "black"}}>
                 <div style={{display: "flex", flexDirection: "column", marginTop: "50px", backgroundColor: "white", width: "1200px", padding: "30px", borderRadius: "10px", boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.06)"}}>
                     <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
-                        <p style={{fontSize: "30px", fontWeight: "bold"}}>Gráfico de Consumo Total</p>
+                        <p style={{fontSize: "30px", fontWeight: "bold"}}>Consumo Total</p>
                     </div>
 
                     <BarChart
@@ -107,7 +107,25 @@ class App extends Component{
                         <Bar dataKey="total" fill="#69b4ff" />
                     </BarChart>
 
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                        {
+                            data_graph.map(item => (
+                                <p style={{width: '100px', fontWeight: 'bold'}} >{item.name}</p>
+                            ))
+                        }
+                    </div>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                        {
+                            data_graph.map(item => (
+                                <p style={{width: '100px'}} >{parseFloat(item.total.toFixed(2))}</p>
+                            ))
+                        }
+                    </div>
+
+
                 </div>
+                    
+
             </div>
             
         );

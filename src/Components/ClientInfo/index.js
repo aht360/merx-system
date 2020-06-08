@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
-import Avatar from '../../Assets/avatar-empty.png';
+import Avatar from '../../Assets/blackLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 export default function ClientInfo(props){
 
@@ -27,6 +27,9 @@ export default function ClientInfo(props){
 
                 <div className="clientInfo-avatar-container">
                     <img className="imgSizeAvatar" src={Avatar} alt="pc"/>
+                    <button className="editAvatar">
+                        <FontAwesomeIcon icon={faEdit} className="iconClientInfo"/>
+                    </button>
                 </div>
 
                 <div className="clientInfo-display-column cel-modifier">

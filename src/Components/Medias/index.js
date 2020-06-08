@@ -44,8 +44,8 @@ class App extends Component{
 
                 Jan19: (Number(response.data[0].Jan19) + Number(response.data[1].Jan19) + Number(response.data[2].Jan19))/744,
                 Fev19: (Number(response.data[0].Fev19) + Number(response.data[1].Fev19) + Number(response.data[2].Fev19))/672,
-                Mar19: (Number(response.data[0].Mar19) + Number(response.data[1].Mar19) + Number(response.data[2].Mar19))/744,
-                Abr19: (Number(response.data[0].Abr19) + Number(response.data[1].Abr19) + Number(response.data[2].Abr19))/720,
+                Mar19: (Number(response.data[0].Mar19) + Number(response.data[1].Mar19) + Number(response.data[2].Mar19))/720,
+                Abr19: (Number(response.data[0].Abr19) + Number(response.data[1].Abr19) + Number(response.data[2].Abr19))/744,
                 Mai19: (Number(response.data[0].Mai19) + Number(response.data[1].Mai19) + Number(response.data[2].Mai19))/744,
                 Jun19: (Number(response.data[0].Jun19) + Number(response.data[1].Jun19) + Number(response.data[2].Jun19))/720,
                 Jul19: (Number(response.data[0].Jul19) + Number(response.data[1].Jul19) + Number(response.data[2].Jul19))/744,
@@ -56,7 +56,7 @@ class App extends Component{
                 Dez19: (Number(response.data[0].Dez19) + Number(response.data[1].Dez19) + Number(response.data[2].Dez19))/744,
             }
 
-            const volume_medio = ( Number(consumo_total_medio.Jan19) + Number(consumo_total_medio.Fev19) + Number(consumo_total_medio.Mar19) + Number(consumo_total_medio.Abr19) + Number(consumo_total_medio.Mai19) + Number(consumo_total_medio.Jun19) + Number(consumo_total_medio.Jul19) + Number(consumo_total_medio.Ago19) + Number(consumo_total_medio.Set19) + Number(consumo_total_medio.Out19) + Number(consumo_total_medio.Nov19) + Number(consumo_total_medio.Dez19))
+            const volume_medio = parseFloat(( Number(consumo_total_medio.Jan19) + Number(consumo_total_medio.Fev19) + Number(consumo_total_medio.Mar19) + Number(consumo_total_medio.Abr19) + Number(consumo_total_medio.Mai19) + Number(consumo_total_medio.Jun19) + Number(consumo_total_medio.Jul19) + Number(consumo_total_medio.Ago19) + Number(consumo_total_medio.Set19) + Number(consumo_total_medio.Out19) + Number(consumo_total_medio.Nov19) + Number(consumo_total_medio.Dez19))/12).toFixed(3)
             
             this.setState({ VolumeMedio: volume_medio })
 
@@ -75,8 +75,8 @@ class App extends Component{
 
             media = media / arr_cons_tot.length;
 
-            const Flex_Max = (arr_cons_tot[11]/media) - 1
-            const Flex_Min = 1 - (arr_cons_tot[0]/media)
+            const Flex_Max = parseFloat((arr_cons_tot[9]/media) - 1).toFixed(4)
+            const Flex_Min = parseFloat(1 - (arr_cons_tot[2]/media)).toFixed(4)
             
             
             this.setState({ FlexMax:  Flex_Max})
@@ -204,6 +204,8 @@ class App extends Component{
                 break;
         }
 
+        US = parseFloat(US.toFixed(3))
+
         this.setState({  usina: US })
 
     }
@@ -213,7 +215,6 @@ class App extends Component{
     }
 
     render(){        
-
         return(
             <div>
                 { this.state.data[0] !== undefined && 
@@ -222,19 +223,19 @@ class App extends Component{
                         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around", borderBottom: "solid", borderWidth: '1px'}}>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Volume Médio: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{this.state.VolumeMedio.toFixed(2)}</p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{this.state.VolumeMedio} MWm</p>
                             </div>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Flex Max: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}> {this.state.FlexMax} </p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}> {(this.state.FlexMax)*100} % </p>
                             </div>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Flex Min: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}> {this.state.FlexMin} </p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}> {(this.state.FlexMin)*100} % </p>
                             </div>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Usina Solar: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{this.state.usina}</p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{this.state.usina} MWp</p>
                             </div>
                         </div>
                          

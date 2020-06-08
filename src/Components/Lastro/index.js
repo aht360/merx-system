@@ -74,8 +74,8 @@ class App extends Component{
         const lastro = {
             Jan19: ((Number(data.Jan19) * 744) - Number(consumo.Jan19)) ,
             Fev19: ((Number(data.Fev19) * 672) - Number(consumo.Fev19)) ,
-            Mar19: ((Number(data.Mar19) * 744) - Number(consumo.Mar19)) ,
-            Abr19: ((Number(data.Abr19) * 720) - Number(consumo.Abr19)),
+            Mar19: ((Number(data.Mar19) * 720) - Number(consumo.Mar19)) ,
+            Abr19: ((Number(data.Abr19) * 744) - Number(consumo.Abr19)),
             Mai19: ((Number(data.Mai19) * 744) - Number(consumo.Mai19)),
             Jun19: ((Number(data.Jun19) * 720) - Number(consumo.Jun19)),
             Jul19: ((Number(data.Jul19) * 744) - Number(consumo.Jul19)) ,
@@ -152,6 +152,21 @@ class App extends Component{
                                 <Legend />
                                 <Bar dataKey="lastro" fill="#69b4ff" />
                             </BarChart>
+
+                            <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                                {
+                                    data_graph.map(item => (
+                                        <p style={{width: '100px', fontWeight: 'bold'}} >{item.name}</p>
+                                    ))
+                                }
+                            </div>
+                            <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+                                {
+                                    data_graph.map(item => (
+                                        <p style={{width: '100px'}} >{parseFloat(item.lastro.toFixed(2))}</p>
+                                    ))
+                                }
+                            </div>
                             
                         </div>
                     </div>

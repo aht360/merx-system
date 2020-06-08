@@ -129,9 +129,9 @@ class App extends Component {
                                 <QuadroSocietario nome={searchfield} />
                                 <DadosCCEE  nome={searchfield} />
                                 <Medias nome={searchfield} />
-                                <Lastro nome={searchfield} />
-                                <GraficoConsumo nome={searchfield}/>
                                 <GraficoTotal nome={searchfield} />
+                                <GraficoConsumo nome={searchfield}/>
+                                <Lastro nome={searchfield} />
                                 <button style={{marginTop: '30px'}} onClick={this.newSearch} className="styled-btn-pesquisa" >Nova pesquisa</button>
                             </div>
 

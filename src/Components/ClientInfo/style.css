@@ -49,6 +49,19 @@
     color: #000000;
 }
 
+.clientInfo-avatar-container{
+    display: flex;
+    flex-direction: column;
+}
+.imgSizeAvatar{
+    width: 150px;
+}
+
+.editAvatar{
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+}
 
 
 @media only screen and (max-width: 600px){
