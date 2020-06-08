@@ -32,7 +32,7 @@ class formSimulacao extends Component{
             usaGerador: 'sim',
             geradorACL: 'sim',
             consumoGerador: '',
-            custoGeracaoDisel: '',
+            custoGeracaoDisel: '1.4',
     
             desconto: '0',
             calc: 'ML',

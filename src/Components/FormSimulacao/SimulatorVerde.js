@@ -19,7 +19,31 @@ export default function SimulatorVerde(props){
             custoGeracaoDisel,energiaACLTarifa,totalLivreDemanda,totalLivreConsumoPonta,
             totalLivreConsumoForaPonta,totalLivreGerador,totalEnergiaACL,livreIcms,totalIcms,
             totalCativo,totalLivre,economiaLivre,economiaPorcentagem
-    }= ResultLivre 
+    }= ResultLivre
+
+
+    var qtdGeradorFormated = qtdGerador;
+
+    if(qtdGeradorFormated !== undefined){
+
+        qtdGeradorFormated = formatQtdGerador(qtdGeradorFormated)
+    }
+
+
+    function formatQtdGerador(e){
+        var formmated = [];
+        var i = 0;
+        console.log(e)
+        for (let index = 2; index < e.length; index++) {
+            if(e[index] !== ','){
+                formmated[i] = e[index];
+                i++;
+            }
+        }
+        return formmated;
+    }
+
+    
 
 
     const{ demanda, demandaFpu, consumoP, consumoPf } = inputs
@@ -78,13 +102,7 @@ export default function SimulatorVerde(props){
                         Tarifas
                     </p>
                     <p className="ResSimulTable">
-                        Faturado sem impostos
-                    </p>
-                    <p className="ResSimulTable">
-                        Fator tributo
-                    </p>
-                    <p className="ResSimulTable">
-                        Faturado com Impostos
+                        Faturado
                     </p>
                 </div>
 
@@ -103,12 +121,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalConsumoPonta}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -129,12 +141,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {totalcativoConsumoPontaFora}
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
                     
                 </div>
 
@@ -153,12 +159,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalDemandaUnica}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -179,12 +179,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {totalDemandaUltrapassagem}
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
                     
                 </div>
 
@@ -196,19 +190,13 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {qtdGerador}
+                        {qtdGeradorFormated}
                     </p>
                     <p className="ResSimulTableContent">
                         {custoGeracaoDisel}
                     </p>
                     <p className="ResSimulTableContent">
                         {totalGerador}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -228,12 +216,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalCativo}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -258,13 +240,7 @@ export default function SimulatorVerde(props){
                         Tarifas
                     </p>
                     <p className="ResSimulTable">
-                        Faturado sem impostos
-                    </p>
-                    <p className="ResSimulTable">
-                        Fator tributo
-                    </p>
-                    <p className="ResSimulTable">
-                        Faturado com Impostos
+                        Faturado
                     </p>
                 </div>
 
@@ -276,19 +252,13 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        70,175
+                        {Number(consumoP) + Number(consumoPf)}
                     </p>
                     <p className="ResSimulTableContent">
                         13,43
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 942,46
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 1.273,59
+                        R${(Number(consumoP) + Number(consumoPf)) * 13.43}
                     </p>
                     
                 </div>
@@ -303,19 +273,13 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        70,175
+                        {Number(consumoP) + Number(consumoPf)}
                     </p>
                     <p className="ResSimulTableContent">
                         41,69
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 2.925,61
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 3.953,53
+                        R${(Number(consumoP) + Number(consumoPf)) * 41.69}
                     </p>
                     
                 </div>
@@ -328,19 +292,13 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        70,175
+                        {Number(consumoP) + Number(consumoPf)}
                     </p>
                     <p className="ResSimulTableContent">
                         62,43
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 4.381,05
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 5.920,34
+                        R${(Number(consumoP) + Number(consumoPf)) * 62.43}
                     </p>
                     
                 </div>
@@ -368,12 +326,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTable">
                         Faturado sem impostos
                     </p>
-                    <p className="ResSimulTable">
-                        Fator tributo
-                    </p>
-                    <p className="ResSimulTable">
-                        Faturado com Impostos
-                    </p>
                 </div>
 
                 <div className="ResSimulTableTitle">
@@ -391,12 +343,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalLivreDemanda}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -417,12 +363,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {totalLivreConsumoPonta}
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
                     
                 </div>
 
@@ -441,12 +381,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalLivreConsumoForaPonta}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -467,12 +401,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {totalLivreGerador}
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
                     
                 </div>
 
@@ -491,12 +419,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalEnergiaACL}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -517,12 +439,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {totalIcms}
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
                     
                 </div>
 
@@ -541,12 +457,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {totalLivre}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
@@ -567,12 +477,6 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {economiaLivre}
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
                     
                 </div>
 
@@ -591,12 +495,6 @@ export default function SimulatorVerde(props){
                     </p>
                     <p className="ResSimulTableContent">
                         {economiaPorcentagem}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
                     </p>
                     
                 </div>
