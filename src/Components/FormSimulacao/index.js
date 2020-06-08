@@ -197,7 +197,7 @@ class formSimulacao extends Component{
                             </Form.Group>
     
                             <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
-                                <Form.Label>Demanda</Form.Label>
+                                <Form.Label>Demanda (kW)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
@@ -209,7 +209,7 @@ class formSimulacao extends Component{
     
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Demanda Fora Ponta Ultrapassagem</Form.Label>
+                                <Form.Label>Demanda Fora Ponta Ultrapassagem (kW)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
@@ -219,7 +219,7 @@ class formSimulacao extends Component{
                             </Form.Group>
     
                             <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
-                                <Form.Label>Consumo de ponta</Form.Label>
+                                <Form.Label>Consumo de ponta (kWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
@@ -231,7 +231,7 @@ class formSimulacao extends Component{
 
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Consumo fora de ponta</Form.Label>
+                                <Form.Label>Consumo fora de ponta (kWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
@@ -256,7 +256,7 @@ class formSimulacao extends Component{
 
                             <div className="formLine">
                                 <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                    <Form.Label>Demanda Ponta</Form.Label>
+                                    <Form.Label>Demanda Ponta (kW)</Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder=""
@@ -266,7 +266,7 @@ class formSimulacao extends Component{
                                 </Form.Group>
         
                                 <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
-                                    <Form.Label>Demanda Ponta Ultrapassagem</Form.Label>
+                                    <Form.Label>Demanda Ponta Ultrapassagem (kW)</Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder=""
@@ -288,7 +288,7 @@ class formSimulacao extends Component{
                             </Form.Group>
     
                             <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
-                                <Form.Label>Consumo Gerador</Form.Label>
+                                <Form.Label>Consumo Gerador (kWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
@@ -302,7 +302,7 @@ class formSimulacao extends Component{
 
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Custo da Geração Disel</Form.Label>
+                                <Form.Label>Custo da Geração Disel (R$/kWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""

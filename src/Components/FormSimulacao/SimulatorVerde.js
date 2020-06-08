@@ -1,5 +1,4 @@
 import React from 'react'
-import {Table} from './styled.js'
 
 import avatar from '../../Assets/avatar-empty.png'
 import blackLogo from '../../Assets/blackLogo.png'
@@ -103,13 +102,13 @@ export default function SimulatorVerde(props){
                         {cativoConsumoPonta}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
                         {totalConsumoPonta}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
                     </p>
                     
                 </div>
@@ -128,113 +127,113 @@ export default function SimulatorVerde(props){
                         {cativoConsumoPontaFora}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
                         {totalcativoConsumoPontaFora}
                     </p>
-                    
-                </div>
-
-                <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TUSD demanda ponta
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$/MWh
-                    </p>
-                    <p className="ResSimulTableContent">
-                        64,588
-                    </p>
-                    <p className="ResSimulTableContent">
-                        1789,64
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 10.000,21
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TUSD demanda fora de Ponta
+                        Demanda
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {demanda}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {cativoDemandaUnica}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalDemandaUnica}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TUSD encargos ponta
+                        Demanda Ultrapassagem
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {demandaFpu}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {cativoDemandaUltrapassagem}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalDemandaUltrapassagem}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TURDS encargo fora ponta
+                        Gerador
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {qtdGerador}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {custoGeracaoDisel}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalGerador}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent">
+                        Total
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$/MWh
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {totalCativo}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
                     </p>
                     
                 </div>
@@ -271,25 +270,25 @@ export default function SimulatorVerde(props){
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        Consumo Ponta
+                        Bandeira Amarela
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        70,175
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        13,43
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        R$ 942,46
                     </p>
                     <p className="ResSimulTableContent">
                         0,74
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        R$ 1.273,59
                     </p>
                     
                 </div>
@@ -298,25 +297,50 @@ export default function SimulatorVerde(props){
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        Consumo fora de ponta
+                        Bandeira Vermelha 1
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        70,175
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        41,69
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        R$ 2.925,61
                     </p>
                     <p className="ResSimulTableContent">
                         0,74
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        R$ 3.953,53
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent">
+                        Bandeira Vermelha 2
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$/MWh
+                    </p>
+                    <p className="ResSimulTableContent">
+                        70,175
+                    </p>
+                    <p className="ResSimulTableContent">
+                        62,43
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$ 4.381,05
+                    </p>
+                    <p className="ResSimulTableContent">
+                        0,74
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$ 5.920,34
                     </p>
                     
                 </div>
@@ -354,25 +378,50 @@ export default function SimulatorVerde(props){
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
+                        Demanda
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$/MWh
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {livreDemandaUnica}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {tarifaLivreDemandaUnica}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {totalLivreDemanda}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent">
                         Consumo Ponta
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {livreConsumoPonta}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {tarifaLivreConsumoPonta}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalLivreConsumoPonta}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
@@ -385,247 +434,177 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {livreConsumoPontaFora}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {tarifaLivreConsumoForaPonta}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalLivreConsumoForaPonta}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
-                    </p>
-                    
-                </div>
-
-                <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent">
-                        TUSD demanda ponta
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$/MWh
-                    </p>
-                    <p className="ResSimulTableContent">
-                        64,588
-                    </p>
-                    <p className="ResSimulTableContent">
-                        1789,64
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 10.000,21
-                    </p>
-                    <p className="ResSimulTableContent">
-                        0,74
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TUSD demanda fora de Ponta
+                        Gerador
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {livreGerador}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {custoGeracaoDisel}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalLivreGerador}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TUSD encargos ponta
+                        Energia ACL
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        {energiaACL}
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {energiaACLTarifa}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalEnergiaACL}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
                     </p>
                     
                 </div>
 
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent">
-                        TURDS encargo fora ponta
+                        ICMS
                     </p>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        64,588
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        1789,64
+                        {livreIcms}
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 10.000,21
+                        {totalIcms}
                     </p>
                     <p className="ResSimulTableContent">
-                        0,74
+                        -
                     </p>
                     <p className="ResSimulTableContent">
-                        R$ 19.488,86
+                        -
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent">
+                        Total Livre
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$/MWh
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {totalLivre}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent">
+                        Economia
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$/MWh
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {economiaLivre}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent">
+                        Porcentagem
+                    </p>
+                    <p className="ResSimulTableContent">
+                        R$/MWh
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        {economiaPorcentagem}
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
+                    </p>
+                    <p className="ResSimulTableContent">
+                        -
                     </p>
                     
                 </div>
 
             </div>
 
-            
-            
-            
-            <Table>
-                <table>
-                    <tr>
-                        <th>Cativo</th>
-                        <th>Qtd</th>
-                        <th>Tarifa</th>
-                        <th>Total</th>
-                    </tr>
-                    <tr>
-                        <th>Demanda:</th>
-                        <td>{demanda}</td>
-                        <td>{cativoDemandaUnica}</td>
-                        <td>{totalDemandaUnica}</td>
-                    </tr>
-                    <tr>
-                        <th>Demanda Ultrapassagem:</th>
-                        <td>{demandaFpu}</td>
-                        <td>{cativoDemandaUltrapassagem}</td>
-                        <td>{totalDemandaUltrapassagem}</td>
-                    </tr>
-                    <tr>
-                        <th>Consumo ponta:</th>
-                        <td>{consumoP}</td>
-                        <td>{cativoConsumoPonta}</td>
-                        <td>{totalConsumoPonta}</td>
-                    </tr>
-                    <tr>
-                        <th>Consumo ponta Fora:</th>
-                        <td>{consumoPf}</td>
-                        <td>{cativoConsumoPontaFora}</td>
-                        <td>{totalcativoConsumoPontaFora}</td>
-                    </tr>
-                    <tr>
-                        <th>Gerador:</th>
-                        <td>{qtdGerador}</td>
-                        <td>{custoGeracaoDisel}</td>
-                        <td>{totalGerador}</td>
-                    </tr>
-                    <tr>
-                        <th>Total:</th>
-                        <td></td>
-                        <td></td>
-                        <td>{totalCativo}</td>
-                    </tr>
-                </table>
-            
-                <table>
-                    <tr>
-                        <th>Livre</th>
-                        <th> Qtd</th>
-                        <th> tarifa</th>
-                        <th>total</th>
-                    </tr>
-                    <tr>
-                        <th>Demanda:</th>
-                        <td>{livreDemandaUnica}</td>
-                        <td>{tarifaLivreDemandaUnica}</td>
-                        <td>{totalLivreDemanda}</td>
-                    </tr>
-                    <tr>
-                        <th>Consumo Ponta:</th>
-                        <td>{livreConsumoPonta}</td>
-                        <td>{tarifaLivreConsumoPonta}</td>
-                        <td>{totalLivreConsumoPonta}</td>
-                    </tr>
-                    <tr>
-                        <th>Consumo Fora Ponta:</th>
-                        <td>{livreConsumoPontaFora}</td>
-                        <td>{tarifaLivreConsumoForaPonta}</td>
-                        <td>{totalLivreConsumoForaPonta}</td>
-                    </tr>
-                    <tr>
-                        <th>Gerador:</th>
-                        <td>{livreGerador}</td>
-                        <td>{custoGeracaoDisel}</td>
-                        <td>{totalLivreGerador}</td>
-                    </tr>
-                    <tr>
-                        <th>Energia ACL:</th>
-                        <td>{energiaACL}</td>
-                        <td>{energiaACLTarifa}</td>
-                        <td>{totalEnergiaACL}</td>
-                    </tr>
-                    <tr>
-                        <th>ICMS:</th>
-                        <td></td>
-                        <td>{livreIcms}</td>
-                        <td>{totalIcms}</td>
-                    </tr>
-                    <tr>
-                        <th>Total Livre:</th>
-                        <td></td>
-                        <td></td>
-                        <td>{totalLivre}</td>
-                    </tr>
-                    <tr>
-                        <th>Economia:</th>
-                        <td></td>
-                        <td></td>
-                        <td>{economiaLivre}</td>
-                    </tr>
-                    <tr>
-                        <th>Porcetagem:</th>
-                        <td></td>
-                        <td></td>
-                        <td>{economiaPorcentagem}</td>
-                    </tr>
-                </table>
-                
-            </Table>
-            
         </div>
 
-
-        
-
-
-
     )
-
     
 }
