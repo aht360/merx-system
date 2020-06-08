@@ -66,15 +66,12 @@ class formSimulacao extends Component{
     }
 
     handleSimulation = async e => {
-
-        
-
         e.preventDefault();
-
+        
         const planilha = this.state;
 
         try {
-
+            console.log(planilha)
             const results = await apiSimulation.post('simulacao', planilha);
             
             const { input, ResultCativo, ResultLivre } = results.data;
@@ -87,13 +84,25 @@ class formSimulacao extends Component{
             console.log(this.state.input)
             console.log(this.state.ResultCativo)
             console.log(this.state.ResultLivre)
-            alert('Será enviado para você, um Email com os detalhes da sua simulação.');
+            alert('Será enviado para você um email com os detalhes da sua simulação.');
             
         
         } catch (err) {
             alert('Erro, tente novamente.');
         }
         
+    }
+
+
+    handleConsumoPf = async (e) => {
+        await this.setState({ consumoPf: e.target.value.replace(',','.') })
+        
+        this.setState({ consumoGerador: (0.11*(this.state.consumoPf)) - this.state.consumoP })
+    }
+
+    handleConsumoP = async (e) => {
+        await this.setState({ consumoP: e.target.value.replace(',','.') })
+        this.setState({ consumoGerador: (0.11*(this.state.consumoPf)) - this.state.consumoP })
     }
 
 
@@ -214,7 +223,7 @@ class formSimulacao extends Component{
                                 <Form.Control
                                     type="text"
                                     placeholder=""
-                                    onChange={e => this.setState({ consumoP: e.target.value.replace(',','.') })}
+                                    onChange={this.handleConsumoP}
                                     require
                                 />
                             </Form.Group>
@@ -226,7 +235,7 @@ class formSimulacao extends Component{
                                 <Form.Control
                                     type="text"
                                     placeholder=""
-                                    onChange={e => this.setState({ consumoPf: e.target.value.replace(',','.') })}
+                                    onChange={this.handleConsumoPf}
                                     require
                                 />
                             </Form.Group>
@@ -283,7 +292,8 @@ class formSimulacao extends Component{
                                 <Form.Control
                                     type="text"
                                     placeholder=""
-                                    onChange={e => this.setState({ consumoGerador: e.target.value.replace(',','.') })}
+                                    onChange={e => (this.setState({ consumoGerador: e.target.value.replace(',','.') }))}
+                                    value={this.state.consumoGerador}
                                     require
                                 />
                                 
@@ -298,6 +308,7 @@ class formSimulacao extends Component{
                                     placeholder=""
                                     onChange={e => this.setState({ custoGeracaoDisel: e.target.value.replace(',','.') })}
                                     require
+                                    defaultValue="1,4"
                                 />
                             </Form.Group>
     
