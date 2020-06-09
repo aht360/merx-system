@@ -31,6 +31,7 @@
 
 
 .resultadoSimulacaoContainer{
+    font-family: 'Encode Sans', sans-serif;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -43,8 +44,10 @@
     width: 1200px;
 }
 .titleResultadoSimulacao{
-    font-size: 38px;
+    font-size: 44px;
     font-weight: bold;
+    letter-spacing: 0.02em;
+
 }
 
 .headerLeft{
@@ -55,11 +58,11 @@
 .headerRight{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .logoSizeResultado{
-    width: 120px;
+    width: 89px;
     margin-left: 50%;
     transform: translateX(-50%);
     
@@ -81,18 +84,37 @@
 
 .headerLeftContentTitle{
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+}
+
+.headerLeftContentSubTitle{
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    line-height: 5px;
 }
 
 .headerRightContentTitle{
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+}
+.headerRightContentSubTitle{
+    font-size: 16px;
+    letter-spacing: 0.1em;
 }
 
 .interTitle{
-    margin-top: 30px;
+    margin-top: 110px;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 24px;
+    letter-spacing: 0.01em;
 }
 
 .containerResSimul{
@@ -103,7 +125,7 @@
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
     border-radius: 4px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .ResSimulTableTitle{
@@ -113,25 +135,26 @@
 }
 
 .containerResSimulTitle{
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #EBEFF2;
     padding: 10px 20px;
-    
 }
 
 
 .ResSimulTable{
     width: 172px;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 12px;
     text-align: center;
-    font-weight: bold;
+    letter-spacing: 0.1em;
     
 }
 .ResSimulTableContent{
+    text-align: center;
     width: 172px;
     font-size: 12px;
-    text-align: center;
+    letter-spacing: 0.1em;
 }
 
 

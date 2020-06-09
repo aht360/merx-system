@@ -235,7 +235,7 @@ class App extends Component{
                             </div>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Usina Solar: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{this.state.usina} MWp</p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}>{parseFloat(this.state.usina).toFixed(2)} MWp</p>
                             </div>
                         </div>
                          

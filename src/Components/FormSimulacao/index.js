@@ -29,14 +29,17 @@ class formSimulacao extends Component{
             demandaPu: '',
             
 
-            usaGerador: 'sim',
+            usaGerador: 'nao',
             geradorACL: 'sim',
             consumoGerador: '',
             custoGeracaoDisel: '1.4',
     
             desconto: '0',
             calc: 'ML',
-            
+            price21: '',
+            price22: '',
+            price23: '',
+            price24: '',
             /*
             icms: '',
             pis: '',
@@ -243,8 +246,8 @@ class formSimulacao extends Component{
                             <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
                                 <Form.Label>Usa Gerador</Form.Label>
                                 <Form.Control as="select" onChange={e => this.setState({ usaGerador: e.target.value })}>
-                                    <option value="sim">Sim</option>
                                     <option value="nao">Não</option>
+                                    <option value="sim">Sim</option>
                                 </Form.Control>
                             </Form.Group>
                         </div>
@@ -278,27 +281,32 @@ class formSimulacao extends Component{
 
                         }
 
-                        <div className="formLine">
-                            <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Gerador no ACL</Form.Label>
-                                <Form.Control as="select" onChange={e => this.setState({ geradorACL: e.target.value })}>
-                                    <option value="sim">Sim</option>
-                                    <option value="nao">Não</option>
-                                </Form.Control>
-                            </Form.Group>
-    
-                            <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
-                                <Form.Label>Consumo Gerador (kWh)</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder=""
-                                    onChange={e => (this.setState({ consumoGerador: e.target.value.replace(',','.') }))}
-                                    value={this.state.consumoGerador}
-                                    require
-                                />
-                                
-                            </Form.Group>
-                        </div>
+                        {
+
+                            (this.state.usaGerador === "sim")
+                            &&
+                            <div className="formLine">
+                                <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
+                                    <Form.Label>Mantém o gerador no ACL?</Form.Label>
+                                    <Form.Control as="select" onChange={e => this.setState({ geradorACL: e.target.value })}>
+                                        <option value="sim">Sim</option>
+                                        <option value="nao">Não</option>
+                                    </Form.Control>
+                                </Form.Group>
+        
+                                <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
+                                    <Form.Label>Consumo Gerador (kWh)</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder=""
+                                        onChange={e => (this.setState({ consumoGerador: e.target.value.replace(',','.') }))}
+                                        value={this.state.consumoGerador}
+                                        require
+                                    />
+                                    
+                                </Form.Group>
+                            </div>
+                        }
 
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
@@ -323,6 +331,54 @@ class formSimulacao extends Component{
                                 
                             </Form.Group>
                         </div>
+
+                        {/*
+                        <div className="formLine">
+                            <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
+                                <Form.Label>Preço da Energia em 2021 (R$/kWh)</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder=""
+                                    onChange={e => this.setState({ price21: e.target.value.replace(',','.') })}
+                                    require
+                                />
+                            </Form.Group>
+    
+                            <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
+                                <Form.Label>Preço da Energia em 2022 (R$/kWh)</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder=""
+                                    onChange={e => this.setState({ price22: e.target.value.replace(',','.') })}
+                                    require
+                                />
+                            </Form.Group>
+
+                        </div>
+
+                        <div className="formLine">
+                            <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
+                                <Form.Label>Preço da Energia em 2023 (R$/kWh)</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder=""
+                                    onChange={e => this.setState({ price23: e.target.value.replace(',','.') })}
+                                    require
+                                />
+                            </Form.Group>
+    
+                            <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
+                                <Form.Label>Preço da Energia 2024 (R$/kWh)</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder=""
+                                    onChange={e => this.setState({ price24: e.target.value.replace(',','.') })}
+                                    require
+                                />
+                            </Form.Group>
+
+                        </div>
+                        */}
     
                         <div style={{display: "flex", justifyContent: "center", marginTop: "40px"}}>
                             <Button className="btn-team register-button register-cell" type="submit">
