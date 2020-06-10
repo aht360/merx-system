@@ -36,10 +36,10 @@ class formSimulacao extends Component{
     
             desconto: '0',
             calc: 'ML',
-            price21: '',
-            price22: '',
-            price23: '',
-            price24: '',
+            price21: '240',
+            price22: '230',
+            price23: '220',
+            price24: '210',
             /*
             icms: '',
             pis: '',
@@ -111,7 +111,7 @@ class formSimulacao extends Component{
 
     render(){
 
-        const { input, ResultCativo, ResultLivre, show, ths, calc } = this.state;
+        const { input, ResultCativo, ResultLivre, show, ths, calc, price21, price22, price23, price24 } = this.state;
 
         return(
             <div className="container-formSimulacao-master">
@@ -332,7 +332,7 @@ class formSimulacao extends Component{
                             </Form.Group>
                         </div>
 
-                        {/*
+                        
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
                                 <Form.Label>Preço da Energia em 2021 (R$/kWh)</Form.Label>
@@ -341,6 +341,7 @@ class formSimulacao extends Component{
                                     placeholder=""
                                     onChange={e => this.setState({ price21: e.target.value.replace(',','.') })}
                                     require
+                                    defaultValue="240"
                                 />
                             </Form.Group>
     
@@ -351,6 +352,7 @@ class formSimulacao extends Component{
                                     placeholder=""
                                     onChange={e => this.setState({ price22: e.target.value.replace(',','.') })}
                                     require
+                                    defaultValue="230"
                                 />
                             </Form.Group>
 
@@ -364,6 +366,7 @@ class formSimulacao extends Component{
                                     placeholder=""
                                     onChange={e => this.setState({ price23: e.target.value.replace(',','.') })}
                                     require
+                                    defaultValue="220"
                                 />
                             </Form.Group>
     
@@ -374,11 +377,12 @@ class formSimulacao extends Component{
                                     placeholder=""
                                     onChange={e => this.setState({ price24: e.target.value.replace(',','.') })}
                                     require
+                                    defaultValue="210"
                                 />
                             </Form.Group>
 
                         </div>
-                        */}
+                        
     
                         <div style={{display: "flex", justifyContent: "center", marginTop: "40px"}}>
                             <Button className="btn-team register-button register-cell" type="submit">
@@ -392,7 +396,7 @@ class formSimulacao extends Component{
 
                     <div className="table-tarifa-container">
                                         
-                        { (show === true) && (ths === "VERDE") && (calc === "ML") &&  <SimulatorVerde inputs={ input } resultCat={ ResultCativo }  resultLiv={ ResultLivre }/>}
+                        { (show === true) && (ths === "VERDE") && (calc === "ML") &&  <SimulatorVerde inputs={ input } resultCat={ ResultCativo }  resultLiv={ ResultLivre } energia1={price21} energia2={price22} energia3={price23} energia4={price24} />}
                         { (show === true) && (ths === "AZUL") && (calc === "ML") &&  <SimulatorAzul inputs={ input } resultCat={ ResultCativo }  resultLiv={ ResultLivre }/>}
                         
                     </div>

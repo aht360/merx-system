@@ -7,6 +7,10 @@ import blackLogo from '../../Assets/blackLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
+import {
+    BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
+
 
 export default function SimulatorVerde(props){
 
@@ -22,13 +26,19 @@ export default function SimulatorVerde(props){
     const {livreDemandaUnica,livreConsumoPonta,livreConsumoPontaFora,livreGerador,energiaACL,
             tarifaLivreDemandaUnica,tarifaLivreConsumoPonta,tarifaLivreConsumoForaPonta,
             custoGeracaoDisel,energiaACLTarifa,totalLivreDemanda,totalLivreConsumoPonta,
-            totalLivreConsumoForaPonta,totalLivreGerador,totalEnergiaACL,livreIcms,totalIcms,
-            totalCativo,totalLivre,economiaLivre,economiaPorcentagem
+            totalLivreConsumoForaPonta,totalLivreGerador,totalEnergiaACL,
+            totalCativo
     }= ResultLivre
 
 
     var qtdGeradorFormated = qtdGerador;
+    var livreDemandaUnicaFormated = formatQtdGerador(livreDemandaUnica)
+    var livreConsumoPontaFormated = formatQtdGerador(livreConsumoPonta)
+    var livreConsumoPontaForaFormated = formatQtdGerador(livreConsumoPontaFora)
+    var livreGeradorFormated = formatQtdGerador(livreGerador)
+    var energiaACLFormated = formatQtdGerador(energiaACL)
 
+    
     if(qtdGeradorFormated !== undefined){
 
         qtdGeradorFormated = formatQtdGerador(qtdGeradorFormated)
@@ -38,7 +48,6 @@ export default function SimulatorVerde(props){
     function formatQtdGerador(e){
         var formmated = [];
         var i = 0;
-        console.log(e)
         for (let index = 2; index < e.length; index++) {
             
             if(e[index] === '.' && e[index+1] === '0'){
@@ -54,6 +63,80 @@ export default function SimulatorVerde(props){
     }
 
     const{ demanda, demandaFpu, consumoP, consumoPf } = inputs
+    
+    var energia1 = Number(props.energia1)
+    var energia2 = Number(props.energia2)
+    var energia3 = Number(props.energia3)
+    var energia4 = Number(props.energia4)
+
+    console.log('energia2: ', energia2);
+
+    var distr = Number(Number(removeSimbol(totalLivreDemanda)) + Number(removeSimbol(totalLivreConsumoPonta)) + Number(removeSimbol(totalLivreConsumoForaPonta)) + Number(removeSimbol(totalLivreGerador)))
+    var tqtd = Number(Number(removeSimbol(consumoP)) + Number(removeSimbol(consumoPf)) + Number(removeSimbol(qtdGeradorFormated)))
+    
+    console.log('distr: ',distr)
+
+    console.log('tqtd: ',tqtd)
+
+    var icms1 = ((energia1/(0.75) - energia1))
+    var icms2 = ((energia2/(0.75) - energia2))
+    var icms3 = ((energia3/(0.75) - energia3))
+    var icms4 = ((energia4/(0.75) - energia4))
+
+    console.log('icms2: ', icms2);
+
+    var EF1 = ((energia1 + icms1) * (tqtd)/1000)
+    var EF2 = ((energia2 + icms2) * (tqtd)/1000)
+    var EF3 = ((energia3 + icms3) * (tqtd)/1000)
+    var EF4 = ((energia4 + icms4) * (tqtd)/1000)
+
+    console.log('EF2: ', EF2 )
+
+    var CF1 = distr + EF1
+    var CF2 = distr + EF2
+    var CF3 = distr + EF3
+    var CF4 = distr + EF4
+
+    console.log('CF2: ' ,CF2 )
+    
+    var ECO1 = (Number(removeSimbol(totalCativo)) - CF1).toFixed(2)
+    var ECO2 = (Number(removeSimbol(totalCativo)) - CF2).toFixed(2)
+    var ECO3 = (Number(removeSimbol(totalCativo)) - CF3).toFixed(2)
+    var ECO4 = (Number(removeSimbol(totalCativo)) - CF4).toFixed(2)
+
+    var PECO1 = (((Number(removeSimbol(totalCativo)) - CF1)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
+    var PECO2 = (((Number(removeSimbol(totalCativo)) - CF2)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
+    var PECO3 = (((Number(removeSimbol(totalCativo)) - CF3)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
+    var PECO4 = (((Number(removeSimbol(totalCativo)) - CF4)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
+
+    const data_graph = [
+        {
+            name: '2021', economia: (Number(ECO1)*12),
+        },
+        {
+            name: '2022', economia: (Number(ECO1)*12 )+ (Number(ECO2) *12),
+        },
+        {
+            name: '2023', economia: (Number(ECO1)*12) + (Number(ECO2)*12) + (Number(ECO3)*12),
+        },
+        {
+            name: '2024', economia: (Number(ECO1)*12) + (Number(ECO2)*12) + (Number(ECO3)*12) + (Number(ECO4)*12),
+        },
+    ];
+
+
+    function removeSimbol(param){
+        var my_number = '';
+        
+        for (let index = 0; index < param.length; index++) {
+            if(param[index] !== 'R' && param[index] !== '$' && param[index] !== ','){
+                my_number = my_number + param[index]
+            }
+            
+        }
+
+        return (my_number)
+    }
 
     return(
         <div className="resultadoSimulacaoContainer">
@@ -343,7 +426,7 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreDemandaUnica}
+                        {livreDemandaUnicaFormated}
                     </p>
                     <p className="ResSimulTableContent">
                         {tarifaLivreDemandaUnica}
@@ -362,7 +445,7 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreConsumoPonta}
+                        {livreConsumoPontaFormated}
                     </p>
                     <p className="ResSimulTableContent">
                         {tarifaLivreConsumoPonta}
@@ -381,7 +464,7 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreConsumoPontaFora}
+                        {livreConsumoPontaForaFormated}
                     </p>
                     <p className="ResSimulTableContent">
                         {tarifaLivreConsumoForaPonta}
@@ -400,7 +483,7 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreGerador}
+                        {livreGeradorFormated}
                     </p>
                     <p className="ResSimulTableContent">
                         {custoGeracaoDisel}
@@ -419,7 +502,7 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {energiaACL}
+                        {energiaACLFormated}
                     </p>
                     <p className="ResSimulTableContent">
                         {energiaACLTarifa}
@@ -430,6 +513,7 @@ export default function SimulatorVerde(props){
                     
                 </div>
 
+                {/*
                 <div className="ResSimulTableTitle">
                     <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
                         ICMS
@@ -467,46 +551,108 @@ export default function SimulatorVerde(props){
                     </p>
                     
                 </div>
+                */}
 
-                <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        Economia
+            </div>
+
+            <div className="economia-box-line">
+
+                <div className="economia-box">
+                    <p className="title-economia-box">
+                        Economia em 2021
                     </p>
-                    <p className="ResSimulTableContent">
-                        R$/MWh
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        {economiaLivre}
-                    </p>
-                    
+                    <div className="economia-box-content">
+                        <p className="economia-box-content-tent">
+                            R$ {ECO1}
+                        </p>
+                        <p className="economia-box-content-tent">
+                            {PECO1} %
+                        </p>
+                    </div>
                 </div>
 
-                <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        Porcentagem
+                <div className="economia-box">
+                    <p className="title-economia-box">
+                        Economia em 2022
                     </p>
-                    <p className="ResSimulTableContent">
-                        R$/MWh
+                    <div className="economia-box-content">
+                        <p className="economia-box-content-tent">
+                            R$ {ECO2}
+                        </p>
+                        <p className="economia-box-content-tent">
+                            {PECO2} %
+                        </p>
+                    </div>
+                </div>
+
+                <div className="economia-box">
+                    <p className="title-economia-box">
+                        Economia em 2023
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
+                    <div className="economia-box-content">
+                        <p className="economia-box-content-tent">
+                            R$ {ECO3}
+                        </p>
+                        <p className="economia-box-content-tent">
+                            {PECO3} %
+                        </p>
+                    </div>
+                </div>
+
+                <div className="economia-box">
+                    <p className="title-economia-box">
+                        Economia em 2024
                     </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        {economiaPorcentagem}
-                    </p>
-                    
+                    <div className="economia-box-content">
+                        <p className="economia-box-content-tent">
+                            R$ {ECO4} 
+                        </p>
+                        <p className="economia-box-content-tent">
+                            {PECO4} %
+                        </p>
+                    </div>
                 </div>
 
             </div>
+
+            <div className="rodapeResSimul">
+                <p className="rodapeResSimul-content">
+                    Estudo indicativo de referência, o preço final de aquisição de energia pode ser maior ou menor que o apontado neste estudo.
+                </p>
+            </div>
+
+            <p className="ecoProjt">
+                Economial anual projetada
+            </p>
+
+            <div className="eco-anual-projetada">
+                <div className="graphEcoAcumu">
+                    <p className="pagTitle">
+                        Pagamentos
+                    </p>
+
+                    <BarChart
+                        width={550}
+                        height={300}
+                        data={data_graph}
+                        margin={{
+                            top: 5, right: 30, left: 0, bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="economia" fill="#0067CC" />
+                    </BarChart>
+
+
+                </div>
+                
+            </div>
+
+
 
         </div>
 
