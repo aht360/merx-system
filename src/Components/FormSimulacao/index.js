@@ -36,10 +36,10 @@ class formSimulacao extends Component{
     
             desconto: '0',
             calc: 'ML',
-            price21: '240',
-            price22: '230',
-            price23: '220',
-            price24: '210',
+            price21: '200',
+            price22: '195',
+            price23: '190',
+            price24: '185',
             /*
             icms: '',
             pis: '',
@@ -335,24 +335,24 @@ class formSimulacao extends Component{
                         
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Preço da Energia em 2021 (R$/kWh)</Form.Label>
+                                <Form.Label>Preço da Energia em 2021 (R$/MWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
                                     onChange={e => this.setState({ price21: e.target.value.replace(',','.') })}
                                     require
-                                    defaultValue="240"
+                                    defaultValue="200"
                                 />
                             </Form.Group>
     
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Preço da Energia em 2022 (R$/kWh)</Form.Label>
+                                <Form.Label>Preço da Energia em 2022 (R$/MWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
                                     onChange={e => this.setState({ price22: e.target.value.replace(',','.') })}
                                     require
-                                    defaultValue="230"
+                                    defaultValue="195"
                                 />
                             </Form.Group>
 
@@ -360,24 +360,24 @@ class formSimulacao extends Component{
 
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Preço da Energia em 2023 (R$/kWh)</Form.Label>
+                                <Form.Label>Preço da Energia em 2023 (R$/MWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
                                     onChange={e => this.setState({ price23: e.target.value.replace(',','.') })}
                                     require
-                                    defaultValue="220"
+                                    defaultValue="190"
                                 />
                             </Form.Group>
     
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Preço da Energia 2024 (R$/kWh)</Form.Label>
+                                <Form.Label>Preço da Energia 2024 (R$/MWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
                                     onChange={e => this.setState({ price24: e.target.value.replace(',','.') })}
                                     require
-                                    defaultValue="210"
+                                    defaultValue="185"
                                 />
                             </Form.Group>
 

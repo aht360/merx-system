@@ -258,6 +258,105 @@
     border-bottom: 1px solid #EEF0F7;
 }
 
+.energPrice{
+    width: 580px;
+    height: 194px;
+
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px 18px 24px;
+}
+
+.enerPriceRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.energPriceT{
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+}
+
+.energPriceC{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+}
+
+.sideGraph{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+
+}
+
+.globalEconomy{
+    width: 580px;
+    height: 194px;
+
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 16px 24px 18px 24px;
+}
+
+.globalRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.CoisasGlobal{
+    width: 380px;
+    height: 76px;
+
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+}
+
+.CoisasGlobal-title{
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+}
+
+.CoisasGlobal-content{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+    line-height: 0px;
+}
+
+.ecoGlobalValorPerc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
 
 
 @media only screen and (max-width: 1100px){

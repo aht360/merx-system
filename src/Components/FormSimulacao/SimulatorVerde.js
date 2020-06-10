@@ -97,6 +97,8 @@ export default function SimulatorVerde(props){
     var CF3 = distr + EF3
     var CF4 = distr + EF4
 
+    var LG = ((CF1 + CF2 + CF3 + CF4)*12).toFixed(2)
+
     console.log('CF2: ' ,CF2 )
     
     var ECO1 = (Number(removeSimbol(totalCativo)) - CF1).toFixed(2)
@@ -108,6 +110,19 @@ export default function SimulatorVerde(props){
     var PECO2 = (((Number(removeSimbol(totalCativo)) - CF2)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
     var PECO3 = (((Number(removeSimbol(totalCativo)) - CF3)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
     var PECO4 = (((Number(removeSimbol(totalCativo)) - CF4)/Number(removeSimbol(totalCativo)))*100).toFixed(2)
+    
+    var ECOG1 = (Number(ECO1)*12).toFixed(2)
+    var ECOG2 = ((Number(ECO1)*12) + (Number(ECO2)*12)).toFixed(2);
+    var ECOG3 = ((Number(ECO1)*12) + (Number(ECO2)*12) + (Number(ECO3)*12)).toFixed(2);
+    var ECOG4 = ((Number(ECO1)*12) + (Number(ECO2)*12) + (Number(ECO3)*12) + (Number(ECO4)*12)).toFixed(2);
+
+    var CG = (Number(removeSimbol(totalCativo))*12*4).toFixed(2)
+    
+    var MECOG = ((Number(PECO1) + Number(PECO2) + Number(PECO3) + Number(PECO4))/4).toFixed(2)
+    
+    console.log(ECOG1)
+    
+    var EG = (CG - LG).toFixed(2)
 
     const data_graph = [
         {
@@ -138,6 +153,8 @@ export default function SimulatorVerde(props){
         return (my_number)
     }
 
+
+
     return(
         <div className="resultadoSimulacaoContainer">
             <div className="headerResultadoSimulacao">
@@ -152,7 +169,7 @@ export default function SimulatorVerde(props){
                                 Empresa Principal
                             </p>
                             <p className="headerLeftContentSubTitle">
-                                DVM SOLAR
+                                MERX ENERGIA
                             </p>
                         </div>
                     </div>
@@ -188,9 +205,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTable">
                         Grandezas Faturadas
                     </p>
-                    <p className="ResSimulTable">
+                    {/*<p className="ResSimulTable">
                         Tarifas
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTable">
                         Faturado
                     </p>
@@ -206,9 +223,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {consumoP}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {cativoConsumoPonta}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalConsumoPonta}
                     </p>
@@ -225,9 +242,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {consumoPf}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {cativoConsumoPontaFora}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalcativoConsumoPontaFora}
                     </p>
@@ -244,9 +261,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {demanda}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {cativoDemandaUnica}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalDemandaUnica}
                     </p>
@@ -263,9 +280,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {demandaFpu}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {cativoDemandaUltrapassagem}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalDemandaUltrapassagem}
                     </p>
@@ -282,9 +299,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {qtdGeradorFormated}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {custoGeracaoDisel}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalGerador}
                     </p>
@@ -301,9 +318,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalCativo}
                     </p>
@@ -326,9 +343,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTable">
                         Grandezas Faturadas
                     </p>
-                    <p className="ResSimulTable">
+                    {/*<p className="ResSimulTable">
                         Tarifas
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTable">
                         Faturado
                     </p>
@@ -344,9 +361,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {Number(consumoP) + Number(consumoPf)}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         R$13,43
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         R${(Number(consumoP) + Number(consumoPf)) * 13.43}
                     </p>
@@ -365,9 +382,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {Number(consumoP) + Number(consumoPf)}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         R$41,69
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         R${(Number(consumoP) + Number(consumoPf)) * 41.69}
                     </p>
@@ -384,9 +401,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {Number(consumoP) + Number(consumoPf)}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         R$62,43
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         R${(Number(consumoP) + Number(consumoPf)) * 62.43}
                     </p>
@@ -410,9 +427,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTable">
                         Grandezas Faturadas
                     </p>
-                    <p className="ResSimulTable">
+                    {/*<p className="ResSimulTable">
                         Tarifas
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTable">
                         Faturado sem impostos
                     </p>
@@ -428,9 +445,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {livreDemandaUnicaFormated}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {tarifaLivreDemandaUnica}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalLivreDemanda}
                     </p>
@@ -447,9 +464,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {livreConsumoPontaFormated}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {tarifaLivreConsumoPonta}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalLivreConsumoPonta}
                     </p>
@@ -466,9 +483,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {livreConsumoPontaForaFormated}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {tarifaLivreConsumoForaPonta}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalLivreConsumoForaPonta}
                     </p>
@@ -485,9 +502,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {livreGeradorFormated}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {custoGeracaoDisel}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalLivreGerador}
                     </p>
@@ -504,9 +521,9 @@ export default function SimulatorVerde(props){
                     <p className="ResSimulTableContent">
                         {energiaACLFormated}
                     </p>
-                    <p className="ResSimulTableContent">
+                    {/*<p className="ResSimulTableContent">
                         {energiaACLTarifa}
-                    </p>
+                    </p>*/}
                     <p className="ResSimulTableContent">
                         {totalEnergiaACL}
                     </p>
@@ -635,9 +652,6 @@ export default function SimulatorVerde(props){
                         width={550}
                         height={300}
                         data={data_graph}
-                        margin={{
-                            top: 5, right: 30, left: 0, bottom: 5,
-                        }}
                     >
                         <CartesianGrid strokeDasharray="3" />
                         <XAxis dataKey="name" />
@@ -649,7 +663,136 @@ export default function SimulatorVerde(props){
 
 
                 </div>
+
+                <div className="sideGraph">
+
+                    <div className="energPrice">
+                            <div className="enerPriceRow">
+                                <p className="energPriceT">
+                                    Preços indicativos
+                                </p>
+                                <p className="energPriceT">
+                                    R$ MWh
+                                </p>
+                            </div>
+                            <div className="enerPriceRow">
+                                <p className="energPriceC">
+                                    2021
+                                </p>
+                                <p className="energPriceC">
+                                    {energia1}
+                                </p>
+                            </div>
+                            <div className="enerPriceRow">
+                                <p className="energPriceC">
+                                    2022
+                                </p>
+                                <p className="energPriceC">
+                                    {energia2}
+                                </p>
+                            </div>
+                            <div className="enerPriceRow">
+                                <p className="energPriceC">
+                                    2023
+                                </p>
+                                <p className="energPriceC">
+                                    {energia3}
+                                </p>
+                            </div>
+                            <div className="enerPriceRow">
+                                <p className="energPriceC">
+                                    2024
+                                </p>
+                                <p className="energPriceC">
+                                    {energia4}
+                                </p>
+                            </div>
+                    </div>
+
+                    <div className="globalEconomy">
+                        <div className="enerPriceRow">
+                            <p className="energPriceT">
+                                R$
+                            </p>
+                            <p className="energPriceT">
+                                %
+                            </p>
+                        </div>
+                        <div className="enerPriceRow">
+                            <p className="energPriceC">
+                                {ECOG1}
+                            </p>
+                            <p className="energPriceC">
+                                {PECO1}
+                            </p>
+                        </div>
+                        <div className="enerPriceRow">
+                            <p className="energPriceC">
+                                {ECOG2}
+                            </p>
+                            <p className="energPriceC">
+                                {PECO2}
+                            </p>
+                        </div>
+                        <div className="enerPriceRow">
+                            <p className="energPriceC">
+                                {ECOG3}
+                            </p>
+                            <p className="energPriceC">
+                                {PECO3}
+                            </p>
+                        </div>
+                        <div className="enerPriceRow">
+                            <p className="energPriceC">
+                                {ECOG4}
+                            </p>
+                            <p className="energPriceC">
+                                {PECO4}
+                            </p>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
                 
+            </div>
+
+
+            <div className="globalRow">
+                <div className="CoisasGlobal">
+                    <p className="CoisasGlobal-title">
+                        Cativo Global
+                    </p>
+                    <p className="CoisasGlobal-content">
+                        R$ {CG}
+                    </p>
+                </div>
+
+                <div className="CoisasGlobal">
+                    <p className="CoisasGlobal-title">
+                        Livre Global
+                    </p>
+                    <p className="CoisasGlobal-content">
+                        R$ {LG}
+                    </p>
+                </div>
+
+                <div className="CoisasGlobal">
+                    <p className="CoisasGlobal-title">
+                        Economia Global
+                    </p>
+                    <div className="ecoGlobalValorPerc">
+                        <p className="CoisasGlobal-content">
+                            R$ {EG}
+                        </p>
+                        <p className="CoisasGlobal-content">
+                            { MECOG } %
+                        </p>
+
+                    </div>
+                </div>
+
             </div>
 
 
