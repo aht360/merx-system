@@ -139,12 +139,70 @@ export default function SimulatorVerde(props){
         },
     ];
 
+    function removeStuff(param){
+        var my_number = '';
+        for (let index = 0; index < param.length; index++) {
+            if(param[index] !== 'R' && param[index] !== '$'){
+                if(param[index] === '.'){
+                    my_number = my_number + ','
+                }
+                else if(param[index] === ','){
+                    my_number = my_number + '.'
+                }
+                else{
+                    my_number = my_number + param[index]
+                }
+            }
+            
+        }
+        return (my_number)
+    }
+
+    function removeStuffAll(param){
+        var my_number = '';
+        for (let index = 0; index < param.length; index++) {
+            if(param[index] !== 'R' && param[index] !== '$'){
+                if(param[index] === '.'){
+                    my_number = my_number + ','
+                }
+                else if(param[index] === ','){
+                    my_number = my_number + '.'
+                }
+                else{
+                    my_number = my_number + param[index]
+                }
+            }
+            
+        }
+        var formatted = '';
+        for (let index = 0; index < my_number.length; index++) {
+            if(my_number[index] === ','){
+                return (formatted)
+            }
+            formatted = formatted + my_number[index];
+        }
+        return (formatted)
+    }
+
 
     function removeSimbol(param){
         var my_number = '';
         
         for (let index = 0; index < param.length; index++) {
             if(param[index] !== 'R' && param[index] !== '$' && param[index] !== ','){
+                my_number = my_number + param[index]
+            }
+            
+        }
+
+        return (my_number)
+    }
+
+    function removeSimbolReal(param){
+        var my_number = '';
+        
+        for (let index = 0; index < param.length; index++) {
+            if(param[index] !== 'R' && param[index] !== '$'){
                 my_number = my_number + param[index]
             }
             
@@ -221,14 +279,21 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {consumoP}
+                        {parseFloat(consumoP).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {cativoConsumoPonta}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalConsumoPonta}
-                    </p>
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalConsumoPonta)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -240,14 +305,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {consumoPf}
+                        {parseFloat(consumoPf).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {cativoConsumoPontaFora}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalcativoConsumoPontaFora}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalcativoConsumoPontaFora)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -259,14 +332,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {demanda}
+                        {parseFloat(demanda).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {cativoDemandaUnica}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalDemandaUnica}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalDemandaUnica)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -278,14 +359,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {demandaFpu}
+                        {parseFloat(demandaFpu).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {cativoDemandaUltrapassagem}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalDemandaUltrapassagem}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalDemandaUltrapassagem)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -297,14 +386,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {qtdGeradorFormated}
+                        {removeStuffAll(qtdGerador)}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {custoGeracaoDisel}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalGerador}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalGerador)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -321,9 +418,16 @@ export default function SimulatorVerde(props){
                     {/*<p className="ResSimulTableContent">
                         
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalCativo}
-                    </p>
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalCativo)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -359,14 +463,23 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {Number(consumoP) + Number(consumoPf)}
+                        {parseFloat(Number(consumoP) + Number(consumoPf)).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         R$13,43
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        R${(Number(consumoP) + Number(consumoPf)) * 13.43}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 13.43)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
+                            
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -380,14 +493,23 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {Number(consumoP) + Number(consumoPf)}
+                        {parseFloat(Number(consumoP) + Number(consumoPf)).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         R$41,69
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        R${(Number(consumoP) + Number(consumoPf)) * 41.69}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 41.69)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
+                            
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -399,14 +521,24 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {Number(consumoP) + Number(consumoPf)}
+                        {parseFloat(Number(consumoP) + Number(consumoPf)).toLocaleString('pt-BR', { style: 'decimal'})}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         R$62,43
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        R${(Number(consumoP) + Number(consumoPf)) * 62.43}
-                    </p>
+                    
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 62.43)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
+                            
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -431,7 +563,7 @@ export default function SimulatorVerde(props){
                         Tarifas
                     </p>*/}
                     <p className="ResSimulTable">
-                        Faturado sem impostos
+                        Faturado
                     </p>
                 </div>
 
@@ -443,14 +575,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreDemandaUnicaFormated}
+                        {removeStuffAll(livreDemandaUnica)}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {tarifaLivreDemandaUnica}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalLivreDemanda}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalLivreDemanda)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -462,14 +602,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreConsumoPontaFormated}
+                        {removeStuffAll(livreConsumoPonta)}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {tarifaLivreConsumoPonta}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalLivreConsumoPonta}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalLivreConsumoPonta)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -481,14 +629,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreConsumoPontaForaFormated}
+                        {removeStuffAll(livreConsumoPontaFora)}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {tarifaLivreConsumoForaPonta}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalLivreConsumoForaPonta}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalLivreConsumoForaPonta)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -500,14 +656,22 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {livreGeradorFormated}
+                        {removeStuffAll(livreGerador)}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {custoGeracaoDisel}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalLivreGerador}
-                    </p>
+
+                    <div className="separarNum">
+
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalLivreGerador)}
+                        </p>
+                    </div>
                     
                 </div>
 
@@ -519,56 +683,24 @@ export default function SimulatorVerde(props){
                         R$/MWh
                     </p>
                     <p className="ResSimulTableContent">
-                        {energiaACLFormated}
+                        {removeStuffAll(energiaACL)}
                     </p>
                     {/*<p className="ResSimulTableContent">
                         {energiaACLTarifa}
                     </p>*/}
-                    <p className="ResSimulTableContent">
-                        {totalEnergiaACL}
-                    </p>
-                    
-                </div>
 
-                {/*
-                <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        ICMS
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$/MWh
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        {livreIcms}
-                    </p>
-                    <p className="ResSimulTableContent">
-                        {totalIcms}
-                    </p>
-                    
-                </div>
+                    <div className="separarNum">
 
-                <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        Total Livre
-                    </p>
-                    <p className="ResSimulTableContent">
-                        R$/MWh
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        -
-                    </p>
-                    <p className="ResSimulTableContent">
-                        {totalLivre}
-                    </p>
+                        <p className="ResSimulTableContentA">
+                            R$
+                        </p>
+
+                        <p className="ResSimulTableContentB">
+                            {removeStuff(totalEnergiaACL)}
+                        </p>
+                    </div>
                     
                 </div>
-                */}
 
             </div>
 
@@ -580,7 +712,7 @@ export default function SimulatorVerde(props){
                     </p>
                     <div className="economia-box-content">
                         <p className="economia-box-content-tent">
-                            R$ {ECO1}
+                            {parseFloat(ECO1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} 
                         </p>
                         <p className="economia-box-content-tent">
                             {PECO1} %
@@ -594,7 +726,7 @@ export default function SimulatorVerde(props){
                     </p>
                     <div className="economia-box-content">
                         <p className="economia-box-content-tent">
-                            R$ {ECO2}
+                            {parseFloat(ECO2).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} 
                         </p>
                         <p className="economia-box-content-tent">
                             {PECO2} %
@@ -608,7 +740,7 @@ export default function SimulatorVerde(props){
                     </p>
                     <div className="economia-box-content">
                         <p className="economia-box-content-tent">
-                            R$ {ECO3}
+                            {parseFloat(ECO3).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} 
                         </p>
                         <p className="economia-box-content-tent">
                             {PECO3} %
@@ -622,7 +754,7 @@ export default function SimulatorVerde(props){
                     </p>
                     <div className="economia-box-content">
                         <p className="economia-box-content-tent">
-                            R$ {ECO4} 
+                            {parseFloat(ECO4).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} 
                         </p>
                         <p className="economia-box-content-tent">
                             {PECO4} %
@@ -634,7 +766,7 @@ export default function SimulatorVerde(props){
 
             <div className="rodapeResSimul">
                 <p className="rodapeResSimul-content">
-                    Estudo indicativo de referência, o preço final de aquisição de energia pode ser maior ou menor que o apontado neste estudo.
+                    Estudo indicativo de referência, o preço final da aquisição da energia será definido no momento da compra.
                 </p>
             </div>
 
@@ -649,9 +781,12 @@ export default function SimulatorVerde(props){
                     </p>
 
                     <BarChart
-                        width={550}
+                        width={520}
                         height={300}
                         data={data_graph}
+                        margin={{
+                            left: 10
+                        }}
                     >
                         <CartesianGrid strokeDasharray="3" />
                         <XAxis dataKey="name" />
@@ -680,7 +815,7 @@ export default function SimulatorVerde(props){
                                     2021
                                 </p>
                                 <p className="energPriceC">
-                                    {energia1}
+                                    {removeSimbolReal(parseFloat(energia1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                                 </p>
                             </div>
                             <div className="enerPriceRow">
@@ -688,7 +823,7 @@ export default function SimulatorVerde(props){
                                     2022
                                 </p>
                                 <p className="energPriceC">
-                                    {energia2}
+                                    {removeSimbolReal(parseFloat(energia2).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                                 </p>
                             </div>
                             <div className="enerPriceRow">
@@ -696,7 +831,7 @@ export default function SimulatorVerde(props){
                                     2023
                                 </p>
                                 <p className="energPriceC">
-                                    {energia3}
+                                    {removeSimbolReal(parseFloat(energia3).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                                 </p>
                             </div>
                             <div className="enerPriceRow">
@@ -704,7 +839,7 @@ export default function SimulatorVerde(props){
                                     2024
                                 </p>
                                 <p className="energPriceC">
-                                    {energia4}
+                                    {removeSimbolReal(parseFloat(energia4).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                                 </p>
                             </div>
                     </div>
@@ -719,32 +854,32 @@ export default function SimulatorVerde(props){
                             </p>
                         </div>
                         <div className="enerPriceRow">
-                            <p className="energPriceC">
-                                {ECOG1}
+                            <p className="energPriceC1">
+                                {removeSimbolReal(parseFloat(ECOG1).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                             </p>
                             <p className="energPriceC">
                                 {PECO1}
                             </p>
                         </div>
                         <div className="enerPriceRow">
-                            <p className="energPriceC">
-                                {ECOG2}
+                            <p className="energPriceC1">
+                                {removeSimbolReal(parseFloat(ECOG2).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                             </p>
                             <p className="energPriceC">
                                 {PECO2}
                             </p>
                         </div>
                         <div className="enerPriceRow">
-                            <p className="energPriceC">
-                                {ECOG3}
+                            <p className="energPriceC1">
+                                {removeSimbolReal(parseFloat(ECOG3).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                             </p>
                             <p className="energPriceC">
                                 {PECO3}
                             </p>
                         </div>
                         <div className="enerPriceRow">
-                            <p className="energPriceC">
-                                {ECOG4}
+                            <p className="energPriceC1">
+                                {removeSimbolReal(parseFloat(ECOG4).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                             </p>
                             <p className="energPriceC">
                                 {PECO4}
@@ -765,16 +900,17 @@ export default function SimulatorVerde(props){
                         Cativo Global
                     </p>
                     <p className="CoisasGlobal-content">
-                        R$ {CG}
+                        {parseFloat(CG).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </p>
                 </div>
+
 
                 <div className="CoisasGlobal">
                     <p className="CoisasGlobal-title">
                         Livre Global
                     </p>
                     <p className="CoisasGlobal-content">
-                        R$ {LG}
+                        {parseFloat(LG).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </p>
                 </div>
 
@@ -784,7 +920,7 @@ export default function SimulatorVerde(props){
                     </p>
                     <div className="ecoGlobalValorPerc">
                         <p className="CoisasGlobal-content">
-                            R$ {EG}
+                            {parseFloat(EG).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                         </p>
                         <p className="CoisasGlobal-content">
                             { MECOG } %
