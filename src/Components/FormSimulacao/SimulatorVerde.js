@@ -476,7 +476,7 @@ export default function SimulatorVerde(props){
                         </p>
 
                         <p className="ResSimulTableContentB">
-                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 13.43)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
+                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 13.43)/1000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
                             
                         </p>
                     </div>
@@ -506,7 +506,7 @@ export default function SimulatorVerde(props){
                         </p>
 
                         <p className="ResSimulTableContentB">
-                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 41.69)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
+                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 41.69)/1000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
                             
                         </p>
                     </div>
@@ -535,7 +535,7 @@ export default function SimulatorVerde(props){
                         </p>
 
                         <p className="ResSimulTableContentB">
-                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 62.43)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
+                            { removeSimbolReal(parseFloat(((Number(consumoP) + Number(consumoPf)) * 62.43)/1000).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })) }
                             
                         </p>
                     </div>

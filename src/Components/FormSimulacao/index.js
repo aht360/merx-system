@@ -310,7 +310,7 @@ class formSimulacao extends Component{
 
                         <div className="formLine">
                             <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>Custo da Geração Disel (R$/kWh)</Form.Label>
+                                <Form.Label>Custo da Geração Diesel (R$/kWh)</Form.Label>
                                 <Form.Control
                                     type="text"
                                     placeholder=""
