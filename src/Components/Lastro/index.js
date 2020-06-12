@@ -163,13 +163,13 @@ class App extends Component{
                             <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
                                 {
                                     data_graph.map(item => (
-                                        <p style={{width: '100px'}} >{parseFloat(item.lastro.toFixed(2))}</p>
+                                        <p style={{width: '100px'}} >{parseFloat(item.lastro.toFixed(2)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                                     ))
                                 }
                             </div>
                             <div style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
                                 
-                                <p style={{width: '100px'}} ><b>TOTAL: </b>{parseFloat(data_graph[0].lastro + data_graph[1].lastro + data_graph[2].lastro + data_graph[3].lastro + data_graph[4].lastro + data_graph[5].lastro + data_graph[6].lastro + data_graph[7].lastro + data_graph[8].lastro + data_graph[9].lastro + data_graph[10].lastro + data_graph[11].lastro).toFixed(2)}</p>
+                                <p style={{width: '100px'}} ><b>TOTAL: </b>{parseFloat(data_graph[0].lastro + data_graph[1].lastro + data_graph[2].lastro + data_graph[3].lastro + data_graph[4].lastro + data_graph[5].lastro + data_graph[6].lastro + data_graph[7].lastro + data_graph[8].lastro + data_graph[9].lastro + data_graph[10].lastro + data_graph[11].lastro).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                             </div>
                             
                         </div>
