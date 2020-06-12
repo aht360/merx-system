@@ -1,0 +1,23 @@
+.cvt-title{
+    margin-top: 50px;
+    font-size: 38px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.cvt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    
+}
+
+.cvt-item{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.active-item{
+    text-decoration: underline;
+}

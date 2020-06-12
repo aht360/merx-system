@@ -7,6 +7,8 @@ import Register from './pages/Register/index';
 import Simulacao from './pages/Simulacao/index';
 import Pesquisa from './pages/Pesquisa/index';
 
+import MarketPlace from './pages/MarketPlace/index';
+
 import Client from './pages/Client/index';
 import Perfil from './pages/Perfil/index';
 
@@ -35,6 +37,7 @@ const Routes = () => (
       <Route exact path="/" component={Main} />
       <Route path="/autoproducao" component={Autoproducao} />
       <Route path="/mercado-livre" component={MercadoLivre} />
+      <Route path="/marketplace" component={MarketPlace} />
       <PrivateRoute path="/register" component={Register} />
       <PrivateRoute path="/pesquisa-mercado-livre" component={Pesquisa} />
       <PrivateRoute path="/client" component={Client} />

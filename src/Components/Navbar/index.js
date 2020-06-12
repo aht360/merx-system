@@ -96,7 +96,8 @@ class App extends Component{
                             { isAuthenticated()  && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="/pesquisa-mercado-livre">Pesquisa Mercado Livre</Nav.Link>}
                             { !isAuthenticated()  && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left"  onClick={this.onLoginClick} >Pesquisa Mercado Livre</Nav.Link>}
                             
-                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick} href="#negocie">Negocie sua Energia</Nav.Link>
+                            <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="marketplace">Marketplace</Nav.Link>
+                            
                             {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="simulacao">Simulação</Nav.Link>}
                             {!isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Simulação</Nav.Link>}
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="mercado-livre">Mercado Livre de Energia</Nav.Link>
