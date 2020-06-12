@@ -109,7 +109,7 @@ export default function Main(){
             <ClientInfo Nome={Nome} companyCNPJ={companyCNPJ} Sigla={Sigla} InicioACL={InicioACL} Submercado={Submercado} Classe={Classe} Categoria={Categoria} AgCC={AgCC} ContEnerg={ContEnerg} GarantCont={GarantCont} />
             <CheckCard EnergiaCheck={EnergiaCheck} DistribuidoraCheck={DistribuidoraCheck} FinanceiroCheck={FinanceiroCheck} CCEECheck={CCEECheck} MedicaoCheck={MedicaoCheck} AprovacaoCheck={AprovacaoCheck} />
             <ProgressBar value="50"/>
-            <CoustCardRow bigger = "true" CustoCativo={CustoCativo} CustoLivre={CustoLivre} Economia={Economia} />
+            <CoustCardRow bigger = "true" CustoCativo={CustoCativo} CustoLivre={CustoLivre} Economia={Economia} format={false} />
             <EconomyGraph />
             <ConsumeLine />
             <CardsGrid />

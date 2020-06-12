@@ -5,6 +5,7 @@ import './style.css';
 class CoustCardItem extends Component{
     constructor(props){
         super();
+        
         var widthDimension;
         var borderColor;
 
@@ -28,10 +29,29 @@ class CoustCardItem extends Component{
 
         this.state = {
             widthDimension,
-            borderColor
+            borderColor,
+            format: false
         }
 
+        this.setState({ format: props.format })
+
     }
+
+    removeSimbolReal = (param) => {
+        var my_number = '';
+        
+        for (let index = 0; index < param.length; index++) {
+            if(param[index] !== 'R' && param[index] !== '$'){
+                my_number = my_number + param[index]
+            }
+            
+        }
+
+        return (my_number)
+    }
+    
+
+
     render(){
 
         const divStyle = {
@@ -39,6 +59,8 @@ class CoustCardItem extends Component{
             borderColor: this.state.borderColor
         };
 
+        const format = this.state.format;
+        console.log(format, this.props.value)
         return(
             <div className="container-CoustCardItem" style={divStyle}>
                 <p className="coustCardItem-title">{this.props.title}</p>
@@ -49,7 +71,8 @@ class CoustCardItem extends Component{
                 <p className="coustCardItem-content">
                     R$ 
                     <p className="coutCardItem-value">
-                        {this.props.value}
+                        { format && this.removeSimbolReal(parseFloat(this.props.value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
+                        { !format && this.props.value }
                     </p>
                 </p>
             </div>

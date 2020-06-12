@@ -142,7 +142,10 @@
     color: #192A3E;
 }
 
-
+.band-divis{
+    display: flex;
+    flex-direction: row;
+}
 .ResSimulTable{
     width: 172px;
     font-weight: 600;

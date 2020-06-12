@@ -6,11 +6,23 @@
 }
 
 .title-modenizacao{
+    font-weight: bold;
     font-size: 56px;
     line-height: 68px;
+    /* or 121% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
 }
 .subtitle-modernizacao{
-    font-size: 22px;
+    font-size: 18px;
+    line-height: 30px;
+    /* or 167% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
 }
 
 .textBox-modernizacao{
@@ -21,6 +33,13 @@
 .text-modernizacao{
     padding: 50px;
     padding-bottom: 0px;
+    font-size: 21px;
+    line-height: 30px;
+    /* or 143% */
+
+    letter-spacing: -0.015em;
+
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .destak{
@@ -59,6 +78,17 @@
         padding-bottom: 50px;
     }
 
+    .table-title{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 36px;
+        /* identical to box height, or 180% */
+
+        text-align: center;
+
+        color: #515151;
+    }
+
     .table-item{
         font-size: 14px;
     }
@@ -67,6 +97,8 @@
         border-style: solid;
         padding: 5px 5px 5px 5px;
         margin-bottom: 50px;
+        font-size: 16px;
+        line-height: 30px;
     }
 
     .text-modernizacao{

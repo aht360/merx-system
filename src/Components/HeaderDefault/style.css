@@ -28,10 +28,14 @@
 .title-ml-header{
     color: #0067CC;
     font-weight: bold;
+    font-size: 44px;
+    letter-spacing: 0.02em;
 }
 
 .subtitle-ml-header{
     margin-top: 30px;
+    font-size: 18px;
+    letter-spacing: 0.05em;
 }
 
 

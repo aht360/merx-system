@@ -19,25 +19,26 @@ export default function SimulatorVerde(props){
     const ResultLivre = props.resultLiv
     
 
-    const {cativoDemandaUnica,cativoDemandaUltrapassagem,cativoConsumoPonta,cativoConsumoPontaFora,qtdGerador,
+    const {/*cativoDemandaUnica,cativoDemandaUltrapassagem,cativoConsumoPonta,cativoConsumoPontaFora,*/qtdGerador,
         totalDemandaUnica,totalDemandaUltrapassagem,totalConsumoPonta,totalcativoConsumoPontaFora,totalGerador
         } = ResultCativo
 
     const {livreDemandaUnica,livreConsumoPonta,livreConsumoPontaFora,livreGerador,energiaACL,
-            tarifaLivreDemandaUnica,tarifaLivreConsumoPonta,tarifaLivreConsumoForaPonta,
-            custoGeracaoDisel,energiaACLTarifa,totalLivreDemanda,totalLivreConsumoPonta,
+            /*tarifaLivreDemandaUnica,tarifaLivreConsumoPonta,tarifaLivreConsumoForaPonta,
+            custoGeracaoDisel,energiaACLTarifa,*/totalLivreDemanda,totalLivreConsumoPonta,
             totalLivreConsumoForaPonta,totalLivreGerador,totalEnergiaACL,
             totalCativo
     }= ResultLivre
 
 
     var qtdGeradorFormated = qtdGerador;
+    /*
     var livreDemandaUnicaFormated = formatQtdGerador(livreDemandaUnica)
     var livreConsumoPontaFormated = formatQtdGerador(livreConsumoPonta)
     var livreConsumoPontaForaFormated = formatQtdGerador(livreConsumoPontaFora)
     var livreGeradorFormated = formatQtdGerador(livreGerador)
     var energiaACLFormated = formatQtdGerador(energiaACL)
-
+    */
     
     if(qtdGeradorFormated !== undefined){
 
@@ -456,9 +457,14 @@ export default function SimulatorVerde(props){
                 </div>
 
                 <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        Bandeira Amarela <FontAwesomeIcon icon={faFlag} className="verticalIcon" style={{color: "#FBFF28"}}/>
-                    </p>
+                    <div className="band-divis">
+                        <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
+                            Bandeira Amarela
+                        </p>
+
+                        <FontAwesomeIcon icon={faFlag} className="verticalIcon" style={{color: "#FBFF28"}}/>
+
+                    </div>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
@@ -486,9 +492,14 @@ export default function SimulatorVerde(props){
                 
 
                 <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        Bandeira Vermelha 1 <FontAwesomeIcon icon={faFlag} className="verticalIcon" style={{color: "red"}}/>
-                    </p>
+                    <div className="band-divis">
+                        <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
+                            Bandeira Vermelha 1 
+                        </p>
+
+                        <FontAwesomeIcon icon={faFlag} className="verticalIcon" style={{color: "red"}}/>
+
+                    </div>
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
@@ -514,9 +525,16 @@ export default function SimulatorVerde(props){
                 </div>
 
                 <div className="ResSimulTableTitle">
-                    <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
-                        Bandeira Vermelha 2 <FontAwesomeIcon icon={faFlag} className="verticalIcon" style={{color: "#D10000"}}/>
-                    </p>
+
+                    <div className="band-divis">
+                        <p className="ResSimulTableContent" style={{textAlign: 'left'}}>
+                            Bandeira Vermelha 2 
+                        </p>
+
+                        <FontAwesomeIcon icon={faFlag} className="verticalIcon" style={{color: "#D10000"}}/>
+
+                    </div>
+
                     <p className="ResSimulTableContent">
                         R$/MWh
                     </p>
