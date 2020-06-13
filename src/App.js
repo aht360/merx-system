@@ -38,7 +38,7 @@ const Routes = () => (
       <Route path="/autoproducao" component={Autoproducao} />
       <Route path="/mercado-livre" component={MercadoLivre} />
       <Route path="/marketplace" component={MarketPlace} />
-      <PrivateRoute path="/register" component={Register} />
+      <Route path="/register" component={Register} />
       <PrivateRoute path="/pesquisa-mercado-livre" component={Pesquisa} />
       <PrivateRoute path="/client" component={Client} />
       <PrivateRoute path="/simulacao" component={Simulacao} />

@@ -3,7 +3,7 @@ import './style.css';
 import BlackLogo from "../../Assets/blackLogo.png"
 import { Form, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faEnvelope, faPhoneAlt, faIdCard, faIdCardAlt, faLock } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faEnvelope, faPhoneAlt, faIdCard, faIdCardAlt, faLock, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 import LoginModal from '../../Components/LoginModal/index';
 import TermsModal from '../../Components/TermsModal/index';
 
@@ -34,14 +34,15 @@ class App extends Component{
         email: "",
         tel: "",
         cpf: "",
-        cnpj: "",
+        companyCNPJ: "",
         password: "",
+        Usertype: "",
         error: ""
     };
 
     handleSignUp = async e => {
         e.preventDefault();
-        const { nome, email, tel, cpf, cnpj, password } = this.state;
+        const { nome, email, tel, cpf, companyCNPJ, password, Usertype } = this.state;
 
         if (!nome || !email || !password) {
             alert("Preencha todos os dados para se cadastrar");
@@ -49,7 +50,7 @@ class App extends Component{
         else {
             try {
 
-                await api.post("/sessions", { nome, email, tel, cpf, cnpj, password })
+                await api.post("/sessions", { nome, email, tel, cpf, companyCNPJ, password, Usertype })
 
                 alert('cadastro realizado!');
                 this.props.history.push("/");
@@ -85,7 +86,7 @@ class App extends Component{
                                 className="text-center"
                                 type="text"
                                 placeholder="Nome completo*" 
-                                style={{width: "268px"}}
+                                style={{width: "fit-content"}}
                                 onChange={e => this.setState({ nome: e.target.value })}
                             />
                         </Form.Group>
@@ -97,7 +98,7 @@ class App extends Component{
                                 className="text-center" 
                                 type="email"
                                 placeholder="Email*"
-                                style={{width: "268px", marginRight: "4px"}}
+                                style={{width: "fit-content", marginRight: "4px"}}
                                 onChange={e => this.setState({ email: e.target.value })}
                             />
                         </Form.Group>
@@ -109,7 +110,7 @@ class App extends Component{
                                 className="text-center "
                                 type="tel"
                                 placeholder="Telefone*"
-                                style={{width: "268px", marginRight: "3px"}}
+                                style={{width: "fit-content", marginRight: "3px"}}
                                 onChange={e => this.setState({ tel: e.target.value })}
                             />
                         </Form.Group>
@@ -122,21 +123,37 @@ class App extends Component{
                                 type="text" 
                                 placeholder="CPF (somente números)*" 
                                 maxLength="11" 
-                                style={{width: "268px", marginRight: "7px"}}
+                                style={{width: "fit-content", marginRight: "7px"}}
                                 onChange={e => this.setState({ cpf: e.target.value })}
                             />
                         </Form.Group>
 
                         <Form.Group controlId="registerGroupCnpj" className="register-cell">
                             <Form.Label className=""><FontAwesomeIcon icon={faIdCardAlt} className="registerIcon"/></Form.Label>
-                            <Form.Control 
+                            <Form.Control
+                                required 
                                 className="text-center " 
                                 type="text" 
-                                placeholder="CNPJ (somente números)" 
+                                placeholder="CNPJ*" 
                                 maxLength="14" 
-                                style={{width: "268px", marginRight: "7px"}}
-                                onChange={e => this.setState({ cnpj: e.target.value })}
+                                style={{width: "fit-content", marginRight: "7px"}}
+                                onChange={e => this.setState({ companyCNPJ: e.target.value })}
                             />
+                        </Form.Group>
+
+                        <Form.Group controlId="registerGroupOpt" className="register-cell">
+                            <Form.Label><FontAwesomeIcon icon={faAddressBook} className="registerIcon"/></Form.Label>
+                            <Form.Control
+                                as="select"
+                                onChange={e => this.setState({ Usertype: e.target.value })}
+                                required
+                                
+                                style={{width: "fit-content", textAlign: "center", padding: "0px 15%"}}
+                            >
+                                <option value="cliente" className="text-center">Cliente</option>
+                                <option value="parceiro" className="text-center" >Parceiro</option>
+                                
+                            </Form.Control>
                         </Form.Group>
 
                         <Form.Group controlId="registerGroupPass" className="register-cell">
@@ -146,7 +163,7 @@ class App extends Component{
                                 className="text-center " 
                                 type="password"
                                 placeholder="Senha*" 
-                                style={{width: "268px"}}
+                                style={{width: "fit-content"}}
                                 onChange={e => this.setState({ password: e.target.value })}
                             />
                         </Form.Group>
@@ -158,7 +175,7 @@ class App extends Component{
                                 className="text-center "
                                 type="password"
                                 placeholder="Confirmar Senha*"
-                                style={{width: "268px"}}
+                                style={{width: "fit-content"}}
                             />
                         </Form.Group>
 

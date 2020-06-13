@@ -9,7 +9,7 @@ import './style.css';
 export default function Header(){
 
     var phrases = ["Escolha seu fornecedor","Realize suas cotações",
-                  "Analise seus dados","Simule sua economia","Conheça mais sobre,"];
+                  "Analise seus dados","Simule sua economia","Conheça mais sobre", "Invista"];
 
     return(
        <Container fluid className="container-header">
