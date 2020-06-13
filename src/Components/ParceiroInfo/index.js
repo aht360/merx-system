@@ -21,9 +21,9 @@ export default function ClientInfo(props){
 
         <div className="clientInfo-container">
 
-            <h1 className="clientInfo-title">Área do cliente</h1>
+            <h1 className="clientInfo-title">Área do Parceiro</h1>
 
-            <div className="clientInfo-display-row" style={{paddingTop: "45px"}}>
+            <div className="clientInfo-display-row" style={{alignItems: "center", justifyContent: "space-around", paddingTop: "45px"}}>
 
                 <div className="clientInfo-avatar-container">
                     <img className="imgSizeAvatar" src={Avatar} alt="pc"/>
@@ -50,7 +50,7 @@ export default function ClientInfo(props){
                             <p className="clientInfo-box-content-title">Sigla</p>
                             <p className="clientInfo-box-content-subtitle">{Sigla}</p>
                         </div>
-                        <div className="clientInfo-box-content" style={{width: "150px"}}>
+                        <div className="clientInfo-box-content">
                             <p className="clientInfo-box-content-title">Início ACL</p>
                             <p className="clientInfo-box-content-subtitle">{InicioACL}</p>
                         </div>
@@ -71,7 +71,7 @@ export default function ClientInfo(props){
                             <p className="clientInfo-box-content-title">Categoria</p>
                             <p className="clientInfo-box-content-subtitle">{Categoria}</p>
                         </div>
-                        <div className="clientInfo-box-content" style={{width: "150px"}}>
+                        <div className="clientInfo-box-content">
                             <p className="clientInfo-box-content-title">AG/CC Bradesco</p>
                             <p className="clientInfo-box-content-subtitle">{AgCC}</p>
                         </div>

@@ -2,24 +2,27 @@
     display: flex;
     flex-direction: column;
     background-color: #E5E5E5;
-    transform: scale(0.8);
+    font-family: Encode Sans;
 
 }
 
 .clientInfo-display-row{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 .clientInfo-display-column{
     display: flex;
     flex-direction: column;
+    
 }
 
 .clientInfo-box-content{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 250px;
     padding: 5px;
 }
 
@@ -28,6 +31,8 @@
     font-weight: bold;
     font-size: 44px;
     color: #646464;
+    margin-top: 93px;
+    margin-left: 130px;
 }
 
 .iconClientInfo{
@@ -37,30 +42,46 @@
 
 .clientInfo-box-content-title{
     font-weight: 600;
-    font-size: 22px;
+    font-size: 14px;
     line-height: 0px;
+    letter-spacing: 0.1em;
     color: #000000;
 }
 
 .clientInfo-box-content-subtitle{
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 36px;
+    letter-spacing: 0.05em;
+    align-items: center;
     color: #000000;
 }
 
 .clientInfo-avatar-container{
     display: flex;
     flex-direction: column;
+    
 }
+
 .imgSizeAvatar{
-    width: 150px;
+    width: 135px;
 }
 
 .editAvatar{
     margin-top: 5px;
     border: none;
     background-color: transparent;
+}
+
+.down-box{
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 1250px){
+    .clientInfo-display-row{
+        justify-content: space-between;
+    }
 }
 
 

@@ -10,6 +10,7 @@ import Pesquisa from './pages/Pesquisa/index';
 import MarketPlace from './pages/MarketPlace/index';
 
 import Client from './pages/Client/index';
+import Parceiro from './pages/Parceiro/index';
 import Perfil from './pages/Perfil/index';
 
 import { isAuthenticated } from './Services/auth';
@@ -42,6 +43,7 @@ const Routes = () => (
       <PrivateRoute path="/pesquisa-mercado-livre" component={Pesquisa} />
       <PrivateRoute path="/client" component={Client} />
       <PrivateRoute path="/simulacao" component={Simulacao} />
+      <PrivateRoute path="/parceiro" component={Parceiro} />
       <PrivateRoute path="/perfil" component={Perfil} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
