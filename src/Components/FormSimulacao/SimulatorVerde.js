@@ -805,13 +805,14 @@ export default function SimulatorVerde(props){
                         margin={{
                             left: 10
                         }}
+                        barSize={32}
                     >
                         <CartesianGrid strokeDasharray="3" />
                         <XAxis dataKey="name" />
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="economia" fill="#0067CC" />
+                        <Bar dataKey="economia" fill="#0067CC"/>
                     </BarChart>
 
 
