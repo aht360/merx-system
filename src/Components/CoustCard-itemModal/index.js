@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
 
-
 class CoustCardItem extends Component{
     constructor(props){
         super();
@@ -14,7 +13,7 @@ class CoustCardItem extends Component{
             widthDimension = "380px";
         }
         else{ // Modal Card
-            widthDimension = "235px"; 
+            widthDimension = "240px"; 
         }
 
         if(props.type === "1"){ // Custo Cativo
@@ -56,21 +55,21 @@ class CoustCardItem extends Component{
 
         const divStyle = {
             width: this.state.widthDimension,
-            borderColor: this.state.borderColor
+            borderColor: this.state.borderColor,
         };
 
         const format = this.state.format;
         console.log(format, this.props.value)
         return(
-            <div className="container-CoustCardItem" style={divStyle}>
-                <p className="coustCardItem-title">{this.props.title}</p>
+            <div className="container-CoustCardItemModal" style={divStyle} >
+                <p className="coustCardItem-titleModal">{this.props.title}</p>
                 <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-                    <p className="coustCardItem-content">{this.props.content}</p>
-                    <p className="coustCardItem-content">{this.props.percent}</p>
+                    <p className="coustCardItem-contentModal">{this.props.content}</p>
+                    <p className="coustCardItem-contentModal">{this.props.percent}</p>
                 </div>
-                <p className="coustCardItem-content">
+                <p className="coustCardItem-contentModal">
                     R$ 
-                    <p className="coutCardItem-value">
+                    <p className="coutCardItem-valueModal">
                         { format && this.removeSimbolReal(parseFloat(this.props.value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))}
                         { !format && this.props.value }
                     </p>

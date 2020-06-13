@@ -1,8 +1,6 @@
 
 .row-compare {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: 'Encode Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,8 +31,9 @@
 .compare-p{
     padding: 50px 0 50px 0;
     font-size:18px;
-    color:#857c7c;
+    color: #515151;
     text-align: justify;
+    letter-spacing: -0.015em;
 }
 
 .correctMarginTop{

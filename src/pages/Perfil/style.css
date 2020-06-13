@@ -1,7 +1,5 @@
 .container-data-master{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: 'Encode Sans', sans-serif;
     position: relative;
 }
 .container-data-external{

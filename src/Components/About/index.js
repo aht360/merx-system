@@ -6,29 +6,6 @@ import Fade from 'react-reveal/Fade';
 
 export default function About(){
 
-    /*
-            <div className="pictures">
-                <Fade left>
-                    <img className="picImg" src={BeProducer} alt="Be Produce"/>
-                </Fade>
-                <div className="textAbout">
-                    
-                </div>
-            </div>
-            <div className="pictures">
-                <div className="textAbout">
-                    <p className="titleAbout">Seja produtor de energia elétrica</p>
-                    <span>
-                        Os principais atrativos da autoprodução são isenção de encargos setoriais, sem rocolhimento ICMS sobre energia produzida entre agentes de mesmo CNPJ de acordo com cada estado, 
-                        diminuição da exposição e variações de preços, aplicação independente da localização geográfica e o direito de comercializar seus excedentes de energia com outros consumidores livres e até mesmo outros agentes de geração.
-                    </span>
-                </div>
-                <Fade right>
-                    <img className="picImg" src={TheMerx} alt="The Merx"/>
-                </Fade>
-            </div>
-    */
-
     return(
         <div className="container-about">
             <div class="item-about">

@@ -7,8 +7,54 @@
 }
 
 .consume-content-table{
-    
+    display: flex;
+    flex-direction: column;
 }
+
+.mytable-row{
+    display: flex;
+    flex-direction: row;
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mytable-item-title{
+    font-family: Encode Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 30px;
+    /* or 467% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #000000;
+    width: 143px;
+    justify-content: center;
+    margin: 0px;
+}
+
+.mytable-item{
+    font-family: Encode Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 0px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    width: 143px;
+    justify-content: center;
+    color: #000000;
+    margin: 4.5px;
+}
+
+
 
 @media only screen and (max-width: 1200px){
     .consumeTable-container{

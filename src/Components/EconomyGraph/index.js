@@ -31,7 +31,10 @@ class SimpleLineChart extends Component {
     render () {
         return (
             <div className="container-econimyGraph">
-                <b className="title-graphic">Economia Acumulada</b>
+                <div className="graphHeader">
+                    <b className="title-graphic">Economia Acumulada</b>
+                    <p className="subtitle-graphic">12 meses</p>
+                </div>
                 <div style={{ width: '100%', height: 250 }}>
                     <ResponsiveContainer>
                         <AreaChart 
@@ -40,8 +43,8 @@ class SimpleLineChart extends Component {
                         >
                             <defs>
                                 <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="5%" stopColor="#109cf1" stopOpacity={0.8}/>
-                                    <stop offset="95%" stopColor="#109cf1" stopOpacity={0}/>
+                                    <stop offset="5%" stopColor="#b0e1ff" stopOpacity={0.8}/>
+                                    <stop offset="95%" stopColor="#b0e1ff" stopOpacity={0}/>
                                 </linearGradient>
                             </defs>
 
@@ -53,7 +56,7 @@ class SimpleLineChart extends Component {
 
                             <Tooltip />
 
-                            <Area type="monotone" dataKey="R$" stroke="#109cf1" fillOpacity={1} fill="url(#colorPv)" />
+                            <Area type="monotone" dataKey="R$" stroke="#0067CC" fillOpacity={1} fill="url(#colorPv)" strokeWidth={4} />
 
                         </AreaChart>
                     </ResponsiveContainer>

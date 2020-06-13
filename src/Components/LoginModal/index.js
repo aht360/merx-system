@@ -43,7 +43,6 @@ class LoginModal extends React.Component {
                 const response = await api.post("/authenticate", { email, password });
 
                 login(response.data.token);
-                alert(`Bem vindo ${response.data.user.nome}`);
 
                 window.location.reload();
 

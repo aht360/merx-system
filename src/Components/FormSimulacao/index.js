@@ -87,7 +87,6 @@ class formSimulacao extends Component{
             console.log(this.state.input)
             console.log(this.state.ResultCativo)
             console.log(this.state.ResultLivre)
-            alert('Será enviado para você um email com os detalhes da sua simulação.');
             
         
         } catch (err) {
@@ -116,52 +115,12 @@ class formSimulacao extends Component{
         return(
             <div className="container-formSimulacao-master">
                 <div className="container-formSimulacao">
-                    <h3 className="dados-title">Dados pessoais</h3>
                     <Form onSubmit={this.handleSimulation}>
+
                         <div className="formLine">
-                            <Form.Group controlId="simulationName" style={{width: "400px"}}>
-                                <Form.Label>Nome</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder=""
-                                    onChange={e => this.setState({ name: e.target.value })}
-                                />
-                            </Form.Group>
+                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", borderWidth: "2px", paddingBottom: "12px", fontWeight: "bold", margin: "30px 0px", color: "#646464"}}>Autoprodutor de energia</p>
     
-                            <Form.Group controlId="simulationEmail" style={{width: "400px"}}>
-                                <Form.Label>E-mail</Form.Label>
-                                <Form.Control
-                                    type="email"
-                                    placeholder=""
-                                    onChange={e => this.setState({ email: e.target.value })}
-                                />
-                            </Form.Group>
-                        </div>
-    
-                        <div className="formLine">
-                            <Form.Group controlId="simulationCNPJ" style={{width: "400px"}}>
-                                <Form.Label>CNPJ</Form.Label>
-                                <Form.Control
-                                    type="number"
-                                    placeholder="Somente números"
-                                    onChange={e => this.setState({ cnpj: e.target.value })}
-                                />
-                            </Form.Group>
-    
-                            <Form.Group controlId="simulationNumber" style={{width: "400px"}}>
-                                <Form.Label>Telefone</Form.Label>
-                                <Form.Control
-                                type="number"
-                                placeholder="Somente números"
-                                onChange={e => this.setState({ tel: e.target.value })}
-                            />
-                            </Form.Group>
-                        </div>
-    
-                        <div className="formLine">
-                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", fontWeight: "bold", margin: "30px 0px", color: "#0067CC"}}>Autoprodutor de energia</p>
-    
-                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", fontWeight: "bold", margin: "30px 0px", color: "#0067CC"}}>Mercado Livre de energia</p>
+                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", borderWidth: "2px", paddingBottom: "12px", fontWeight: "bold", margin: "30px 0px", color: "#0067CC"}}>Mercado Livre de energia</p>
                         </div>
     
                         <div className="formLine">

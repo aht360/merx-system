@@ -4,6 +4,7 @@
     justify-content: center;
     padding: 50px 0px;
     cursor: default;
+    font-family: 'Encode Sans', sans-serif;
 }
 
 .card-checkbox{
@@ -35,18 +36,21 @@
 }
 
 .card-checkbox-item-title{
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
+    align-items: center;
+    letter-spacing: 0.1em;
+
 }
 
 .card-checkbox-item-content{
     font-size: 12px;
+    text-align: center;
 }
 
 .iconCardCheck{
     color: green;
     transition: all .5s linear;
-
+    margin-right: 5px;
 }
 
 .iconCardCheck:hover{

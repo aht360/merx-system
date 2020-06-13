@@ -20,7 +20,7 @@ class CardContent extends Component {
                 widthContent = "100%"
                 break;
             case 'false':
-                widthContent = "300px"
+                widthContent = "380px"
                 break;
             default:
                 console.log('lixo');
@@ -67,25 +67,25 @@ class CardContent extends Component {
         const chooseRender = () => {
             if(this.state.borderColor === "green"){
                 return (
-                    <div>
+                    <div style={{display: "flex"}} >
                         <FontAwesomeIcon icon={faCheck} className="verticalIcon" style={{color: "green"}}/>
-                        <p style={{fontSize: "10px"}}>Completo</p>
+                        <p style={{fontSize: "10px", marginLeft: "8px"}}>Completo</p>
                     </div>
                 );
             }
             else if(this.state.borderColor === "#FF9C27"){
                 return(
-                    <div>
+                    <div style={{display: "flex"}}>
                         <FontAwesomeIcon icon={faExclamation} className="verticalIcon" style={{color: "#FF9C27"}}/>
-                        <p style={{fontSize: "10px"}}>Em operação</p>
+                        <p style={{fontSize: "10px", marginLeft: "8px"}}>Em operação</p>
                     </div>
                 );
             }
             else if(this.state.borderColor === "red"){
                 return(
-                    <div>
+                    <div style={{display: "flex"}}>
                         <FontAwesomeIcon icon={faTimes} className="verticalIcon" style={{color: "red"}}/>
-                        <p style={{fontSize: "10px"}}>Erro</p>
+                        <p style={{fontSize: "10px", marginLeft: "8px"}}>Erro</p>
                     </div>
                 );
             }

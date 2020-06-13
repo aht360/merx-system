@@ -1,6 +1,5 @@
 .container-econimyGraph{
     background-color: white;
-    padding: 50px 0px;
     margin-bottom: 50px;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -10,12 +9,40 @@
     width: 1200px;
 }
 
+.graphHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 50px;
+}
 
+.subtitle-graphic{
+    font-family: Encode Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.01em;
+
+    /* black */
+
+    color: #192A3E;
+}
 .title-graphic{
 
     font-weight: bold;
     font-size: 24px;
     color: #192A3E;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
 }
 
 @media only screen and (max-width: 1200px){

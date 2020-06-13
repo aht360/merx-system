@@ -1,6 +1,6 @@
 .container-mercadoLivre{
     margin: 0;
-    font-family: Encode Sans;
+    font-family: 'Encode Sans', sans-serif;
     width: 100%;
     overflow: hidden;
 }

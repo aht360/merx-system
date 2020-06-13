@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 
 import CardContent from '../CardContent/index';
-import CoustCardRow from '../CoustCardRow/index';
+import CoustCardRowModal from '../CoustCardRowModal/index';
 import AnaliseLine from '../AnaliseLine/index';
 import DownFiles from '../DownFiles/index';
 
@@ -62,7 +62,7 @@ render() {
                     <div className="container-modal-Info">
                         <FontAwesomeIcon icon={faTimes} className="close-icon-card" onClick={this.handleClose}/>
                         <CardContent date={this.state.myDate} content={this.state.myContent} status={this.state.myStatus} fullWidth="true"/>
-                        <CoustCardRow bigger="false" CustoCativo="786.890,90" CustoLivre="572.803,25" Economia="214.087,64" format="true" />
+                        <CoustCardRowModal bigger="false" CustoCativo="786.890,90" CustoLivre="572.803,25" Economia="214.087,64" format="true" />
                         <AnaliseLine />
                         <DownFiles />
                     </div>

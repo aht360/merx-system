@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import './style.css';
+import Correct from '../../Assets/correct.png';
 
 export default function CheckCard(props){
 
@@ -16,7 +17,7 @@ export default function CheckCard(props){
                     props.EnergiaCheck
                     &&  
                     <div className="card-checkbox-item">
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Energia ACL</p>
+                        <p className="card-checkbox-item-title"> <img src={Correct} alt="correct" className="iconCardCheck"/> Energia ACL</p>
                         <p className="card-checkbox-item-content">Compra de Energia</p>
                     </div>
                 }
@@ -24,7 +25,7 @@ export default function CheckCard(props){
                     !props.EnergiaCheck
                     &&  
                     <div className="card-checkbox-item" style={{color: "#C4C4C4"}}>
-                        <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} /> Energia</p>
+                        <p className="card-checkbox-item-title"> <img src={Correct} alt="correct"/> Energia</p>
                         <p className="card-checkbox-item-content">Compra de Energia</p>
                     </div>
                 }
@@ -34,7 +35,7 @@ export default function CheckCard(props){
                         props.DistribuidoraCheck
                         && 
                         <div className="card-checkbox-item">
-                            <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Distribuidora</p>
+                            <p className="card-checkbox-item-title"> <img src={Correct} alt="correct" className="iconCardCheck"/> Distribuidora</p>
                             <p className="card-checkbox-item-content">Ajuste e gestão de contratos</p>
                         </div>
                     }
@@ -42,7 +43,7 @@ export default function CheckCard(props){
                         !props.DistribuidoraCheck
                         && 
                         <div className="card-checkbox-item" style={{color: "#C4C4C4"}}>
-                            <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} /> Distribuidora</p>
+                            <p className="card-checkbox-item-title"> <img src={Correct} alt="correct"/> Distribuidora</p>
                             <p className="card-checkbox-item-content">Ajuste e gestão de contratos</p>
                         </div>
                     }
@@ -53,7 +54,7 @@ export default function CheckCard(props){
                         props.FinanceiroCheck
                         && 
                         <div className="card-checkbox-item">
-                            <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Informações financeiras</p>
+                            <p className="card-checkbox-item-title"> <img src={Correct} alt="correct" className="iconCardCheck"/> Informações financeiras</p>
                             <p className="card-checkbox-item-content">Abertura da Conta Trianon</p>
                         </div>
                     }
@@ -61,7 +62,7 @@ export default function CheckCard(props){
                         !props.FinanceiroCheck
                         && 
                         <div className="card-checkbox-item" style={{color: "#C4C4C4"}}>
-                            <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} /> Informações financeiras</p>
+                            <p className="card-checkbox-item-title"> <img src={Correct} alt="correct"/> Informações financeiras</p>
                             <p className="card-checkbox-item-content">Abertura da Conta Trianon</p>
                         </div>
                     }
@@ -91,7 +92,7 @@ export default function CheckCard(props){
                         props.MedicaoCheck
                         && 
                         <div className="card-checkbox-item">
-                            <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Adequação da Medição</p>
+                            <p className="card-checkbox-item-title"> <img src={Correct} alt="correct" className="iconCardCheck"/> Adequação da Medição</p>
                             <p className="card-checkbox-item-content">Ajuste físico da Medição</p>
                         </div>
                     }
@@ -110,7 +111,7 @@ export default function CheckCard(props){
                         props.AprovacaoCheck
                         &&
                         <div className="card-checkbox-item">
-                            <p className="card-checkbox-item-title"> <FontAwesomeIcon icon={faCheck} className="iconCardCheck"/> Aprovação</p>
+                            <p className="card-checkbox-item-title"> <img src={Correct} alt="correct" className="iconCardCheck"/> Aprovação</p>
                             <p className="card-checkbox-item-content">Consumidor Livre</p>
                         </div>
                     }

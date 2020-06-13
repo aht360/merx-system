@@ -1,6 +1,6 @@
 .cardContent-container{
     background-color: white;
-    border-radius: 8px;
+    border-radius: 4px;
     /*
     width: 300px;
     */
@@ -40,12 +40,15 @@
 .cardContent-text{
     font-size: 12px;
     padding: 0px 0px 0px 10px;
+    text-align: start;
 }
 
 .icon-box-card{
     display: flex;
     flex-direction: row;
     text-align: center;
+    margin-right: 15px;
+    margin-top: 16px;
 }
 
 @media only screen and (max-width: 800px){

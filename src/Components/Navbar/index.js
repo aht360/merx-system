@@ -30,7 +30,7 @@ class App extends Component{
                 break;
             case 'false':
                 colorBack = "#FFFFFF;" // White
-                fontColor = "#000" // Black
+                fontColor = "#646464" // Black
                 setColor = false;
                 break;
             default:
@@ -57,7 +57,6 @@ class App extends Component{
 
     onLogoutClick = () => {
         console.log(getToken());
-        alert('Deslogado!')
         logout();
         window.location.reload();
     }
