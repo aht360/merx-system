@@ -83,25 +83,7 @@ class App extends Component {
             return dado.toLowerCase().includes(searchfield.toLowerCase());
         })
 
-        return !data.length ?
-            (
-                <div>
-                    <NavBar changeColor="false" />
-                    <div className="container-pesquisa-master" style={{ textAlign: "center" }}>
-                        <h1 style={{ marginTop: "100px"}}>Carregando dados...</h1>
-                        <div style={{ marginTop: "100px", height: '20vh' }}>
-                            <Spinner animation="border" role="status">
-                                <span className="sr-only">Loading...</span>
-                            </Spinner>
-                        </div>
-                    </div>
-                    <Footer />
-                </div>
-            )
-            
-            :
-
-            (
+        return (
                 <div style={{ textAlign: "center" }}>
                     <NavBar changeColor="false" />
                     <div className="container-pesquisa-master">
