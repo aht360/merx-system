@@ -4,6 +4,8 @@ import footer1 from '../../Assets/footer1.png'
 import footer2 from '../../Assets/footer2.png'
 import footer3 from '../../Assets/footer3.png'
 import footer4 from '../../Assets/footer4.png'
+import footertop4 from '../../Assets/footertop4.png';
+import footerbottom4 from '../../Assets/footerbottom4.png'
 
 export default function HeaderFooter(){
 
@@ -16,11 +18,12 @@ export default function HeaderFooter(){
                 <div className="column-partner">
                     <img className="partner-size" src={footer3} alt="f3"/>
                 </div>
-                <div className="column-partner">
+                <div className="column-partner adjust">
                     <img className="partner-size" src={footer1} alt="f1"/>
                 </div>
-                <div className="column-partner">
-                    <img className="partner-size" src={footer4} alt="f1"/>
+                <div className="column-partner-modifier">
+                    <img className="partner-size-modifier" src={footertop4} alt="f1"/>
+                    <img className="partner-size-modifier-2" src={footerbottom4} alt="footerbottom"/>
                 </div>
             </div>
             

@@ -75,13 +75,20 @@
 
 .container-img{
     position: absolute;
-    left: 50%;
-    top: 37%;
+    display: flex;
+    left: 29%;
+    top: 41%;
     transform: translateX(-50%);
     transform: translateY((-50%))
 }
 .imgSize{
-    height: 350px;
+    height: 340px;
+}
+.imgSize2{
+    height: 450px;
+    position: absolute;
+    left: 320px;
+    top: -50px;
 }
 
 .verticalIcon{
@@ -110,5 +117,20 @@
         padding-bottom: 20px;
     }
 
+    .subText{
+        margin-top: 30px;
+        margin-bottom: 15px;
+        width: 300px;
+        line-height: 20px;
+    }
+
+    .container-text-typedEffect{
+        
+        line-height: 36px;
+        letter-spacing: 0.02em;
+        width: 300px;
+
+        color: #FFFFFF;
+    }
 
 }

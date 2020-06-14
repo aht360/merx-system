@@ -1,5 +1,6 @@
 import React from 'react';
-import Pc from '../../Assets/Pc.png';
+import Pc from '../../Assets/mypc.png';
+import Cel from '../../Assets/mycel.png';
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
@@ -31,6 +32,7 @@ export default function Header(){
                 <Col sm={4}>
                     <div className="container-img">
                         <img className="imgSize" src={Pc} alt="pc"/>
+                        <img className="imgSize2" src={Cel} alt="pc"/> 
                     </div>
                 </Col>
         </Container>

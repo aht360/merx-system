@@ -7,9 +7,28 @@
 .row-partner{
     width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
+
+.column-partner-modifier{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.partner-size-modifier{
+    width: fit-content;
+    height: fit-content;
+    
+}
+.partner-size-modifier-2{
+    width: fit-content;
+    height: fit-content;
+    transform: translateX(40%);
+    margin-top: 4.7px;
+}
 
 @media only screen and (max-width: 600px){
     .container-HeaderFooter{
@@ -17,8 +36,18 @@
         display: inline-block;
         position: relative;
     }
-    .partner-size{
-        width: 80px;
+    .partner-size,
+    .partner-size-modifier{
+        width: 70px;
+    }
+    .partner-size-modifier-2{
+        width: 70px;
+        height: 35px;
+        transform: translateX(0%);
+    }
+
+    .column-partner-modifier{
+        margin-top: 7.5px;
     }
 
     .row-partner{
@@ -30,5 +59,9 @@
         padding: 5px;
     }
 
+    .adjust{
+        margin-top: 1.5px;
+    }
+    
 
 }
