@@ -118,9 +118,9 @@ class formSimulacao extends Component{
                     <Form onSubmit={this.handleSimulation}>
 
                         <div className="formLine">
-                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", borderWidth: "2px", paddingBottom: "12px", fontWeight: "bold", margin: "30px 0px", color: "#646464"}}>Autoprodutor de energia</p>
+                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", borderWidth: "2px", paddingBottom: "12px", fontWeight: "bold", margin: "30px 0px", color: "#646464", cursor: "pointer"}}>Autoprodutor de energia</p>
     
-                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", borderWidth: "2px", paddingBottom: "12px", fontWeight: "bold", margin: "30px 0px", color: "#0067CC"}}>Mercado Livre de energia</p>
+                            <p style={{width: "400px", textAlign: "center", borderBottomStyle: "solid", borderWidth: "2px", paddingBottom: "12px", fontWeight: "bold", margin: "30px 0px", color: "#0067CC", cursor: "pointer"}}>Mercado Livre de energia</p>
                         </div>
     
                         <div className="formLine">

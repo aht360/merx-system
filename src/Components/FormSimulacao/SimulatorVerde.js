@@ -807,9 +807,38 @@ export default function SimulatorVerde(props){
                         }}
                         barSize={32}
                     >
-                        <CartesianGrid strokeDasharray="3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
+                        <CartesianGrid
+                            strokeDasharray="4 4"
+                            vertical={false}
+                        />
+                        <XAxis 
+                            dataKey="name"
+                            style={{
+                                fontFamily: 'Encode Sans',
+                                fontStyle: 'normal',
+                                fontWeight: 'normal',
+                                fontSize: '12px',
+                                lineHeight: '15px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                letterSpacing: '0.01em',
+                                color: '#4C5862'
+                            }}
+                        />
+                        <YAxis 
+                            style={{
+                                fontFamily: 'Encode Sans',
+                                fontStyle: 'normal',
+                                fontWeight: 'normal',
+                                fontSize: '12px',
+                                lineHeight: '15px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                letterSpacing: '0.01em',
+                                color: '#4C5862'
+                            }}
+                            
+                        />
                         <Tooltip />
                         <Legend />
                         <Bar dataKey="economia" fill="#0067CC"/>
@@ -948,6 +977,137 @@ export default function SimulatorVerde(props){
                     </div>
                 </div>
 
+            </div>
+
+            <p className="ecoProjt">
+                Análise dos custos mensais estimados no ambiente de contratação livre
+            </p>
+
+            <div className="containerResSimul">
+                <p className="containerResSimulTitle">
+                    Ambiente Livre
+                </p>
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTable setSize" style={{textAlign: 'left'}}>
+                        Compromissos mensais
+                    </p>
+                    <p className="ResSimulTable setSize">
+                        Agente credor
+                    </p>
+                    <p className="ResSimulTable setSize">
+                        Valor estimado  
+                    </p>
+                    
+                    <p className="ResSimulTable setSize">
+                        Data
+                    </p>
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent setSize" style={{textAlign: 'left'}}>
+                        Fatura de uso TUSD
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        Distribuidora
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        R$ 10.000,21
+                    </p>
+
+                    <p className="ResSimulTableContent setSize">
+                        Negociável
+                    </p>
+                    
+                </div>
+                
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent setSize" style={{textAlign: 'left'}}>
+                        Fatura de energia elétrica
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        Gerador
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        R$ 10.000,21
+                    </p>
+
+                    <p className="ResSimulTableContent setSize">
+                        Dia 10 do mês após consumo
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent setSize" style={{textAlign: 'left'}}>
+                        Contribuição CCEE
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        CCEE
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        R$ 10.000,21
+                    </p>
+
+                    <p className="ResSimulTableContent setSize">
+                        20º dia útil
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent setSize" style={{textAlign: 'left'}}>
+                        Energia de reserva
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        CCEE
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        R$ 10.000,21
+                    </p>
+
+                    <p className="ResSimulTableContent setSize">
+                        16º dia útil
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent setSize" style={{textAlign: 'left'}}>
+                        Liquidação financeira
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        CCEE
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        R$ 10.000,21
+                    </p>
+
+                    <p className="ResSimulTableContent setSize">
+                        MS+29º dia útil
+                    </p>
+                    
+                </div>
+
+                <div className="ResSimulTableTitle">
+                    <p className="ResSimulTableContent setSize" style={{textAlign: 'left'}}>
+                        Garantias
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        CCEE
+                    </p>
+                    <p className="ResSimulTableContent setSize">
+                        R$ 10.000,21
+                    </p>
+
+                    <p className="ResSimulTableContent setSize">
+                        15º dia útil
+                    </p>
+                    
+                </div>
+                
+
+                
+                    
             </div>
 
 

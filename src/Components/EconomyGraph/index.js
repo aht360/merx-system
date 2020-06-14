@@ -37,7 +37,7 @@ class SimpleLineChart extends Component {
                 </div>
                 <div style={{ width: '100%', height: 250 }}>
                     <ResponsiveContainer>
-                        <AreaChart 
+                        <AreaChart
                             data={data}
                             margin={{ top: 10, right: 50, left: 5, bottom: 0 }}
                         >

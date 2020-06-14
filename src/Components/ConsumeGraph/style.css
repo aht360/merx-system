@@ -6,6 +6,7 @@
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+
 }
 
 .consume-header{
@@ -16,13 +17,15 @@
     padding: 15px 15px 0px 15px;
     border-bottom-style: solid;
     border-bottom-width: 2px;
-    border-bottom-color: #EBEFF2;;
+    border-bottom-color: #EBEFF2;
+    font-family: Encode Sans;
 }
 
 .consume-title{
     font-weight: bold;
     font-size: 24px;
     color: #192A3E;
+    font-family: Encode Sans;
 }
 
 .consume-subtitle{

@@ -5,8 +5,9 @@
     transform: translateX(-50%);
     text-align: center;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
-    border-radius: 10px;
+    border-radius: 4px;
     width: 1200px;
+    
 }
 
 .graphHeader{

@@ -7,6 +7,7 @@ import CoustCardRow from '../../Components/CoustCardRow/index';
 import ProgressBar from '../../Components/ProgressBar/index';
 import EconomyGraph from '../../Components/EconomyGraph/index';
 import ConsumeLine from '../../Components/ConsumeLine/index';
+import XPTO from '../../Components/XPTO/index';
 import CardsGrid from '../../Components/CardsGrid/index';
 import Footer from '../../Components/Footer/index';
 
@@ -112,6 +113,7 @@ export default function Main(){
             <CoustCardRow bigger = "true" CustoCativo={CustoCativo} CustoLivre={CustoLivre} Economia={Economia} format={false} />
             <EconomyGraph />
             <ConsumeLine />
+            <XPTO />
             <CardsGrid />
             <Footer />
         </div>

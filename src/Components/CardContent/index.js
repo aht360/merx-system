@@ -20,7 +20,7 @@ class CardContent extends Component {
                 widthContent = "100%"
                 break;
             case 'false':
-                widthContent = "380px"
+                widthContent = "375px"
                 break;
             default:
                 console.log('lixo');
