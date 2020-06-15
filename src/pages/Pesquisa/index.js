@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Spinner } from 'react-bootstrap';
+//import { Spinner } from 'react-bootstrap';
 
 import BlackLogo from "../../Assets/blackLogo.png"
 import NavBar from '../../Components/Navbar/index';
@@ -67,6 +67,7 @@ class App extends Component {
         event.preventDefault();
         this.setState({ show: false })
         this.setState({ searchfield: '' })
+        window.location.reload();
     }
 
     handleClickopt = (data) =>{
@@ -114,7 +115,9 @@ class App extends Component {
                                 <GraficoTotal nome={searchfield} />
                                 <GraficoConsumo nome={searchfield}/>
                                 <Lastro nome={searchfield} />
+
                                 <button style={{marginTop: '30px'}} onClick={this.newSearch} className="styled-btn-pesquisa" >Nova pesquisa</button>
+                                
                             </div>
 
                         }

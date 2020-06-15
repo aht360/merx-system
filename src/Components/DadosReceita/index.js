@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import api from '../../Services/apiSimulation';
 import apiReceita from '../../Services/apiReceita';
 
+
 import './style.css';
 
 
@@ -40,8 +41,10 @@ class App extends Component{
             alert('erro ao se comunicar com o bdados')
             this.setState({erro: true});
         }
-
+        
         const dataReceita = await apiReceita.get(`/${my_cnpj}`);
+        
+
         this.setState({ data: dataReceita.data })
 
     }
