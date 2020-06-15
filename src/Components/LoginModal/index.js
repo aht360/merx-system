@@ -49,7 +49,7 @@ class LoginModal extends React.Component {
             } catch (err) {
                 this.setState({
                     error:
-                      "Usuário ou senha inválidos."
+                      "Credenciais incorretas ou pendentes de validação."
                 });
 
             }

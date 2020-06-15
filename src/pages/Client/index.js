@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../../Components/Navbar/index';
 
 import ClientInfo from '../../Components/ClientInfo/index';
@@ -42,67 +42,65 @@ export default function Main(){
     const [ CustoLivre, setCustoLivre ] = useState('');
     const [ Economia, setEconomia ] = useState('');
 
-    async function getData(){
-
-        const my_token = getToken();
-        
-        try {
-
-            var response = await api.get('/user', {
-                headers: { authorization: 'Bearer ' + my_token }
-            })
+    useEffect( () => {
+        async function fetchData(){
+            const my_token = getToken();
             
+            try {
+    
+                var response = await api.get('/user', {
+                    headers: { authorization: 'Bearer ' + my_token }
+                })
+                
+    
+            } catch (err) {
+                console.log(err);
+                alert("Erro ao pegar o id do usuario");
+            }
+            
+            const _id = response.data.user_id;
+            
+            
+            try {
+                
+                response = await api.post('/user', {_id},{
+                    headers: { authorization: 'Bearer ' + my_token }
+                })
+                
+                setCompCNPJ(response.data.user.companyCNPJ);
+    
+            } catch (err) {
+                console.log(err);
+                alert("Erro ao pegar os dados do usuario");
+            }
+            response = await api.post('/getCompany', { companyCNPJ });
+            
+    
+            setNome(response.data.company.Nome);
+            setSigla(response.data.company.Sigla);
+            setInicioACL(response.data.company.InicioACL);
+            setSubmercado(response.data.company.Submercado);
+            setClasse(response.data.company.Classe);
+            setCategoria(response.data.company.Categoria);
+            setAgCC(response.data.company.AgCC);
+            setContEnerg(response.data.company.ContEnerg);
+            setGarantCont(response.data.company.GarantCont);
+    
+            setEnergiaCheck(response.data.company.EnergiaCheck);
+            setDistribuidoraCheck(response.data.company.DistribuidoraCheck);
+            setFinanceiroCheck(response.data.company.FinanceiroCheck);
+            setCCEECheck(response.data.company.CCEECheck);
+            setMedicaoCheck(response.data.company.MedicaoCheck);
+            setAprovacaoCheck(response.data.company.AprovacaoCheck);
+    
+            setCustoCativo(response.data.company.CustoCativo);
+            setCustoLivre(response.data.company.CustoLivre);
+            setEconomia(response.data.company.Economia);
 
-        } catch (err) {
-            console.log(err);
-            alert("Erro ao pegar o id do usuario");
         }
-        
-        const _id = response.data.user_id;
-        
-        
-        try {
-            
-            response = await api.post('/user', {_id},{
-                headers: { authorization: 'Bearer ' + my_token }
-            })
-
-            setCompCNPJ(response.data.user.companyCNPJ);
-
-        } catch (err) {
-            console.log(err);
-            alert("Erro ao pegar os dados do usuario");
-        }
-            
-        response = await api.post('/getCompany', { companyCNPJ });
-
-        console.log(response.data.company)
-
-        setNome(response.data.company.Nome);
-        setSigla(response.data.company.Sigla);
-        setInicioACL(response.data.company.InicioACL);
-        setSubmercado(response.data.company.Submercado);
-        setClasse(response.data.company.Classe);
-        setCategoria(response.data.company.Categoria);
-        setAgCC(response.data.company.AgCC);
-        setContEnerg(response.data.company.ContEnerg);
-        setGarantCont(response.data.company.GarantCont);
-
-        setEnergiaCheck(response.data.company.EnergiaCheck);
-        setDistribuidoraCheck(response.data.company.DistribuidoraCheck);
-        setFinanceiroCheck(response.data.company.FinanceiroCheck);
-        setCCEECheck(response.data.company.CCEECheck);
-        setMedicaoCheck(response.data.company.MedicaoCheck);
-        setAprovacaoCheck(response.data.company.AprovacaoCheck);
-
-        setCustoCativo(response.data.company.CustoCativo);
-        setCustoLivre(response.data.company.CustoLivre);
-        setEconomia(response.data.company.Economia);
-        
-        
-    }
-
-    getData();
+        fetchData()
+    }, [companyCNPJ] );
+    
 
     return(
         <div className="master-container-client">

@@ -60,7 +60,7 @@ class CoustCardItem extends Component{
         };
 
         const format = this.state.format;
-        console.log(format, this.props.value)
+        
         return(
             <div className="container-CoustCardItem" style={divStyle}>
                 <p className="coustCardItem-title">{this.props.title}</p>

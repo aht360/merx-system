@@ -10,6 +10,8 @@ import BlackLogo from "../../Assets/blackLogo.png";
 
 import Logo from "../../Assets/logo.png";
 
+import api from '../../Services/apiSimulation'
+
 
 
 class App extends Component{
@@ -41,7 +43,8 @@ class App extends Component{
             colorBack,
             fontColor,
             changeColor: setColor,
-            name: ''
+            name: '',
+            Usertype: 'cliente'
         }
 
 
@@ -61,16 +64,50 @@ class App extends Component{
         window.location.reload();
     }
 
+    async componentDidMount(){
+        if(isAuthenticated()){
+            const my_token = getToken();
+    
+                try {
+    
+                    var response = await api.get('/user', {
+                        headers: { authorization: 'Bearer ' + my_token }
+                    })
+                    
+        
+                } catch (err) {
+                    console.log(err);
+                    //alert("Erro ao pegar o id do usuario");
+                }
+                
+                const _id = response.data.user_id;
+    
+                try {
+                
+                    response = await api.post('/user', {_id},{
+                        headers: { authorization: 'Bearer ' + my_token }
+                    })
+                    console.log(response.data.user.Usertype)
+                    this.setState({ Usertype: response.data.user.Usertype })
+        
+                } catch (err) {
+                    console.log(err);
+                    //alert("Erro ao pegar os dados do usuario");
+                }
+
+        }
+    }
+
+
 
     render(){
-
         
         const divStyle = {
             backgroundColor: this.state.colorBack,
             color: this.state.fontColor,
             borderColor: this.state.fontColor
         };
-
+        
         return (
             <div>
 
@@ -103,7 +140,9 @@ class App extends Component{
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="autoproducao">Autoprodução de Energia</Nav.Link>
                             <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="#pricing">Contato</Nav.Link>
                             {!isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLoginClick}>Login</Nav.Link>}
-                            {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="client">Perfil</Nav.Link>}
+                            {isAuthenticated() && this.state.Usertype === 'cliente' && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="client">Perfil</Nav.Link>}
+                            {isAuthenticated() && this.state.Usertype === 'parceiro' && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" href="parceiro">Perfil</Nav.Link>}
+                    
                             {isAuthenticated() && <Nav.Link id="navItem-color" style={divStyle} className="hvr-underline-from-left" onClick={this.onLogoutClick}>Sair</Nav.Link>}
                             
                         </Nav>

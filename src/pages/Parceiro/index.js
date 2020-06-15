@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../../Components/Navbar/index';
 
-import ParceiroInfo from '../../Components/ClientInfo/index';
+import ParceiroInfo from '../../Components/ParceiroInfo/index';
+import CheckCard from '../../Components/CheckCard/index';
+import CoustCardRow from '../../Components/CoustCardRow/index';
+import ProgressBar from '../../Components/ProgressBar/index';
+import EconomyGraph from '../../Components/EconomyGraph/index';
+import ConsumeLine from '../../Components/ConsumeLine/index';
+import XPTO from '../../Components/XPTO/index';
+import CardsGrid from '../../Components/CardsGrid/index';
 import Footer from '../../Components/Footer/index';
 
 import './style.css';
@@ -24,62 +31,88 @@ export default function Main(){
     const [ ContEnerg, setContEnerg ] = useState('');
     const [ GarantCont, setGarantCont ] = useState('');
 
-    async function getData(){
+    const [ EnergiaCheck, setEnergiaCheck ] = useState('');
+    const [ DistribuidoraCheck, setDistribuidoraCheck ] = useState('');
+    const [ FinanceiroCheck, setFinanceiroCheck ] = useState('');
+    const [ CCEECheck, setCCEECheck ] = useState('');
+    const [ MedicaoCheck, setMedicaoCheck ] = useState('');
+    const [ AprovacaoCheck, setAprovacaoCheck ] = useState('');
 
-        const my_token = getToken();
-        
-        try {
+    const [ CustoCativo, setCustoCativo ] = useState('');
+    const [ CustoLivre, setCustoLivre ] = useState('');
+    const [ Economia, setEconomia ] = useState('');
 
-            var response = await api.get('/user', {
-                headers: { authorization: 'Bearer ' + my_token }
-            })
+    useEffect( () => {
+        async function fetchData(){
+            const my_token = getToken();
             
+            try {
+    
+                var response = await api.get('/user', {
+                    headers: { authorization: 'Bearer ' + my_token }
+                })
+                
+    
+            } catch (err) {
+                console.log(err);
+                alert("Erro ao pegar o id do usuario");
+            }
+            
+            const _id = response.data.user_id;
+            
+            
+            try {
+                
+                response = await api.post('/user', {_id},{
+                    headers: { authorization: 'Bearer ' + my_token }
+                })
+                
+                setCompCNPJ(response.data.user.companyCNPJ);
+    
+            } catch (err) {
+                console.log(err);
+                alert("Erro ao pegar os dados do usuario");
+            }
+            response = await api.post('/getCompany', { companyCNPJ });
+            
+    
+            setNome(response.data.company.Nome);
+            setSigla(response.data.company.Sigla);
+            setInicioACL(response.data.company.InicioACL);
+            setSubmercado(response.data.company.Submercado);
+            setClasse(response.data.company.Classe);
+            setCategoria(response.data.company.Categoria);
+            setAgCC(response.data.company.AgCC);
+            setContEnerg(response.data.company.ContEnerg);
+            setGarantCont(response.data.company.GarantCont);
+    
+            setEnergiaCheck(response.data.company.EnergiaCheck);
+            setDistribuidoraCheck(response.data.company.DistribuidoraCheck);
+            setFinanceiroCheck(response.data.company.FinanceiroCheck);
+            setCCEECheck(response.data.company.CCEECheck);
+            setMedicaoCheck(response.data.company.MedicaoCheck);
+            setAprovacaoCheck(response.data.company.AprovacaoCheck);
+    
+            setCustoCativo(response.data.company.CustoCativo);
+            setCustoLivre(response.data.company.CustoLivre);
+            setEconomia(response.data.company.Economia);
 
-        } catch (err) {
-            console.log(err);
-            alert("Erro ao pegar o id do usuario");
         }
-        
-        const _id = response.data.user_id;
-        
-        
-        try {
-            
-            response = await api.post('/user', {_id},{
-                headers: { authorization: 'Bearer ' + my_token }
-            })
-
-            setCompCNPJ(response.data.user.companyCNPJ);
-
-        } catch (err) {
-            console.log(err);
-            alert("Erro ao pegar os dados do usuario");
-        }
-            
-        response = await api.post('/getCompany', { companyCNPJ });
-
-        console.log(response.data.company)
-
-        setNome(response.data.company.Nome);
-        setSigla(response.data.company.Sigla);
-        setInicioACL(response.data.company.InicioACL);
-        setSubmercado(response.data.company.Submercado);
-        setClasse(response.data.company.Classe);
-        setCategoria(response.data.company.Categoria);
-        setAgCC(response.data.company.AgCC);
-        setContEnerg(response.data.company.ContEnerg);
-        setGarantCont(response.data.company.GarantCont);
-        
-        
-    }
-
-    getData();
+        fetchData()
+    }, [companyCNPJ] );
+    
 
     return(
         <div className="master-container-client">
             <NavBar changeColor="true" />
             <ParceiroInfo Nome={Nome} companyCNPJ={companyCNPJ} Sigla={Sigla} InicioACL={InicioACL} Submercado={Submercado} Classe={Classe} Categoria={Categoria} AgCC={AgCC} ContEnerg={ContEnerg} GarantCont={GarantCont} />
-            
+            <CheckCard EnergiaCheck={EnergiaCheck} DistribuidoraCheck={DistribuidoraCheck} FinanceiroCheck={FinanceiroCheck} CCEECheck={CCEECheck} MedicaoCheck={MedicaoCheck} AprovacaoCheck={AprovacaoCheck} />
+            <ProgressBar value="50"/>
+            <CoustCardRow bigger = "true" CustoCativo={CustoCativo} CustoLivre={CustoLivre} Economia={Economia} format={false} />
+            <EconomyGraph />
+            <ConsumeLine />
+            <XPTO />
+            <CardsGrid />
             <Footer />
         </div>
     )

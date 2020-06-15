@@ -1,8 +1,9 @@
 import React from 'react';
-import './style.css';
+
 import Avatar from '../../Assets/blackLogo.png';
+import DownIcon from '../../Assets/DownIcon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload, faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
 export default function ClientInfo(props){
 
@@ -23,7 +24,7 @@ export default function ClientInfo(props){
 
             <h1 className="clientInfo-title">Área do Parceiro</h1>
 
-            <div className="clientInfo-display-row" style={{alignItems: "center", justifyContent: "space-around", paddingTop: "45px"}}>
+            <div className="clientInfo-display-row" style={{paddingTop: "45px"}}>
 
                 <div className="clientInfo-avatar-container">
                     <img className="imgSizeAvatar" src={Avatar} alt="pc"/>
@@ -47,10 +48,10 @@ export default function ClientInfo(props){
                         </div>
 
                         <div className="clientInfo-box-content">
-                            <p className="clientInfo-box-content-title">Sigla</p>
+                            <p className="clientInfo-box-content-title" style={{width: "100px"}}>Sigla</p>
                             <p className="clientInfo-box-content-subtitle">{Sigla}</p>
                         </div>
-                        <div className="clientInfo-box-content">
+                        <div className="clientInfo-box-content" style={{width: "150px"}}>
                             <p className="clientInfo-box-content-title">Início ACL</p>
                             <p className="clientInfo-box-content-subtitle">{InicioACL}</p>
                         </div>
@@ -68,10 +69,10 @@ export default function ClientInfo(props){
                             <p className="clientInfo-box-content-subtitle">{Classe}</p>
                         </div>
                         <div className="clientInfo-box-content">
-                            <p className="clientInfo-box-content-title">Categoria</p>
+                            <p className="clientInfo-box-content-title" style={{width: "100px"}}>Categoria</p>
                             <p className="clientInfo-box-content-subtitle">{Categoria}</p>
                         </div>
-                        <div className="clientInfo-box-content">
+                        <div className="clientInfo-box-content" style={{width: "150px"}}>
                             <p className="clientInfo-box-content-title">AG/CC Bradesco</p>
                             <p className="clientInfo-box-content-subtitle">{AgCC}</p>
                         </div>
@@ -82,9 +83,9 @@ export default function ClientInfo(props){
                             <p className="clientInfo-box-content-title">Contrato Energia</p>
 
                             <div className="clientInfo-display-row down-box">
-                                <p className="clientInfo-box-content-subtitle">{ContEnerg}</p>
+                                <p className="clientInfo-box-content-subtitle" style={{color: "#0067CC"}}>{ContEnerg}</p>
                                 <a href="#d" className="clientInfo-box-content-subtitle">
-                                    <FontAwesomeIcon icon={faDownload} className="iconClientInfo"/>
+                                    <img src={DownIcon} alt="download"/>
                                 </a>
                             </div>
                             
@@ -93,9 +94,9 @@ export default function ClientInfo(props){
                             <p className="clientInfo-box-content-title">Garantia Contrato</p>
                             
                             <div className="clientInfo-display-row down-box">
-                                <p className="clientInfo-box-content-subtitle">{GarantCont}</p>
+                                <p className="clientInfo-box-content-subtitle" style={{color: "#0067CC"}}>{GarantCont}</p>
                                 <a href="#d" className="clientInfo-box-content-subtitle">
-                                    <FontAwesomeIcon icon={faDownload} className="iconClientInfo"/>
+                                    <img src={DownIcon} alt="download"/>
                                 </a>
                             </div>
                         </div>
