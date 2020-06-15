@@ -1,6 +1,4 @@
 import React, { Component }  from 'react';
-import api from '../../Services/apiSimulation';
-import apiReceita from '../../Services/apiReceita';
 
 
 
@@ -10,41 +8,9 @@ class App extends Component{
         super();
         
         this.state = {
-            NomeAgente: props.nome,
-            data: [],
-            erro: false
+            data: props.qsa
         }
     }
-
-    async componentDidMount(){
-
-        var my_cnpj;
-
-        const { NomeAgente } = this.state
-
-        try {
-            const response = await api.post("/DadosCadastrais", { NomeAgente });
-            
-            my_cnpj = response.data[0].CnpjAgente;
-
-            if(my_cnpj.length < 14) my_cnpj = '0' + my_cnpj;
-            
-
-            if(response.data.length !== 0){
-                this.setState({erro: true});
-
-            }
-
-        } catch (err) {
-            alert('erro ao se comunicar com o bdados')
-            this.setState({erro: true});
-        }
-
-        const dataReceita = await apiReceita.get(`/${my_cnpj}`);
-        this.setState({ data: dataReceita.data.qsa })
-
-    }
-
 
     render(){        
 

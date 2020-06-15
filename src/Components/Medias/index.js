@@ -1,7 +1,7 @@
 import React, { Component }  from 'react';
 import api from '../../Services/apiSimulation'
 
-import apiReceita from '../../Services/apiReceita';
+
 class App extends Component{
 
     constructor(props){
@@ -9,9 +9,10 @@ class App extends Component{
         
         this.state = {
             NomeAgente: props.nome,
-            VolumeMedio: '',
-            FlexMax: '',
-            FlexMin: '',
+            mysUF: props.uf,
+            VolumeMedio: '14.29',
+            FlexMax: '0.1421',
+            FlexMin: '0.1259',
             usina: '',
             data: [],
             erro: false
@@ -93,30 +94,8 @@ class App extends Component{
             this.setState({erro: true});
         }
 
-        var my_cnpj;
-
-
-        try {
-            response = await api.post("/DadosCadastrais", { NomeAgente });
-            
-            my_cnpj = response.data[0].CnpjAgente;
-
-            if(my_cnpj.length < 14) my_cnpj = '0' + my_cnpj;
-            
-
-            if(response.data.length !== 0){
-                this.setState({erro: true});
-
-            }
-
-        } catch (err) {
-            alert('erro ao se comunicar com o bdados')
-            this.setState({erro: true});
-        }
-
-        const dataReceita = await apiReceita.get(`/${my_cnpj}`);
-        var my_uf = dataReceita.data.uf
-        var US;
+        var my_uf = this.state.mysUF
+        var US = Number(this.state.VolumeMedio) / 0.165;
         switch(my_uf){
             case 'AC':
                 US = Number(this.state.VolumeMedio) / 0.165;
@@ -203,7 +182,7 @@ class App extends Component{
                 US = Number(this.state.VolumeMedio) / 0.165;
                 break;
         }
-
+        console.log(my_uf)
         US = parseFloat(US.toFixed(3))
 
         this.setState({  usina: US })
@@ -227,11 +206,11 @@ class App extends Component{
                             </div>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Flex Max: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}> {(this.state.FlexMax)*100} % </p>
-                            </div>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}> { parseFloat(((this.state.FlexMax)*100)).toLocaleString('pt-BR', { style: 'decimal'}) } % </p> 
+                            </div> 
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Flex Min: </p>
-                                <p style={{fontSize: "18px", marginLeft: "10px"}}> {(this.state.FlexMin)*100} % </p>
+                                <p style={{fontSize: "18px", marginLeft: "10px"}}> { parseFloat(((this.state.FlexMin)*100)).toLocaleString('pt-BR', { style: 'decimal'}) } % </p>
                             </div>
                             <div style={{display: "flex", flexDirection: "column", alignItems: "baseline", width: "300px", textAlign: "center"}}>
                                 <p style={{fontWeight: "bold", fontSize: "22px"}}>Usina Solar: </p>
